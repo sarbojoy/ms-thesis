@@ -1,0 +1,64 @@
+\section{Calculating $c_{\beta \alpha}^{(n_{-})}$ \& $c_{\beta \alpha}^{(n_{+})}$}
+\label{Calculation for c_alphabeta}
+
+In Chapter 2, we introduced a method to calculate the $c$ matrices that elucidate the relation between $\eta^{-1}$, and the eigensubspaces that it connects. Here, we calculate $c^{\, (n_\pm)}$ matrices in the same way. \par 
+
+For $c^{\, (n_-)}$ we first act $H$ algebraically on $\eta^{-1}|\phi_{n_-^{\prime}}, a\rangle$ 
+\begin{align}
+    \label{H acting on eta-inverse phi_n-}
+    &\nonumber\\
+    H \eta^{-1}|\phi_{n_{-}^{\prime}}, \alpha\rangle \, = \, \eta^{-1} H^{\dagger}|\phi_{n_{-}^{\prime}}, \alpha\rangle \, = \, (E_{n_+^{\prime}}^{\, *})^{*} (\eta^{-1} |\phi_{n_{-}^{\prime}}, \alpha\rangle).\\
+    &\nonumber
+\end{align}
+Using the Hamiltonian in Eq.(\ref{Hamiltonian with 3 diff eigenspaces}) on $eta^{-1}|\phi_{n_{-}^{\prime}}, \alpha\rangle$ and equating it to Eq.(\ref{H acting on eta-inverse phi_n-}) we get
+\begin{align}
+    \label{Equating Summation form H and algebraic H 2}
+    &\nonumber\\
+    \sum_{n_0} \sum_{b \, = \, 1}^{d_{n_0}} E_{n_0}\left|\psi_{n_0}, b \right\rangle\left\langle \phi_{n_0}, b\right| \eta^{-1}|\phi_{n_{-}^{\prime}}, \alpha\rangle + \sum_{n_{+}} \sum_{\beta \, = \, 1}^{d_{n_{+}}} E_{n_{+}}\left|\psi_{n_{+}}, \beta \right\rangle\left\langle \phi_{n_{+}}, \beta\right|\eta^{-1} \nonumber\\
+    |\phi_{n_{-}^{\prime}}, \alpha\rangle+E_{n_{+}}^{\, *}\left|\psi_{n_1}, \beta \right\rangle\left\langle \phi_{n_{-}}, \beta\right| \eta^{-1}|\phi_{n_{-}^{\prime}}, \alpha\rangle \,= \, E_{n_{+}^{\prime}}(\eta^{-1}|\phi_{n_{-}^{\prime}}, \alpha\rangle).\\
+    &\nonumber
+\end{align}
+Here, we see that $E_{n_0}$'s, $E_{n_{+}}^{\, *}$'s, and $E_{n_+}$'s that are not equal to $E_{n_{+}^{\prime}}$ must be zero. The sum on the left-hand side that survives corresponds to the subspace with eigenvalue $E_{n_{+}^{\prime}}$ and multiplicity $d_{n_{-}^{\prime}}$. And we have
+\begin{align}
+    \label{Final expression after equating summation H and algebraic H 2}
+    &\nonumber\\
+    \sum_{\beta \, = \, 1}^{d_{n_{-}^{\prime}}} E_{n_{+}^{\prime}}(\langle\phi_{n_{+}^{\prime}}, \beta|\eta^{-1}| \phi_{n_{-}^{\prime}}, \alpha\rangle)|\psi_{n_{+}^{\prime}}, \beta\rangle \,= \, E_{n_{+}^{\prime}}(\eta^{-1}|\phi_{n_{-}^{\prime}}, \alpha\rangle).\\
+    &\nonumber
+\end{align}
+Cancelling $E_{n_{+}^{\prime}}$ on both sides, removing the primes and exchanging the dummy variables $a$ and $b$, we get the final expression.
+\begin{align}
+    \label{c_ab expression for E_n-}
+    &\nonumber\\
+    \eta^{-1}|\phi_{n_{-}}, \alpha\rangle \, = \, \sum_{\beta=1}^{d_{n_{+}}} c_{\beta \alpha}^{(n_{-})}|\psi_{n_{+}}, \beta\rangle, \quad c_{\alpha \beta}^{(n_{-})} \, := \,\langle\phi_{n_{+}}, \alpha|\eta^{-1}| \phi_{n_{-}}, \beta\rangle.\\
+    &\nonumber
+\end{align}
+Next, we find the $c$ matrix expression for the eigenvectors $\eta^{-1}|\phi_{n_-^{\prime}}, a\rangle$. Applying $H$ algebraically, we get
+\begin{align}
+    \label{H acting on eta-inverse phi_n+}
+    &\nonumber\\
+    H \eta^{-1}|\phi_{n_{+}^{\prime}}, \alpha\rangle \, = \, \eta^{-1} H^{\dagger}|\phi_{n_{+}^{\prime}}, \alpha\rangle \, = \, (E_{n_+^{\prime}})^{*} (\eta^{-1} |\phi_{n_{+}^{\prime}}, \alpha\rangle).\\
+    &\nonumber
+\end{align}
+Again, using the Hamiltonian in Eq.(\ref{Hamiltonian with 3 diff eigenspaces}) on $eta^{-1}|\phi_{n_{+}^{\prime}}, \alpha\rangle$ and equating it to Eq.(\ref{H acting on eta-inverse phi_n+}) we get
+\begin{align}
+    \label{Equating Summation form H and algebraic H 3}
+    &\nonumber\\
+    \sum_{n_0} \sum_{b \, = \, 1}^{d_{n_0}} E_{n_0}\left|\psi_{n_0}, b \right\rangle\left\langle \phi_{n_0}, b\right| \eta^{-1}|\phi_{n_{+}^{\prime}}, \alpha\rangle + \sum_{n_{+}} \sum_{\beta \, = \, 1}^{d_{n_{+}}} E_{n_{+}}\left|\psi_{n_{+}}, \beta \right\rangle\left\langle \phi_{n_{+}}, \beta\right|\eta^{-1} \nonumber\\
+    |\phi_{n_{+}^{\prime}}, \alpha\rangle+E_{n_{+}}^{\, *}\left|\psi_{n_1}, \beta \right\rangle\left\langle \phi_{n_{-}}, \beta\right| \eta^{-1}|\phi_{n_{+}^{\prime}}, \alpha\rangle \,= \, E_{n_{+}^{\prime}}^{\, *}(\eta^{-1}|\phi_{n_{+}^{\prime}}, \alpha\rangle).\\
+    &\nonumber
+\end{align}
+Thus, $E_{n_0}$'s, $E_{n_+}$'s, and $E_{n_{+}}^{\, *}$'s that are not equal to $E_{n_{+}^{\prime}}^{\, *}$ must be zero. The sum on the left-hand side that survives corresponds to the subspace with eigenvalue $E_{n_{+}^{\prime}}^{\, *}$ and multiplicity $d_{n_{+}^{\prime}}$. And we have
+\begin{align}
+    \label{Final expression after equating summation H and algebraic H 3}
+    &\nonumber\\
+    \sum_{\beta \, = \, 1}^{d_{n_{+}^{\prime}}} E_{n_{+}^{\prime}}^{\, *}(\langle\phi_{n_{-}^{\prime}}, \beta|\eta^{-1}| \phi_{n_{+}^{\prime}}, \alpha\rangle)|\psi_{n_{-}^{\prime}}, \beta\rangle \,= \, E_{n_{+}^{\prime}}^{\, *}(\eta^{-1}|\phi_{n_{+}^{\prime}}, \alpha\rangle).\\
+    &\nonumber
+\end{align}
+And again, we cancel $E_{n_{+}^{\prime}}^{\, *}$ on both sides, remove all primes, and exchange the dummy variables $a$ and $b$ to get the expression
+\begin{align}
+    \label{c_ab expression for E_n+}
+    &\nonumber\\
+    \eta^{-1}|\phi_{n_{+}}, \alpha\rangle \, = \, \sum_{\beta=1}^{d_{n_{+}}} c_{\beta \alpha}^{(n_{+})}|\psi_{n_{-}}, \beta\rangle, \quad c_{\alpha \beta}^{(n_{+})} \, := \, \langle\phi_{n_{-}}, \alpha|\eta^{-1}| \phi_{n_{+}}, \beta\rangle.\\
+    &\nonumber
+\end{align}
+The coefficients in Eq.(\ref{c_ab expression for E_n0}), Eq.(\ref{c_ab expression for E_n-}), and Eq.(\ref{c_ab expression for E_n+}) describe the effect of $\eta^{-1}$ on the Hilbert space. Essentially, it forms a relationship between the $|\phi\rangle$'s, and the $|\psi\rangle$'s that is mediated by $\eta$ which in turn describes the pseudo-Hermiticity of the system. 

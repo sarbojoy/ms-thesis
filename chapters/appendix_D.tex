@@ -1,0 +1,30 @@
+\section{Mixed inner product of basis vectors in Biorthogonal Quantum Mechanics}
+\label{Mixed inner product of basis vectors in Biorthogonal Quantum Mechanics}
+
+The result we want to show is the following.
+\begin{align}
+    \label{Mixed inner product in BQM}
+    &\nonumber\\
+    \left\langle\chi_n | \phi_m\right\rangle \, = \, \delta_{n m}\left\langle\chi_n | \phi_n\right\rangle.\\
+    &\nonumber
+\end{align}
+Here, we assume that we have nondegenerate eigenvalues for each of the sets $\{ |\phi_n\rangle \}$ and $\{ |\phi_n\rangle \}$ separately. Then using Eq.(\ref{Eigenstates of K}) and Eq.(\ref{Eigenstates of K-dagger}) we have 
+\begin{align}
+    \label{Mixed basis vectors on K in BQM}
+    &\nonumber\\
+    \langle\chi_m|K| \phi_n\rangle \, = \, \kappa_n \, \langle\chi_m | \phi_n\rangle \, = \, \nu_m^{\, *} \, \langle\chi_m | \phi_n\rangle \quad \text{or,} \quad (\kappa_n - \nu_m^{\, *}) \langle\chi_m | \phi_n\rangle = 0.\\
+    &\nonumber
+\end{align}
+Therefore, $\langle\chi_m | \phi_n\rangle = 0$ if $\kappa_n \neq \nu_m^{\, *}$ while $\langle\chi_m | \phi_n\rangle \neq 0$ if $\kappa_n = \nu_m^{\, *}$. We have arbitrarily chosen both $\phi_n\rangle$ and $\chi_n\rangle$, which means that all the mixed inner products cannot vanish (this would be trivial!). Hence, there is at least one such $\kappa_n = \nu_m^{\, *}$ and it must be the only one because we assume that the sets of eigenvalues ${\kappa_n}$ and $\{\nu_n\}$ are not degenerate. Label shuffling can be done to make such nonzero inner product states have the subscript $n$. Thus we get $\left\langle\chi_m | \phi_n\right\rangle = 0$ if $m \neq n$ and $\left\langle\chi_m | \phi_n\right\rangle \neq 0$ if $m=n$ which is exactly Eq.(\ref{Mixed inner product in BQM}) with the subscripts exchanged. 
+
+\section{Bounded Operator}
+\label{Boundedness of a linear operator}
+
+Let $V$ and $W$ be vector spaces. Then a bounded linear operator is a linear transformation $T: V \rightarrow W$ that maps bounded subsets of $V$ to bounded subsets of $W$. Then $T$ is bounded iff $\exists$ some $M > 0$ such that $\forall \ \alpha \in V$,
+\begin{align}
+    \label{Bounded Operator}
+    &\nonumber\\
+    ||T \, \alpha||_{\, V} \, \leq \, M \, ||\alpha||_{\, W},\\
+    &\nonumber
+\end{align}
+where the subscripts represent the norms in the respective vector spaces. The smallest $M$ for which Eq.(\ref{Bounded Operator}) becomes the operator norm of $T$ and is denoted by $||T||$.

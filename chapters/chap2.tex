@@ -1,0 +1,713 @@
+\vspace{1cm}
+
+\hspace{0.7cm} We have traversed the vast land of $\mathcal{PT}$-symmetric quantum mechanics in the previous chapter, but the journey is not complete; in fact, it is about to begin. $\mathcal{PT}$-symmetric quantum mechanics, when closely scrutinised, has many loopholes and inconsistencies. This was first pointed out rightfully by Mostafazadeh in a series of papers in 2002 \cite{doi:10.1063/1.1418246,doi:10.1063/1.1461427,doi:10.1063/1.1489072} and became the holy grail of non-Hermitian quantum mechanics. The arguments made by Mostafazadeh were regarding the validity of obtaining real eigenvalues if the Hamiltonian was non-Hermitian and $\mathcal{PT}$-symmetric. It turned out that $\mathcal{PT}$-symmetry was not the genuine rationale behind the reality of eigenstates of non-Hermitian Hamiltonians, and something more general/broader was required. Thus came the need for the concept of \textbf{\textit{Pseudo-Hermiticity}} which essentially encompassed $\mathcal{PT}$-symmetric quantum mechanics. Pseudo-Hermiticity will eventually allow us to move into the time-dependent picture in the next chapter. But before that can happen, we introduce and elaborate in this chapter the shortcomings of $\mathcal{PT}$-symmetric theory, Pseudo-Hermiticity, and quasi-hermiticity. The last idea was well known in the 1990s but needed some tweaks to fit into the non-Hermitian framework \cite{SCHOLTZ199274} and, in due course, became pseudo-Hermiticity as we know it today. Let us begin with the drawbacks of $\mathcal{PT}$-symmetric quantum mechanics.
+
+\section{Shortcomings of $\mathcal{PT}$-symmetric quantum mechanics}
+\label{PT-symm shortcomings}
+
+The reality of the spectrum of a non-Hermitian Hamiltonian has been attributed to its $\mathcal{PT}$ symmetry until now. After we are done with this chapter, we will realise that this is not the whole story, and rather a more fundamental property, pseudo-Hermiticity, is at play. This property is the basic structure that is responsible for the real eigenvalues. Mostafazadeh argued that the correlating $\mathcal{PT}$-symmetry and reality of the spectrum is mostly because most non-Hermtian Hamiltonians having real eigenvalues coincidentally have $\mathcal{PT}$-symmetry, but there are $\mathcal{PT}$-symmetric Hamiltonians that do not have real spectrum \cite{doi:10.1063/1.1418246}. Therefore, we can firmly say that $\mathcal{PT}$-symmetry alone does not justify the reality of the spectrum, and we need an alternative hypothesis. Since the ideas of $\mathcal{PT}$-symmetric theory have already been thoroughly discussed in the last chapter, here we will try to build pseudo-Hermiticity and then compare the two. \par
+
+In \cite{CANNATA1998219}, Cannata \textit{et al} describes a class of non-Hermitian and non-$\mathcal{PT}$-symmetric Hamiltonians that have a real spectrum. In this investigation, the authors use the Darboux method to construct complex potentials and then exactly solve their Schr\"{o}dinger equations. In some cases where the potential is not $\mathcal{PT}$-symmetric, the eigenvalues are still real. 
+
+\section{Peudo-Hermiticty: Definition and basic theorems}
+\label{pseudo-Hermiticity def and theorems}
+
+\textbf{\textit{Definition}:} \textbf{[}$\bm{\eta}$\textbf{-pseudo-Hermitian operator]} Let $V_{\pm}$ be two complex inner product spaces endowed with Hermitian linear automorphisms $\eta_{\pm}$ which satisfy
+\begin{align}
+    \label{Lin automorphisms etas for pseudo-H}
+    &\nonumber\\
+    \forall \, v_{\pm}, \, w_{\pm} \in V_{\pm}, \qquad \left(v_{\pm}, \eta_{\pm} \,  w_{\pm}\right)_{\pm} \, = \, \left(\eta_{\pm} \, v_{\pm}, w_{\pm}\right)_{\pm}.\\
+    &\nonumber
+\end{align}
+ 
+\begin{align}
+    \label{eta pseudo hermitian adjoint}
+    &\nonumber\\
+    \mathcal{O}^{\#}: V_{-} \rightarrow V_{+} \quad \text{such that,} \quad \mathcal{O}^{\#} \, := \, \eta_{\pm}^{-1} \, \mathcal{O}^\dag \, \eta_{\pm}.\\
+    &\nonumber
+\end{align}
+If a single Hilbert space is used to define the quantum system and one automorphism is considered, i.e.
+\begin{align}
+    \label{Use single Hilbert space}
+    &\nonumber\\
+    V_{+} \, = \, V_{-} \, = \, \mathcal{H} \quad \text{and} \quad \eta_\pm \, = \, \eta. \\
+    &\nonumber
+\end{align}
+Then $\mathcal{O}$ is called $\eta$-pseudo-Hermitian if $\mathcal{O}^{\#} = \mathcal{O}$ or more explicitly
+\begin{align}
+    \label{Pseudo-Hermiticity Condition}
+    &\nonumber\\
+    \mathcal{O} \, = \, \eta^{-1} \, \mathcal{O}^\dag \, \eta. \\
+    &\nonumber
+\end{align}
+The relation in Eq.(\ref{Pseudo-Hermiticity Condition}) is the crux of this chapter and will ultimately help us introduce time into the picture in the next chapter. \par
+
+\hspace{-1.5em}\textbf{\textit{Definiton}:} \textbf{[pseudo-Hermitian operator]} Linear operator $\mathcal{O}: V \rightarrow V$ on complex inner product space $V$ is called pseudo-Hermitian if $\exists$ a Hermitian linear automorphism $\eta$  such that $\mathcal{O}$ is $\eta$-pseudo-Hermitian (as defined above). \par
+
+Although it is hard to believe, we actually have all the major ingredients to build a quantum theory based on pseudo-Hermiticity. Consider a system with a non-Hermitian time-dependent Hamiltonian $H(t)$ and Hilbert space $\mathcal{H}$. There exists a Hermitian automorphism $\eta$, of the Hilbert space $\mathcal{H}$ onto itself. \par 
+
+\hspace{-1.5em}\textbf{\textit{Theorem 1}:} We define a Hermitian indefinite inner product $\langle\langle \, \mid \, \rangle\rangle_{\eta}$ based on $\eta$ as 
+\begin{align}
+    \label{Eta indefinite inner product}
+    &\nonumber\\
+    \left\langle\left\langle\psi_{1} \mid \psi_{2}\right\rangle\right\rangle_{\eta} \, := \, \left\langle\psi_{1}|\eta| \psi_{2}\right\rangle, \quad \forall\left|\psi_{1}\right\rangle,\left|\psi_{2}\right\rangle \in \mathcal{H}.\\
+    &\nonumber
+\end{align}
+This inner product is indefinite, in general, and is invariant under time-translation generated by the Hamiltonian $H$ \textit{iff} $H$ is $\eta$-pseudo-Hermitian. \par
+
+\hspace{-1.5em}\textbf{\textit{Proof}:} If $H$ is $\eta$-pseudo-Hermitian then (rearranging the $\eta$-pseudo-Hermitian condition in Eq.(\ref{Pseudo-Hermiticity Condition}) for $H$)
+\begin{align}
+    \label{Rearranged pseudo-Hermiticity condition for H}
+    &\nonumber\\
+    H^{\dagger}\, = \, \eta \, H \, \eta^{-1}. \\
+    &\nonumber
+\end{align}
+Now the Schr\"{o}dinger equation for a general state $|\psi(t)\rangle$ of the system with Hamiltonian $H = H(t)$ is 
+\begin{align}
+    \label{Schrodinger Time Evolution Equation }
+    &\nonumber\\
+    i \, \frac{d}{d t}|\psi(t)\rangle \, = \, H \, |\psi(t)\rangle.\\
+    &\nonumber
+\end{align}
+Let us take two state vectors, $\left|\psi_{1}(t)\right\rangle$ and $\left|\psi_{2}(t)\right\rangle$. Evolving them in time using the Schr\"{o}dinger equation and taking their adjoints
+\begin{align}
+    &\nonumber\\
+    i \, \frac{d}{d t}|\psi_{1}(t)\rangle \, = \, H \,|\psi_{1}(t)\rangle \quad \stackrel{\text{DC}}{\longleftrightarrow} \quad -i \, \frac{d}{d t}\langle\psi_{1}(t)| \, = \, \langle\psi_{1}(t)| \, H^{\dagger}, \nonumber\\
+    &\nonumber\\
+    i \, \frac{d}{d t}|\psi_{2}(t)\rangle \, = \, H \,|\psi_{2}(t)\rangle \quad \stackrel{\text{DC}}{\longleftrightarrow} \quad -i \, \frac{d}{d t}\langle\psi_{2}(t)| \, = \, \langle\psi_{2}(t)| \, H^{\dagger}.
+\end{align}
+We require that the time derivative of the indefinite inner product be zero or
+\begin{align}
+    \label{Time derivative of indefinite inner product is zero 1}
+    &\nonumber\\
+    &i \, \frac{d}{d t}\left(\left\langle\left\langle\psi_1(t) \, | \, \psi_2(t)\right\rangle\right\rangle_\eta\right) \, = \, i \, \frac{d}{d t}\left(\left\langle\psi_1(t)\right| \eta \left|\psi_2(t)\right\rangle\right) \, = \, 0, \nonumber\\
+    \nonumber\\
+    \text{or,} \quad i &\left(\frac{d}{d t}\left\langle\psi_1(t)\right|\right) \cdot\left(\eta\left|\psi_2(t)\right\rangle\right)+i\left(\left\langle\psi_1(t)\right|\right) \cdot\left(\frac{d}{d t} \, \eta\left|\psi_2(t)\right\rangle\right) \, = \, 0. \\
+    &\nonumber
+\end{align}
+Here, we have assumed that $\eta$ is a time-independent automorphism of $\mathcal{H}$ but this is to make our lives easier. In the next chapter, we will talk about time-dependent backgrounds, where $\eta(t)$ will take center stage. Taking this assumption, we can rewrite Eq.(\ref{Time derivative of indefinite inner product is zero 1})
+\begin{align}
+    \label{Time derivative of indefinite inner product is zero 2}
+    &\nonumber\\
+    i \, \frac{d}{d t}\left\langle\left\langle\psi_1 \, | \, \psi_2\right\rangle\right\rangle_\eta \, = \, \left\langle\psi_1(t)\left|\left(\eta H-H^{\dagger} \eta\right)\right| \psi_2(t)\right\rangle \, = \, 0 .\\
+    &\nonumber
+\end{align}
+Now, we have chosen the two evolving state vectors arbitrarily and thus it must be this.
+\begin{align}
+    \label{The Pseudo-Hermitian Condition is required}
+    &\nonumber\\
+    &\eta H - H^{\dagger}\eta \, = \, 0, \nonumber\\
+    \nonumber\\
+    \text{or,} \quad &H \, = \, \eta^{-1} H^{\dagger} \eta. \\
+    &\nonumber
+\end{align}
+We get back the \textbf{\textit{Pseudo-Hermiticity condition}} and, therefore, if the $\eta$ inner product is time-invariant, then the Hamiltonian of the system must be pseudo-Hermitian. \qedsymbol \par
+\textbf{\textit{It is easily noticed that if}} $\eta$ \textbf{\textit{is taken to be the identity,}} $\bm{1}$\textbf{\textit{, then we get back the Hermiticity condition of standard quantum mechanics. This shows that we are extending the known quantum mechanics formalism to a more general framework, the former being a special case of pseudo-Hermitian theory.}} \par
+It should be clear that $\mathcal{PT}$-symmetry and pseudo-Hermiticity are different properties. One might assume that the connection between pseudo-Hermitian and $\mathcal{PT}$-symmetric quantum mechanics is natural, and the latter might be a particular case of the former. But this is not true at all. Let us establish this with the help of a simple exercise. We take two Hamiltonians: $H_1:=p^2+x^2 p$ and $H_2:=p^2+i\left(x^2 p+p x^2\right)$. $H_1$ is $\mathcal{PT}$-symmetric, while $H_2$ is pseudo-Hermitian with respect to the parity operator.
+\begin{align}
+    \label{Example of a pseudo-Hermitian Hamiltonian}
+    &\nonumber\\
+    &H_2 \, = \, p^2+i \left(x^2 \, p+p \, x^2\right), \\
+    \nonumber\\
+    \implies \qquad \ \ \, &H_2^{\dagger} \, = \, p^2+(-i)\left(x^2 \, p+ x^2\right),\\
+    \nonumber\\
+    \text{and,} \qquad \mathcal{P} & H_2 \, \mathcal{P}^{-1} \, = \, p^2+i\left(-x^2 \, p-p \, x^2\right) \, = \, H_2^{\dagger}.  \\  
+    &\nonumber
+\end{align}
+But $H_1$ is not $\mathcal{P}$-pseudo-Hermitian and also $H_2$ is not $\mathcal{PT}$-symmetric. Therefore, it should be clear that these two properties are separate concepts (of course $H_1$ can be pseudo-Hermitian with respect to some other linear automorphism $\eta$). They have a subtle relationship, although it has highly impactful consequences, which we will discuss in the next section. \par
+
+In standard Hermitian quantum mechanics, compact results often point to important conclusions. One such result here is 
+\begin{align}
+    \label{Two eigenvectors eta inner product}
+    &\nonumber\\
+    \left(E_i^{\, *}-E_j\right)\left\langle\left\langle E_i \mid E_j\right\rangle\right\rangle_\eta \, = \, 0.\\
+    &\nonumber
+\end{align}
+Before moving on to the consequences of Eq.(\ref{Two eigenvectors eta inner product}) let us see how we arrived at this result. We use the pseudo-Hermiticity condition in Eq.(\ref{The Pseudo-Hermitian Condition is required}) in different form, called the \textit{intertwining relation}
+\begin{align}
+    \label{Intertwining Relation}
+    &\nonumber\\
+    \eta \, H \, = \, H^{\dagger} \, \eta.\\
+    &\nonumber
+\end{align}
+Using this with the simple eigenvalue equation of the Hamiltonian will give us Eq.(\ref{Two eigenvectors eta inner product}). Eigenvalue equations for two distinct eigenstates of the Hamiltonian $H$ and their conjugates
+\begin{align}
+    \label{Two eigenstates of H and conjugates}
+    &\nonumber\\
+    &H\left|E_i\right\rangle \, = \, E_i\left|E_i\right\rangle \quad \stackrel{\text{DC}}{\longleftrightarrow} \quad \left\langle E_i\right| H^{\dagger} \, = \, \left\langle E_i\right| E_i^{\, *}, \nonumber\\
+    &\nonumber\\
+    &H\left|E_j\right\rangle \, = \, E_j\left|E_j\right\rangle \quad \stackrel{\text {DC}}{\longleftrightarrow} \quad \left\langle E_j\right| H^{\dagger} \, = \, \left\langle E_j\right| E_j^{\, *}. \\
+    &\nonumber
+\end{align}
+Note that since $\eta$ is Hermitian, $\eta \left|E_{i}\right\rangle$ are also eigenvectors of $H^{\dagger}$ with eigenvalue $E_i$. Now applying the $\eta$ operator to the conjugate eigenvalue equation for $\left|E_i\right\rangle$ from the left and then multiplying $\left|E_j\right\rangle$ again from the left we get
+\begin{align}
+    \label{Distinct Eigenvalue and Eigenvector result}
+    &\nonumber\\
+    &\left\langle E_i\left|H^{\dagger}  \eta\right|E_j\right\rangle \, = \, E_i^{\, *}\left\langle E_i\left| \, \eta \, \right| E_j\right\rangle \, = \, \left\langle E_i\left|\eta H\right| E_j\right\rangle \, = \, E_j^{\, *}\left\langle E_i\left| \, \eta \, \right| E_j\right\rangle, \nonumber\\
+    &\nonumber\\
+    \implies &E_j\left\langle E_i\left| \, \eta \,\right| E_j\right\rangle \, = \, E_i^{\, *}\left\langle E_i\left| \, \eta \, \right| E_j\right\rangle \quad \text{or,} \quad \left(E_i^{\, *}-E_j\right)\left\langle E_i\left| \, \eta \, \right| E_j\right\rangle \, = \, 0, \nonumber\\
+    &\nonumber\\
+    \implies & \qquad \qquad \qquad \quad \quad \ \left(E_i^{\, *}-E_j\right)\left\langle\left\langle E_i | E_j\right\rangle\right\rangle_\eta \, = \, 0.\\
+    &\nonumber
+\end{align}
+Eq.(\ref{Distinct Eigenvalue and Eigenvector result}) allows us to conjecture new propositions such as the following.\par
+
+\hspace{-1.5em}\textbf{\textit{Theorem 2}:} A system that has a non-Hermitian Hamiltonian that is $\eta$-pseudo-Hermitian has the following properties, consequences of Eq.(\ref{Distinct Eigenvalue and Eigenvector result}):
+
+\begin{itemize}
+    \item[(i)] Eigenvectors that have complex eigenvalues (in $\mathcal{PT}$ symmetry then belong to the \textit{unbroken} regime) have vanishing $\eta$ norms or essentially $\eta$ seminorms (see Appendix \ref{Seminorm illustration}). Say, we take an eigenvector $\left|E_i\right\rangle$ of $H$ then, $H\left|E_i\right\rangle=E_i\left|E_i\right\rangle$ s.t. $E_i \notin \mathbb{R}$ then $E_i^{\, *}-E_i=-2\, i \, Im\left(E_i\right)$. As a result, we must have
+        \begin{align}
+        \label{vanishing eta seminorm}
+        &\nonumber\\
+        &\left(E_i^{\, *}-E_i\right)\left\langle\left\langle E_i | E_i\right\rangle\right\rangle_\eta \, = \, 0 \implies-2 i \, Im\left(E_i\right)\left\langle\left\langle E_i | E_i\right\rangle\right\rangle_\eta \,= \, 0 \nonumber\\
+        &\implies \left\langle\left\langle E_i \mid E_i\right\rangle\right\rangle_\eta \, = \, \left(\left\|E_i\right\|_\eta\right)^2 \, = \, 0 \implies\left\|E_i\right\|_\eta \, = \, 0.\\
+        &\nonumber
+        \end{align}
+    \item[(ii)] Two eigenvectors with eigenvalues that are complex conjugates of each other (\textit{just like in the unbroken} $\mathcal{PT}$\textit{-symmteric region}) are not $\eta$-orthogonal,
+        \begin{align}
+        \label{Two eigenvectors are eta orthogonal}
+        &\nonumber\\
+        E_i \neq E_j^{\,*} \implies \left\langle\left\langle E_i | E_j\right\rangle\right\rangle_\eta \, = \, 0.\\
+        &\nonumber
+        \end{align}
+        Any two eigenvectors with non-degenerate and real eigenvalues must be $\eta$-orthogonal. 
+\end{itemize}
+
+Finally, we begin to see that a formalism based on the $\eta$ inner product is now taking shape. Soon, we will have a fully consistent quantum theory with theorems that are analogous to conventional quantum mechanics. \par
+
+A vector space endowed with such an $\eta$ inner product must have fundamental properties that describe elements of the space. The following theorem explains these aspects. \par
+
+\hspace{-1.5em}\textbf{\textit{Theorem 3}:} Let $\bm{V}$ be an inner product space endowed with a linear Hermitian automorphism $\eta$. Let the identity operator in this space be denoted by $\bm{1}: \bm{V} \rightarrow \bm{V}$, $O_1$, $O_2: \bm{V} \rightarrow \bm{V}$ be linear operators, and $z_1$,$z_2 \in \mathbb{C}$. Then the following properties must hold.
+\begin{itemize}
+    \item[(i)] $\bm{1}^{\, \#} = \bm{1}$, 
+    \item[(ii)] $\left(O_1^{\, \#}\right)^{\, \#} = O_1$,
+    \item[(iii)] $\left(z_1 \, O_1 + z_2 \, O_2\right)^{\, \#} = z_1^{\, *} \, O_1^{\, \#} + z_2^{\, *} \, O_2^{\, \#}$,
+\end{itemize}
+where $z_i^{\, *}$ denotes the complex conjugation of $z_i$. \par
+
+\hspace{-1.5em}\textbf{\textit{Proof}:} The definition of $\eta$-pseudo-Hermitian adjoint makes (i) and (iii) trivial consequences. As for (iii), a simple calculation will verify the property.
+\begin{align}
+    &\nonumber\\
+    \left(z_1 \, O_1+z_2 \, O_2\right)^{\, \#} \, = \, \eta^{-1}\left(z_1 \, O_1+z_2 \, O_2\right)^{\dagger} \eta \, = \, z_1^{\, *} \, \eta^{-1} \, O_1^{\dagger} \, \eta+z_2^{\, *} \, \eta^{-1} \, O_2^{\dagger} \, \eta \, = \, z_1^{\, *} \, O_1^{\, \#}+z_2^{\, *} \, O_2^{\, \#}. \nonumber \qed
+\end{align}
+\hspace{1.5em} Composition of linear transformations in pseudo-Hermitian quantum mechanics is similar to standard Hermitian quantum mechanics. \par
+
+\hspace{-1.5em}\textbf{\textit{Theorem 4}:} Let there be three inner product spaces $\bm{V_i}$ such that $i \in {1,2,3}$, each endowed with Hermitian linear automorphisms $\eta_i$. If $O_1: \bm{V_1} \rightarrow \bm{V_2}$ and $O_2: \bm{V_2} \rightarrow \bm{V_3}$ are linear operators. Then, the pseudo-Hermitian adjoint of the composition of both has the property:
+\begin{align}
+    \label{PHA Composition of Linear Operators}
+    &\nonumber\\
+    (O_2 \, O_1)^{\#} \, = \, O_1^{\, \#} \, O_2^{\, \#}. \\
+    &\nonumber
+\end{align}
+\textbf{\textit{Proof}:} A single-line calculation will verify this theorem:
+\begin{align}
+    &\nonumber\\
+    \left(O_2 \, O_1\right)^{\#} \, = \, \eta_1^{-1} \left(O_2 \, O_1\right)^{\dagger}\eta_3 \, = \, \eta_1^{-1} \, O_1^{\dagger} \, \eta_2 \, \eta_2^{-1} \, O_2^{\dagger} \, \eta_3 \, = \, O_1^{\, \#} \, O_2^{ \, \#}. \qquad \text{\qedsymbol} \nonumber\\ 
+    &\nonumber
+\end{align}
+An important aspect of quantum study is to look at unitary transformations that essentially rotate the system in the state space or Hilbert space. In standard quantum mechanics, the Hermiticity is invariant under a unitary transformation. We have something similar in pseudo-Hermitian quantum mechanics. The following theorem elucidates our claim.\par
+
+\hspace{-1.5em}\textbf{\textit{Theorem 5}:} Let $\bm{V}$ be an inner product space endowed with a Hermitian linear automorphism $\eta$. A unitary operator in this space, $U: \bm{V} \rightarrow \bm{V}$, exists, and we also have a general linear operator $O: \bm{V} \rightarrow \bm{V}$. We define $\eta_{_U} := U^{\dagger} \, \eta \, U$ which is also a Hermitian linear automorphism. Then $O: \bm{V} \rightarrow \bm{V}$ is $\eta$-pseudo-Hermitian iff its unitary transformation $O_U := U^{\dagger} \, O \, U$ is $\eta_{_U}$-pseudo-Hermitian or pseudo-Hermiticity is unitary-invaraint. \par 
+\hspace{-1.5em}\textbf{\textit{Proof}:} First, we check the Hermiticity of $\eta_{_U}$.
+\begin{align}
+    \label{Eta_U is Hermitian}
+    &\nonumber\\
+    \eta_{_U}^{\dagger} \, = \, U^{\dagger} \, \eta^{\dagger}\left(U^{\dagger}\right)^{\dagger} \, = \, U^{\dagger} \, \eta \, U \, = \, \eta_{_U}. \qquad \text{[Since, $\eta^{\dagger} \, = \, \eta$]}\\
+    &\nonumber
+\end{align}
+Now that we know that $\eta_{_U}$ is Hermitian, we can move on to our main theorem. But before that we need to determine the inverse of $\eta_{_U}$.
+\begin{align}
+    \label{Inverse of Eta_U}
+    &\nonumber\\
+    \eta_{_U}^{-1} \, = \, \left(U^{\dagger} \, \eta \, U\right)^{\, -1} \, = \, U^{-1} \, \eta^{-1} \, \left(U^{\dagger}\right)^{-1} \, = \, U^{\dagger} \, \eta^{-1} \, U.\\
+    &\nonumber
+\end{align}
+Now, $O_U^{\, \#} \, = \, \eta^{-1}_{_U} \, O_{U}^{\dagger} \, \eta_{_U}$ i.e. pseudo-Hermitian with respect to $\eta_{_U}$. Therefore,
+\begin{align}
+    \label{O_U is eta pseudo Hermitian iff O is eta Hermitian}
+    &\nonumber\\
+    O_{U}^{\, \#} \, = \, \eta_{_U}^{\, -1}(U^{\dagger} \, O \, U)^{\dagger} \, \eta_{_U} \, &= \, \eta_{_U}^{-1} \left(U^{\dagger} \, O^{\dagger} \, U\right) \eta_{_U} \, = \, U^{\dagger} \, \eta^{-1} \, U \left(U^{\dagger} \, O^{\dagger} \, U\right) U^{\dagger} \, \eta \, U  \nonumber\\
+    &\nonumber\\
+    &= \, U^{\dagger} \left(\eta^{-1} \, O^{\dagger} \, \eta\right)U \qquad \text{[ Since $U$ is unitary ]}. \\
+    &\nonumber
+\end{align}
+We see $O$ is $\eta$-pseudo-Hermitian iff $O_{U}^{\#} = O_{U}$ or equivalently $O = \eta^{-1} \, O^{\dagger} \, \eta$, the $\eta$-pseudo-Hermitian condition must be true. \qedsymbol \par
+
+\hspace{-1.5em}Theorem 5 can also be interpreted as a deduction that unitarity is maintained in pseudo-Hermitian quantum mechanics, just as in the ordinary one. So, if $O = \eta^{-1} \, O^{\dagger} \, \eta$ then we have
+\begin{align}
+    \label{Pseudo Hermitian quantum mechanics is unitary invariant}
+    &\nonumber\\
+    U^{\dagger} \, O \, U \, = \, \left(U^{\dagger} \, \eta \, U\right)^{-1}\left(U^{\dagger} \, O \, U\right)^{\dagger}\left(U^{\dagger} \, \eta \, U\right).\\
+    &\nonumber
+\end{align}
+A unitary transformation of the Hermitian linear automorphism, $\eta$ and also of the linear operator $O$ does not affect their pseudo-Hermitian association. Therefore, a unitary transformation or effectively a rotation of the system leaves the pseudo-Hermitian properties intact. \par
+
+The keen observer must have recognised and asked a very simple question: \textit{What if a single linear operator is pseudo-Hermitian with respect to two different Hermitian linear automorphisms?} Sounds like a love triangle! In fact, this is a very real possibility, and the next theorem will help us to understand the significance of such a situation. \par
+
+\hspace{-1.5em}\textbf{\textit{Theorem 6}:} Let $\bm{V}$ be an inner product space endowed with two Hermitian linear automorphisms $\eta_1$ and $\eta_2$. Let $O: \bm{V} \rightarrow \bm{V}$ be a linear operator, then $O$ is $\eta$-pseudo-Hermitian with respect to both $\eta_1$ and $\eta_2$ iff $\eta_2^{-1} \, \eta_1$ commutes with $O$. \par
+
+\hspace{-1.5em}\textbf{\textit{Proof}:} If $\eta_1^{-1} \, O^{\dagger} \, \eta_1 \, = \, \eta_2^{-1} \, O^{\dagger} \, \eta_2$, then 
+\begin{align}
+    \label{}
+    &\nonumber\\
+    &O^{\dagger} \, \eta_1 \, \eta_2^{-1} \, = \, \eta_1 \, \eta_2^{-1} \, O^{\dagger} \implies \left(O^{\dagger} \, \eta_1 \, \eta_2^{-1}\right)^{\dagger} \, = \, \left(\eta_1 \, \eta_2^{-1} \, O^{\dagger}\right)^{\dagger} \nonumber\\
+    \implies \left(\eta_2^{-1}\right)^{\dagger} \eta_1^{\dagger} \, O \, &= \, O \left(\eta_2^{-1}\right)^{\dagger} \eta_1^{\dagger} \implies \eta_2^{-1} \, \eta_1 \, O \, = \, O \, \eta_2^{-1} \, \eta_1 \quad \text{[ Since $\eta$ is Hermitian]} \nonumber\\
+    &\implies \qquad \quad \left[O,\eta_2^{-1} \,\eta_1\right] \, = \, 0. 
+    \nonumber \qed
+\end{align}
+So, when we have an actual system with a working Hamiltonian $H$ then if this $H$ is pseudo-Hermitian with respect to two distinct $\eta_1$, and $\eta_2$ we have $\eta_2^{-1} \, \eta_1$ as a symmetry of the system. \par
+
+Probabilistic interpretation of Hermitian systems gives the notion of observing a particular eigenstate and the wave function collapsing to that state so that further transition is not possible. The orthogonality of eigenstates of a Hermitian operator captures this scheme very well. Until now, our discussion has been solely focused on the Hamiltonian of the system, but we have ignored the basic eigenstate structure of the space that a non-Hermitian Hamlitonian can pose. The eigenstates produced by a non-Hermitian Hamiltonian may not be orthogonal and yet be a real and complete set. We have, from the very beginning, emphasised the fact that the reality of a spectrum is more than enough for a candidate Hamiltonian to be accepted physically. In the following section, we will illuminate the core structure of a space corresponding to a non-Hermitian Hamiltonian.
+
+\section{What happens when the eigenstates have real eigevalues, and form a complete set but are not orthogonal?}
+\label{Biorthogonal Eigenbasis for a pesudo-Hermitian Hamiltonian}
+
+The physical viability of a quantum theory essentially depends on two factors: The eigenvalues are real, and the set of eigenstates is complete. It is therefore tolerable to relax the notion of orthogonality and thus replace it with a more general concept of biorthogonality. We will talk more about biorthogonal sets of eigenbasis in the next chapter, and for now we assume that it will make our lives easier to introduce a biorthogonal set of eigenbasis for a $\eta$-pseudo-Hermitian Hamiltonian with a discrete spectrum. 
+\begin{align}
+    \label{Biorthogonal set of eigenbasis for a eta-pseudo-Hermitian H}
+    &\nonumber\\
+    H\left|\psi_n, a\right\rangle=E_n\left|\psi_n, a\right\rangle, \quad H^{\dagger}\left|\phi_n, a\right\rangle=E_n^{\, *}\left|\phi_n, a\right\rangle. \\
+    &\nonumber
+\end{align}
+Here, $E_n$'s are the eigenvalues and $a$ is a degeneracy label to keep things as general as possible. Eq.(\ref{Biorthogonal set of eigenbasis for a eta-pseudo-Hermitian H}) defines a biorthognal basis, but the realisation of orthogonality and completeness is understood through the delta function and identity operator relations. 
+\begin{align}
+    \label{Delta function and identity relation}
+    &\nonumber\\
+    \left\langle\phi_m, b | \psi_n, a\right\rangle \, &= \, \delta_{m n} \, \delta_{a b}, \\
+    &\nonumber\\
+    \sum_n \sum_{a \, = \,1}^{d_n} \left|\phi_n, a\right\rangle \left\langle\psi_n, a\right| \, &= \,\sum_n \sum_{a \, = \,1}^{d_n}\left| \psi_n, a\right\rangle\left\langle\phi_n, a\right| \, = \, \bm{1}. \\
+    &\nonumber
+\end{align}
+The $d_n$'s represent the multiplicity or dimension of the set of eigenstates with identical eigenvalue, and $b$, similarly, is a degeneracy label. \par
+
+We now present a theorem (and, of course, prove it!) that will finally put everything into perspective \cite{doi:10.1063/1.1418246}. Until now, there has been no connection between the last chapter and our present study. This theorem will bridge the gap between $\mathcal{PT}$-symmetry and pseudo-Hermitian quantum mechanics thus vindicating our methods. \par
+
+\hspace{-1.5em}\textbf{\textit{Theorem 7}:} Let $H$ be a pseudo-Hermitian Hamiltonian with a biorothonormal eigenbasis. Then the complex eigenvalues of $H$ appear in complex conjugate pairs with the same multiplicity. \par
+
+\hspace{-1.5em}\textbf{\textit{Proof}:} Using Eq.(\ref{Intertwining Relation}) and Eq.(\ref{Biorthogonal set of eigenbasis for a eta-pseudo-Hermitian H}), we have 
+\begin{align}
+    \label{Eta-inverse is a map from En to En*}
+    &\nonumber\\
+    H \, \eta^{-1}\left|\phi_n, a\right\rangle \, = \, \eta^{-1} H^{\dagger}\left|\phi_n, a\right\rangle \, = \, E_n^{\, *} \, \eta^{-1}\left|\phi_n, a\right\rangle. 
+\end{align}
+Since $\eta^{-1}$ is an invertible operator and $\left|\phi_n, a\right\rangle$ is arbitrary, their product does not vanish. Therefore, we see that $\eta^{-1}\left|\phi_n, a\right\rangle$ is also an eigenvector of $H$ with an eigenvalue of $E_n^{\, *}$. We have a sort of correspondence between $\eta^{-1} \left|\phi_n,a \right\rangle$' s and $\left|\psi_n,a\right\rangle$' s in the sense that $\eta^{-1}$ creates a map between subspaces of eigenvectors with eigenvalues $E_n$'s and $E_n^{\, *}$'s. Since $\eta^{-1}$ is invertible, this map is one-to-one and thus both eigensubspaces have the same multiplicity.
+\begin{align}
+    &\nonumber\\
+    \left|\psi_n, a\right\rangle \, &\longleftrightarrow \, \eta^{-1}\left|\phi_n, a\right\rangle, \nonumber\\
+    &\nonumber\\
+    E_n \, &\longleftrightarrow \, E_n^{\, *}. \quad \qed \nonumber\\
+    &\nonumber
+\end{align}
+The above proof divides the Hilbert space for a non-Hermitian Hamiltonian into three parts: a subspace of eigenvectors with real eigenvalues, and two subspaces of eigenvectors with eigenvalues that are complex conjugate pairs (one subspace with eigenvalue $E_n$ and the other one with $E_n^{\, *}$. Let us survey this eigenspace in the context of Eqs.(\ref{Biorthogonal Eigenbasis for a pesudo-Hermitian Hamiltonian})-(\ref{Eta-inverse is a map from En to En*}) to get a more deeper perspective of the underlying structure. \par
+
+We denote the real eigenvalues and associated eigenvectors using the subscript `$_0$'. Complex eigenvalues and their conjugates are represented by `$\pm$', i.e. two separate spaces of eigenvectors mapped one-to-one by $\eta^{-1}$. Then we can write the completeness relation and the Hamiltonian for the system as
+\begin{align}
+    &\nonumber\\
+    \bm{1} \, &= \, \sum_{n_0} \sum_{a \, = \, 1}^{d_{n_0}}|\psi_{n_0}, a\rangle\langle\phi_{n_0}, a|+\sum_{n_{+}} \sum_{\alpha \, = \, 1}^{d_{n_{+}}}(|\psi_{n_{+}}, \alpha\rangle\langle\phi_{n_{+}}, \alpha|+| \psi_{n_{-}}, \alpha\rangle\langle\phi_{n_{-}}, \alpha|), \label{Completeness relation with 3 diff eigenspaces}\\
+    \nonumber\\
+    H \, = \, \sum_{n_0}& \sum_{a \, = \, 1}^{d_{n_0}} E_{n_0}|\psi_{n_0}, a\rangle\langle\phi_{n_0}, a|+\sum_{n_{+}} \sum_{\alpha \, = \, 1}^{d_{n_{+}}}(E_{n_{+}}|\psi_{n_{+}}, \alpha\rangle\langle\phi_{n_{+}}, \alpha|+ \, E_{n_{+}}^{\, *}| \psi_{n_{-}}, \alpha\rangle\langle\phi_{n_{-}}, \alpha|). \label{Hamiltonian with 3 diff eigenspaces}\\
+    &\nonumber
+\end{align}
+In Eq.(\ref{Eta-inverse is a map from En to En*}) we find the role of $\eta^{-1}$ but to find its matrix representation, a similar calculation is performed using the above Hamiltonian. We already know
+\begin{align}
+    \label{H acting on eta-inverse phi_n0}
+    &\nonumber\\
+    H \eta^{-1}|\phi_{n_0^{\prime}}, a\rangle \, = \, \eta^{-1} H^{\dagger}|\phi_{n_0^{\prime}}, a\rangle \, = \, E_{n_0^{\prime}}(\eta^{-1} |\phi_{n_0^{\prime}}, a\rangle) \quad [ \, \because E_{n_0^{\prime}} \in \mathbb{R} \, ]. \\
+    &\nonumber
+\end{align}
+Using the Hamiltonian in Eq.(\ref{Hamiltonian with 3 diff eigenspaces}) on $\eta^{-1}|\phi_{n_0^{\prime}}, a\rangle$ and equating it to Eq.(\ref{H acting on eta-inverse phi_n0}) we get
+\begin{align}
+    \label{Equating Summation form H and algebraic H 1}
+    &\nonumber\\
+    \sum_{n_0} \sum_{b \, = \, 1}^{d_{n_0}} E_{n_0}|\psi_{n_0}, b \rangle\langle \phi_{n_0}, b| \eta^{-1}|\phi_{n_0^{\prime}}, a\rangle + \sum_{n_{+}} \sum_{\beta \, = \, 1}^{d_{n_{+}}} E_{n_{+}}|\psi_{n_{+}}, \beta \rangle\langle \phi_{n_{+}}, \beta|\eta^{-1} \nonumber\\
+    |\phi_{n_0^{\prime}}, a\rangle+E_{n_{+}}^{\, *}|\psi_{n_1}, \beta \rangle\langle \phi_{n_{-}}, \beta| \eta^{-1}|\phi_{n_0^{\prime}}, a\rangle \,= \, E_{n_0^{\prime}}(\eta^{-1}|\phi_{n_0^{\prime}}, a\rangle.\\
+    &\nonumber
+\end{align}
+This means that all $E_{n_{\pm}}$'s are zero along with all $E_{n_{0}}$'s that are not equal to $E_{n_{0}^{\prime}}$. The sum on the left-hand side that survives corresponds to the subspace with eigenvalue $E_{n_{0}^{\prime}}$ and multiplicity $d_{n_{0}^{\prime}}$. And we have
+\begin{align}
+    \label{Final expression after equating summation H and algebraic H 1}
+    &\nonumber\\
+    \sum_{b \, = \, 1}^{d_{n_0^{\prime}}} E_{n_0^{\prime}}(\langle\phi_{n_0^{\prime}}, b|\eta^{-1}| \phi_{n_0^{\prime}}, a\rangle)|\psi_{n_0^{\prime}}, b\rangle \,= \, E_{n_0^{\prime}}(\eta^{-1}|\phi_{n_0^{\prime}}, a\rangle)\\
+    &\nonumber\end{align}
+Removing the primes and exchanging the dummy variables $a$ and $b$ we get a clean expression.
+\begin{align}
+    \label{c_ab expression for E_n0}
+    &\nonumber\\
+    \eta^{-1}\left|\phi_{n_0}, a\right\rangle=\sum_{b=1}^{d_{n_0}} c_{b a}^{\left(n_0\right)}\left|\psi_{n_0}, b\right\rangle, \quad c_{a b}^{\left(n_0\right)}:=\left\langle\phi_{n_0}, a\left|\eta^{-1}\right| \phi_{n_0}, b\right\rangle.\\
+    &\nonumber
+\end{align}
+$c_{ab}^{(n_0)}$ represents a matrix with complex entries and captures the essence of the relation that $\eta^{-1}$ forms in the various eigensubspaces. Similar matrices can be calculated for the complex eigensubspaces represented by the subscripts `$\pm$' and are shown in Appendix \ref{Calculation for c_alphabeta}. We will use these results to eventually find a matrix representation of $\eta$, thus generalising a method to find $\eta$ for any non-Hermitian Hamiltonian. \par
+
+Since $\eta$ is a Hermitian linear automorphism, according to Eq.(\ref{c_ab expression for E_n0}), Eq.(\ref{c_ab expression for E_n-}), and Eq.(\ref{c_ab expression for E_n+}), the $c^(n_0)$ and $c^(n_\pm)$ matrices must also be Hermitian. This allows us to perform unitary transitions on the space such that these matrices become diagonal, and then rescale them to identity. Then these three equations, i.e. Eq.(\ref{c_ab expression for E_n0}), Eq.(\ref{c_ab expression for E_n-}), and Eq.(\ref{c_ab expression for E_n+}), take the form
+\begin{align}
+    &\nonumber\\
+    \eta^{-1}\left|\phi_{n_0}, a\right\rangle\, = \, \left|\phi_{n_0}, a\right\rangle \quad &\text{or} \quad \left|\psi_{n_0}, a\right\rangle \, = \, \eta\left|\psi_{n_0}, a\right\rangle \text {, } \label{Final form of c matrices after u trans and rescalling 1}\\
+    &\nonumber\\
+    \eta^{-1} \, |\phi_{n_\pm}, \alpha\rangle \, = \, |\phi_{n_\pm}, \alpha\rangle \quad &\text{or} \quad |\psi_{n_\pm}, \alpha\rangle \, = \, \eta \, |\psi_{n_\pm}, \alpha\rangle. \label{Final form of c matrices after u trans and rescalling 2} \\
+    &\nonumber
+\end{align}
+In Appendix \ref{Calculation for c_alphabeta} we have mentioned the fact that $\eta$ essentially defines the structure of the space by forming relationships between the eigensubspaces we have discussed. Now using Eq.(\ref{Delta function and identity relation}), Eq.(\ref{Final form of c matrices after u trans and rescalling 1}), and Eq.(\ref{Final expression after equating summation H and algebraic H 2}) the $\eta$-orthonormalisation conditions for the eigenvectors become
+\begin{align}
+    &\nonumber\\
+    \left\langle\psi_{n_0}, a | \phi_{m_0}, b\right\rangle \, = \, \left\langle\psi_{n_0}, a| \, \eta \,| \psi_{m_0}, b\right\rangle \, = \, \left\langle\left\langle\psi_{n_0}, a | \psi_{m_0, b}\right\rangle\right\rangle_\eta \, = \, \delta_{n_0, \, m_0} \, \delta_{a_b}, \label{n_0 eta-orthonormalisation conditions} \\
+    \nonumber\\
+    \langle\psi_{n_{\pm}}, \alpha | \phi_{m_{\mp}}, \beta\rangle  \, = \, \langle\psi_{n_{\pm}}, \alpha| \, \eta \, | \psi_{m_{\mp}}, \beta\rangle \, = \, \langle\langle\psi_{n_{\pm}}, \alpha | \psi_{m_{\mp}}, \beta\rangle\rangle_\eta \, = \, \delta_{n_{\pm}, \, m_{\mp}} \, \delta_{\alpha \beta}. \label{n_pm eta-orthonormalisation conditions} \\
+    &\nonumber
+\end{align}
+A definite form for $\eta$ for a Hamiltonian with biorthonormal eigenbasis can be found by solving Eq.(\ref{Final form of c matrices after u trans and rescalling 1}) and Eq.(\ref{Final form of c matrices after u trans and rescalling 2}), then substituting these results in the completeness relation Eq.(\ref{Completeness relation with 3 diff eigenspaces}). Thus, finally, we get the generalised expressions for $\eta$ and its inverse $\eta^{-1}$.
+\begin{align}
+    \label{eta in generalised form}
+    &\nonumber\\
+    \eta \, &= \, \sum_{n_0} \sum_{a \, = \, 1}^{d_{n_0}} \eta \, |\psi_{n_0}, a\rangle\langle\phi_{n_0}, a|+\sum_{n_{+}} \sum_{\alpha \, = \, 1}^{d_{n_{+}}} (\eta \, |\psi_{n_{+}}, \alpha\rangle\langle\phi_{n_{+}}, \alpha|+ \eta \,| \psi_{n_{-}}, \alpha\rangle\langle\phi_{n_{-}}, \alpha|) \nonumber\\
+    &= \, \sum_{n_0} \sum_{a=1}^{d_{n_0}}|\phi_{n_0}, a\rangle\langle\phi_{n_0}, a|+\sum_{n_{+}} \sum_{\alpha=1}^{d_{n_{+}}}(|\phi_{n_{-}}, \alpha\rangle\langle\phi_{n_{+}}, \alpha|+| \phi_{n_{+}}, \alpha\rangle\langle\phi_{n_{-}}, \alpha|)\\
+    &\nonumber
+\end{align}
+and consequently the inverse is given by 
+\begin{align}
+    \label{eta-inverse in generalised form}
+    &\nonumber\\
+    \eta^{-1} \, &= \, \sum_{n_0} \sum_{a \, = \, 1}^{d_{n_0}} \eta^{-1} \, |\psi_{n_0}, a\rangle\langle\phi_{n_0}, a|+\sum_{n_{+}} \sum_{\alpha \, = \, 1}^{d_{n_{+}}} (\eta^{-1} \, |\psi_{n_{+}}, \alpha\rangle\langle\phi_{n_{+}}, \alpha|+ \eta^{-1} \,| \psi_{n_{-}}, \alpha\rangle\langle\phi_{n_{-}}, \alpha|) \nonumber \\
+    &= \, \sum_{n_0} \sum_{a=1}^{d_{n_0}}|\psi_{n_0}, a\rangle\langle\psi_{n_0}, a|+\sum_{n_{+}} \sum_{\alpha=1}^{d_{n_{+}}}(|\psi_{n_{-}}, \alpha\rangle\langle\psi_{n_{+}}, \alpha|+| \psi_{n_{+}}, \alpha\rangle\langle\psi_{n_{-}}, \alpha|). \\
+    &\nonumber
+\end{align}
+\subsection{Connection between $\mathcal{PT}$-symmetry and pseudo-Hermiticity}
+
+The above results for the explicit form of $\eta$ and $\eta^{-1}$ are crucial to the understanding of the composition of eigenvalues for a non-Hermitian Hamiltonian. In Theorem 7 we have proved that any non-Hermitian Hamiltonian with a biorthonormal eigenbasis and a discrete specturm must have eigenvalues are real and complex as well, where the complex ones appear in conjugate pairs with the same multiplicity \textbf{(\textit{region of broken}} $\bm{\mathcal{PT}}$\textbf{\textit{-symmetry})}. \par
+
+In this section, above, we have just learnt that if a non-Hermitian Hamiltonian has a biorthonormal eigenbasis then we can express it in the form in Eq.(\ref{Hamiltonian with 3 diff eigenspaces}) such that it is pseudo-Hermitian with respect to the explicit forms of $\eta$ and $\eta^{-1}$ in Eq.(\ref{eta in generalised form}) and in Eq.(\ref{eta-inverse in generalised form}) respectively. The pseudo-Hermitian condition, Eq.(\ref{The Pseudo-Hermitian Condition is required}), for these explicit forms can be checked (due to the calulation being extremely long, it is not shown in this thesis, but anyone willing to see it can ask the author in a personal capacity). \par
+
+\hspace{-1.5em}\textbf{\textit{Theorem 8}:} A non-Hermitian Hamiltonian with a discrete spectrum and a complete biorthonormnal set of eigenvectors is pseudo-Hermitian iff one of the conditions holds true
+\begin{itemize}
+    \item[(i)] The spectrum of the Hamiltonian is real.
+    \item[(ii)] The nonreal or complex eigenvalues appear in complex conjugate pairs with the same multiplicity.
+\end{itemize}
+\par
+
+\hspace{-1.5em}\textbf{\textit{Proof}:} The above arugments should make it clear that conditions (i) and (ii) are sufficient. This is because the explicit forms of the Hamiltonian and the Hermtian linear automorphism by construction satisfy Eq.(\ref{The Pseudo-Hermitian Condition is required}). \qedsymbol \par
+
+A word of caution: Many non-Hermitian Hamiltonians may not have a biorthonomal set of eigenvectors. In that case, they may or may not be pseudo-Hermitian. \par 
+
+\hspace{-1.5em}\textbf{\textit{Corollary}:} Every $\mathcal{PT}$-symmetric Hamiltonian with a discrete eigenvalue spectrum and a complete biorthonormal set of eigenvectors is always pseudo-Hermitian.\par
+
+\hspace{-1.5em}\textbf{\textit{Proof}:} Let $H$ be a $\mathcal{PT}$-symmetric Hamiltonian then $H$ must commute with $\mathcal{PT}$, i.e. $\left[H, \mathcal{P T}\right] \, = \, \left[\mathcal{P T}, H\right] \, = \, 0$. Let $|E\rangle$ be an eigenvector of $H$ with eigenvalue $E$ then 
+\begin{align}
+    &\nonumber\\
+    H \, |E\rangle \, = \,  E \, |E\rangle. \nonumber\\
+    &\nonumber
+\end{align}
+We define $|E\rangle^{\prime} := \mathcal{PT} \, |E\rangle$. Then, since $H$ and $\mathcal{PT}$ commute, we have
+\begin{align}
+    &\nonumber\\
+    H \, |E\rangle^{\prime} \, =& \, H \mathcal{PT} \, |E\rangle \, = \, \mathcal{PT} H \, |E\rangle \, = \, \mathcal{PT} E \, |E\rangle \, = \, E^{\, *} \, \mathcal{PT} \, |E\rangle \, = \, E^{\, *} \, |E\rangle^{\prime}, \nonumber\\
+    &\implies |E\rangle^{\prime} \text{ is a eigenvector of } H \text{ with eigenvalue } E^{\, *}. \nonumber\\
+    &\nonumber
+\end{align}
+Here, $\mathcal{T}$ is the complex conjugation operator and is therefore antilinear. But $H|E\rangle^{\prime} \, = \, H \, \mathcal{P T} \, |E\rangle \, = \, \mathcal{P T} H|E\rangle \, = \, \mathcal{P T} H(\mathcal{P T})^2|E\rangle \, = \, (\mathcal{P T}) H(\mathcal{TP)} \mathcal{P T} \, |E\rangle \, = \, \mathcal{P} H^{\dagger} \, \mathcal{P} \, |E\rangle^{\prime} \, = \, E^{\, *}|E\rangle^{\prime}$. Thus, we see that $H$ must be pseudo-Hermitian with respect to the $\mathcal{P}$ operator, and the biorthonormal structure arises naturally. \qedsymbol \par
+
+In the following section, we will briefly elaborate some deeper insights of the biorthonormal system, which will tell us the reason for choosing such a basis and shed light on the matter of interpretation of operators as observables.  
+
+\section{A primer on Hilbert Spaces with Biorthogonal Basis}
+
+In the last section, we have extensively used the concept of a biorthonormal eigenbasis to give an underlying framework of pseudo-Hermitian quantum mechanics. Yet, it lacked the interpretation of a lot of fundamental concepts in quantum mechanics; the simplest example would be the probabilistic characterisation of observables. Biorthonormality requires a much more detailed illustration, for reasons which will soon be clear, and thus we dedicate a separate section on its development. \par
+
+The idea of orthogonality was relaxed in order to reinforce pseudo-hermiticity with a proper foundation, but it must be clear that biorthogonality is fundamentally sensible. The probabilistic interpretation of standard quantum mechanics and the idea that once a state has been observed, it collapses to a definite value given by the norm squared of the state where any further transition is not allowed must be respected when building a quantum theory. To be consistent with this interpretation, the Hilbert space considered must consist of square-integrable functions with a complete basis, while operators must have real eigenvalues. The collapse of the wave function and the obstruction of further transitions are encrypted in the orthogonality of eigenstates, and Hermitian operators encode this by default. \par
+
+The core idea of biorthogonal quantum mechanics involves the suspension of orthogonality and replacing it with biorthogonality. Complex non-Hermitian Hamiltonians that we have studied until now are perfect candidates for this. The eigenstates of these non-Hermitian Hamiltonians, being biorthogonal, are maximally separated in the ray space, thus making transitions after a measurement impossible. A complete set of eigenvectors with real eigenvalues is enough to make an operator a viable candidate for a physical observable. \par  
+
+The work by Scholtz \textit{et al} \cite{SCHOLTZ199274} was one of the first papers to propose a metric operator approach to non-Hermitian quantum mechanics. We will briefly discuss this initial work at the end of this chapter. The idea of using a biorthogonal basis to explain quantum mechanics with operators that are not Hermitian was proposed as early as 1838 by Liouville \cite{Liouville1838} and in 1908 by Birkhoff \cite{10.2307/1988661}. Anna Johson Pell\footnotemark\footnotetext{Anna Johnson Pell was an American mathematician. She is best known for her early work on linear algebra in infinite dimensions, which has later become a part of functional analysis. To read about her inspiring story as a woman mathematician, visit the Wikipedia page on her: \href{https://en.wikipedia.org/wiki/Anna_Johnson_Pell_Wheeler}{Anna Johnson Pell Wheeler}.}, a distinguished woman of mathematics, has described in detail the properties of biorthogonal bases in real Hilbert spaces \cite{pell1911applications,10.2307/1988573}. In recent times, the primary work on biorthogonal bases was established by Curtright and Mezincescu \cite{curtright2007biorthogonal}. Mostafazadeh in 2010 published an almost exhaustive work on biorthogonal pseudo-Hermitian systems \cite{mostafazadeh2010pseudo}. However, a much more rigorous formulation was required that would make the idea of measurement processes and their probabilistic interpretations transparent. This was done by Brody \cite{Brody_2014} in 2014 and we will mostly devote this section to the salient features of pseudo-Hermitian biorhtogonal quantum mechanics of this paper.   
+
+\subsection{Non-Hermitian complex Hamiltonians with biorthogonal eigenstates}
+
+A complex Hamiltonian literally has a complex form with two Hermitian Hamiltonians coupled with a complex iota $i$. If $K$ is a complex Hamiltonian, then, in general, it has the configuration
+\begin{align}
+    \label{Complex Hamiltonian K}
+    &\nonumber\\
+    K \, = \, H - i \, \Gamma, \qquad \text{where $H$ and $\Gamma$ are Hermitian.}\\
+    &\nonumber
+\end{align}
+Therefore, the complex conjugate transpose of $K$ is 
+\begin{align}
+    \label{Conjugate Transpose of Complex Hamiltonian K}
+    &\nonumber\\
+    K^{\dagger} = H^{\dagger} - (i \, \Gamma)^{\dagger} \, = \, H + i \, \Gamma.
+\end{align}
+In the previous section, we introduced a pair of sets that form the biorthonormal eigenbasis (one for the Hamiltonian and one for its complex transpose). Similarly, here, we introduce such a pair and assume nondegeneracy of the states. Let the set consisting of \\ 
+\newpage
+\hspace{-1.5em}the eigenstates of $K$ be $\{|\phi_n\rangle\}$ with eigenvalues $\{\kappa_n\}$, then,
+\begin{align}
+    \label{Eigenstates of K}
+    &\nonumber\\
+    K\left|\phi_n\right\rangle \, = \, \kappa_n\left|\phi_n\right\rangle \quad \text { and } \quad\left\langle\phi_n\right| K^{\dagger} \, = \, \kappa_n^{\, *}\left\langle\phi_n\right|.\\
+    &\nonumber
+\end{align}
+Again, we introduce a complementary set, $\{|\chi_n\rangle\}$, comprising the eigenstates of $K^{\dagger}$ with the eigenvalues $\{\nu_n\}$. 
+\begin{align}
+    \label{Eigenstates of K-dagger}
+    &\nonumber\\
+    K^{\dagger}\left|\chi_{n}\right\rangle \, = \, \nu_n\left|\chi_{n}\right\rangle \quad \text { and } \quad\left\langle\chi_{n}\right| K \, = \, \nu_n^{\, *}\left\langle\chi_{n}\right|.\\
+    &\nonumber
+\end{align}
+This is identical to what we did in the last section and the only difference is that we did not include the degeneracy. Since the operator $K$ is not Hermitian, the eigenstates may not be orthogonal, but might be complete with real eigenvalues. Therefore, the introduction of the complementary set is a requisite. Now that we have set the stage, finding exclusive properties of defined sets, other operators, and geometry of the space is straightforward. \par
+
+First, as usual, let us look at the geometry of the space, that is, the inner product structure. 
+\begin{align}
+    \label{Inner product of phi_n}
+    &\nonumber\\
+    \left\langle\phi_m | \phi_n\right\rangle \, &= \, 2i \, \frac{\left\langle\phi_m\right|\left(\kappa_m^{\, *}-\kappa_n\right)\left|\phi_n\right\rangle}{2i \, (\kappa_m^{\, *}-\kappa_n)} \, = \, 2 \, \frac{\left\langle\phi_n\left|\left(\kappa_m^{\, *}+\kappa_n\right)\right| \phi_n\right\rangle}{2 \, (\kappa_m^{\, *}+\kappa_n)} \nonumber\\
+    \nonumber\\
+    \implies \left\langle\phi_m | \phi_n\right\rangle \, &= \, 2i \, \frac{\left\langle\phi_m\right|\left(K^{\dagger}-K\right)\left|\phi_n\right\rangle}{2i \, (\kappa_m^{\, *}-\kappa_n)} \, = \, 2 \, \frac{\left\langle\phi_n\left|\left(K^{\dagger}+K\right)\right| \phi_n\right\rangle}{2 \, (\kappa_m^{\, *}+\kappa_n)} \nonumber\\
+    \nonumber\\
+    \implies &\left\langle\phi_m | \phi_n\right\rangle \, = \, 2i \, \frac{\left\langle\phi_m\right|\Gamma\left|\phi_n\right\rangle}{\kappa_m^{\, *}-\kappa_n} \, = \, 2 \, \frac{\left\langle\phi_n\left|H\right| \phi_n\right\rangle}{\kappa_m^{\, *}+\kappa_n}. \\
+    &\nonumber
+\end{align}
+Similarly, we can find the inner product for $\{ |\chi_n \rangle \}$.
+\begin{align}
+    \label{Inner product of chi_n}
+    &\nonumber\\
+    \left\langle\chi_m | \chi_n\right\rangle \, = \, 2i \, \frac{\left\langle\chi_m\right|\Gamma\left|\chi_n\right\rangle}{\nu_m-\nu_n^{\, *}} \, = \, 2 \, \frac{\left\langle\chi_n\left|H\right| \chi_n\right\rangle}{\nu_m+\nu_n^{\, *}}.
+\end{align}
+The set $\{ |\phi_n\rangle \}$ spans the space, but an important criterion for a basis is that the composing vectors must be linearly independent. Here, we can show this linearity using the corresponding set of $|\chi_n\rangle$'s (one more reason to choose a biorthogonal set up). \par
+
+\hspace{-1.5em}\textbf{\textit{Theorem 1}:} The set $\{ |\phi_n\rangle \}$ is linearly independent. \par    
+
+\hspace{-1.5em}\textbf{\textit{Proof}:} We proof this using the contrary argument, i.e., let the set $\{ |\phi_n\rangle\}$ be linearly dependent. Then
+\begin{align}
+    &\nonumber\\
+    \sum_n c_n\left|\phi_n\right\rangle \, = \, 0, \nonumber\\
+    &\nonumber
+\end{align}
+for all $c_n \neq 0$ or $\sum_n |c_n|^2 \neq 0$. Multiplying $\langle\chi_m|$ from the left of this equation, we get.
+\begin{align}
+    &\nonumber\\
+    \sum_n c_n\left\langle\chi_m|\phi_n\right\rangle \, = \, \sum_n c_n \, \delta_{mn}\left\langle\chi_m|\phi_m\right\rangle \, = \, c_m \left\langle\chi_m|\phi_m\right\rangle \, = \, 0. \nonumber\\
+    &\nonumber
+\end{align}
+The mixed inner product property involving the Kronecker Delta used here is kind of the analogue of orthogonality in standard quantum mechanics. See Appendix \ref{Mixed inner product of basis vectors in Biorthogonal Quantum Mechanics} for verification. Since the inner porducts are not zero, it must be $c_m = 0 \ \forall \ m$ or $\sum_m |c_m|^2 = 0$ in contradiction to our initial assumption. \qedsymbol \par   
+
+The Hilbert space that we have defined here is based on the operator $K$ and its eigenvectors, which are linearly independent according to Theorem 1 above. Therefore, the set $\{ |phi_n\rangle \}$ forms a basis for this space. A general state $|\psi\rangle$ in this space, hence, can be expressed as a linear combination of the elements of $\{ |\phi_n\rangle \}$.
+\begin{align}
+    \label{A general state as lin combination of phi_n's}
+    &\nonumber\\
+    |\psi\rangle \, = \, \sum_m c_m\left|\phi_m\right\rangle. \\
+    &\nonumber
+\end{align}
+Now multiplying Eq.(\ref{A general state as lin combination of phi_n's}) by $\langle\chi_n|$ from the left gives
+\begin{align}
+    \label{Multiply gen state with chi_n from left}
+    &\nonumber\\
+    \left\langle\chi_n|\psi\right\rangle \, = \, \sum_m c_m\left\langle\chi_n|\phi_m\right\rangle \, &=  \, \sum_m c_m \, \delta_{nm}\left\langle\chi_n|\phi_n\right\rangle \, = \, c_n \left\langle\chi_n|\phi_n\right\rangle, \nonumber\\
+    \nonumber\\
+    \implies c_n \, &= \, \frac{\left\langle \chi_n | \psi\right\rangle}{\left\langle \chi_n | \phi_n\right\rangle}.\\
+    &\nonumber
+\end{align}
+Fitting this result in Eq.(\ref{A general state as lin combination of phi_n's}) and exchanging $m$ with $n$ leads to the completeness relation.
+\begin{align}
+    \label{BQM completeness relation}
+    &\nonumber\\
+    |\psi\rangle = \, \sum_n \left(\frac{\left\langle \chi_n|\psi\right\rangle}{\left\langle \chi_n| \phi_n\right\rangle}\right) \left|\phi_n\right\rangle \qquad \text{or,} \qquad   
+    |\psi\rangle = \, \left(\sum_n \, \frac{\left|\phi_n \right\rangle \left\langle \chi_n \right|}{\left\langle \chi_n |\phi_n\right\rangle}\right)|\psi\rangle. \\
+    &\nonumber
+\end{align}
+Thus, the completeness relation is  
+\begin{align}
+    \label{Completeness of the set phi_n and chi_n}
+    &\nonumber\\
+    \sum_n \, \frac{\left|\phi_n \right\rangle \left\langle \chi_n \right|}{\left\langle \chi_n |\phi_n\right\rangle} \, = \, \bm{1}.\\
+    &\nonumber
+\end{align}
+A projection operator $[E^{2} = E]$ analogous to standard quantum mechanics can be defined as 
+\begin{align}
+    \label{Projection Operator in BQM}
+    &\nonumber\\
+    \Pi_n \, = \, \frac{\left|\phi_n\right\rangle\left\langle\chi_n\right|}{\left\langle\chi_n \mid \phi_n\right\rangle}. \\
+    &\nonumber
+\end{align}
+Eq.(\ref{Projection Operator in BQM}) satisfies the relation $\Pi_n \, \Pi_m = \delta_{nm} \, \Pi_n$ just like any pair of indexed projection operators. \par
+
+\subsection{Probabilistic interpretation of Biorthogonal quantum mechanics}
+
+The formalism we have developed now needs a correct interpretation so as to be consistent with the physics of quantum mechanics. Measurement in quantum mechanics is associated with the norm of states and hence we must decide on conventions related to the norm of the biorthogonal eigenbases. Here, we must remember that the norm of a state can be greater than unity because we usually take the norm convention to be:
+\begin{align}
+    \label{Norm convention in BQM}
+    &\nonumber\\
+    \left\langle\chi_n | \phi_n\right\rangle \, = \, 1. \\
+    &\nonumber
+\end{align}
+It must be clear that under this assumption normalisation of the eigenvectors (the sets $|\phi_n\rangle$ and $|\chi_n\rangle$) is not guaranteed. But the reason for taking this assumption will apparently be clear as it will make our lives much easier. \par
+
+Orthogonality inherently restricts the transition of a state to another, but here in a biorthogonal system, we cannot expect this if we assume the standard quantum mechanics transition probability form $\langle \beta | \alpha\rangle\langle\alpha | \beta\rangle /\langle\alpha | \alpha\rangle\langle\beta | \beta\rangle$, between two states $|\alpha\rangle$ and $|\beta\rangle$. A transition between two eigenstates $|\phi_n\rangle$ and $|\phi_m\rangle$ is not possible even though they are not orthogonal to each other, i.e. $\langle\phi_m|\phi_n\rangle \neq 0$. In the state space, these two eigenstates are maximally separated, and hence there is no transition. But taking the standard form of transition probability leads to paradoxical reuslts here. Averting this requires a redefinition of the standard dual space in the following way: A general state $|\psi\rangle$ expanded in the biorthogonal basis is linked to an \textit{associated stated}. This \textit{associated state} is obtained using the correspondence 
+\begin{align}
+    \label{Redefined Duality}
+    &\nonumber\\
+    |\psi\rangle \, = \, \sum_n c_n &\left|\phi_n\right\rangle \, \longleftrightarrow \, \langle\widetilde{\psi}| \, = \, \sum_n c_n^*\left\langle x_n\right|, \\
+    \nonumber\\
+    \text{this means,} \qquad &|\widetilde{\psi}\rangle \, = \, \sum_n c_n\left|\chi_n\right\rangle.\\
+    &\nonumber
+\end{align}
+Hence, the dual of a state $|\psi\rangle$ in the Hilbert space is given by $\langle\widetilde{\psi}|$ and then $|\widetilde{\psi}\rangle$ is the Hermitian conjugate of $\langle\widetilde{\psi}|$. The dual space, being a set of linear functionals, is then used to define the inner product: for two general states $|\alpha\rangle = \sum_n a_n |\phi_n\rangle$ and $|\beta\rangle = \sum_n b_n |\phi_n\rangle$ then define
+\begin{align}
+    \label{Inner Product in BQM}
+    &\nonumber\\
+    \langle\beta, \alpha\rangle \, \equiv \, \langle\widetilde{\beta} | \alpha\rangle \, = \, \sum_{n, m} \, b_{n}^{ \, *} \, a_m\left\langle\chi_n | \phi_m\right\rangle \, = \, \sum_n \, b_{n}^{ \, *} \, a_n.\\
+    &\nonumber
+\end{align}
+We have used the assumpiton in Eq.(\ref{Norm convention in BQM}) along with the inner product relation in Appendix \ref{Mixed inner product of basis vectors in Biorthogonal Quantum Mechanics} Eq.(\ref{Mixed inner product in BQM}). Here, we will use another assumption that the state space is a Bloch sphere of unit radius. We have, for a general state $|\alpha\rangle$:  
+\begin{align}
+    \label{State Space of unit Bloch sphere}
+    &\nonumber\\
+    \langle\widetilde{\alpha} | \alpha\rangle \, = \, \sum_n \, a_n^{\, *} a_n \, = \, 1.\\
+    &\nonumber
+\end{align}
+This assumption coupled with Eq.(\ref{Norm convention in BQM}) gives the transition probability of a general state $|\alpha\rangle$ to a specific eigenstate $|\phi_n\rangle$. 
+\begin{align}
+    \label{Transition Probability in BQM}
+    &\nonumber\\
+    p_n \, = \, a_n^{\, *} a_n \, = \, \frac{\left\langle \chi_n | \alpha\right\rangle\left\langle\tilde{\alpha} | \phi_n\right\rangle}{\langle\tilde{\alpha} | \alpha\rangle\left\langle \chi_n | \phi_n\right\rangle}. \\
+    &\nonumber
+\end{align}
+A simple calculation verifies the above result. 
+\begin{align}
+    &\nonumber\\
+    \frac{\left\langle \chi_n | \alpha\right\rangle\left\langle\tilde{\alpha} | \phi_n\right\rangle}{\langle\tilde{\alpha} | \alpha\rangle\left\langle \chi_n | \phi_n\right\rangle} \, &= \, \frac{\left(\sum_m a_m\left\langle \chi_n | \phi_m\right\rangle\right)\left(\sum_m a_m^{\, *}\left\langle \chi_m | \phi_n\right\rangle\right)}{\langle\widetilde{\alpha} | \alpha\rangle\left\langle \chi_n | \phi_n\right\rangle} \nonumber\\
+    \nonumber\\
+    &= \, \frac{\left(\sum_m a_m \, \delta_{nm}\left\langle \chi_n | \phi_n\right\rangle\right)\left(\sum_m a_m^{\, *} \, \delta_{mn}\left\langle \chi_m | \phi_m\right\rangle\right)}{\langle\widetilde{\alpha} | \alpha\rangle\left\langle \chi_n | \phi_n\right\rangle}\nonumber\\
+    \nonumber\\
+    &= \, \frac{a_n\left\langle \chi_n | \phi_n\right\rangle a_n^{\, *}\left\langle \chi_n | \phi_n\right\rangle}{\langle\widetilde{\alpha} | \alpha\rangle\left\langle \chi_n | \phi_n\right\rangle} \, = \, a_n^{\, *} a_n. \quad \text{[Using Eq.(\ref{Norm convention in BQM}) \& Eq.(\ref{State Space of unit Bloch sphere})]} \nonumber
+\end{align}
+Eq.(\ref{Transition Probability in BQM}) has a good analogy to measurement of a general state in standard quantum mechanics. Here, $p_n$ is the probability of obtaining an eigenvalue of $\kappa_n$ when a $\hat{K}$ measurement is performed on a general state $|\alpha\rangle$. \par 
+
+\subsection{Characterising observables; Why use a biorthogonal basis?}
+
+We have introduced a biorthogonal basis to counteract the fact that orthogonality of basis eigenstates is not available in a scenario where the Hamiltonian is complex. But this begs the question: How do we represent Hermiticity in the context of a complex system? This will be analogous to standard quantum mechanics and completes the picture when it comes to describing any operator $\mathcal{O}$ in such an arrangement. \par
+
+Using a biorthogonal basis $\{|\phi_n\rangle,|\chi_n\rangle\}$, as in Eq.(\ref{Eigenstates of K}) and Eq.(\ref{Eigenstates of K-dagger}), to represent a generic operator $\mathcal{O}$ would mean, 
+\begin{align}
+    \label{Representing a general operator O in biorthogonal basis}
+    &\nonumber\\
+    \mathcal{O} \, = \, \sum_{n,m} \,  o_{nm} \, |\phi_n\rangle \langle\chi_m|, \\
+    &\nonumber
+\end{align}
+where $\{ o_{nm} \}$ is a matrix. If the biorthogonal basis $\{|\phi_n\rangle,|\chi_n\rangle\}$ are eigenstates of $\mathcal{O}$ then ${o_{nm}}$ would be a diagonal matrix with the eigenvalues along the diagonal, i.e. $o_{nm} = \delta_{nm} \, o_n$. \par
+
+Now, if we had used only the set $\{ |\phi_n\rangle \}$ to represent vectors and operators in this Hilbert space, we would have encountered a serious problem. Since this set is not orthogonal, let alone orthonormalised, the representation of an arbitrary operator $\mathcal{O}$ would look like.
+\begin{align}
+    \label{Representing a general operator O in complete not orthogonal basis}
+    &\nonumber\\
+    \mathcal{O} \, = \, \sum_{n,m} \, \theta_{nm} \, |\phi_n\rangle\langle\phi_m|.\\
+    &\nonumber
+\end{align}
+Here, $\{ |\phi_n\rangle \}$ is complete but due to lack of orthogonality the set $\{\theta_{nm}\}$ forms an array rather than being represented as a matrix. This complication is resolved by the use of a biorthogonal basis, and thus, justifies our effort in developing all the theory above. \par
+
+If two operators $A$ and $B$ are represented using a biorthogonal basis $\{|\phi_n\rangle,|\chi_n\rangle\}$ as in Eq. (\ref{Representing a general operator O in biorthogonal basis}) with co-effcients $\{ a_{nm} \}$ and $\{ b_{nm} \}$, respectively. Then their composition or product is given by
+\begin{align}
+    \label{Composition or product of two operators in BQM}
+    &\nonumber\\
+    (P)_{nm} \, = \, p_{nm} \, = \, \sum_r \, a_{nr} \, b_{rm},\\
+    &\nonumber
+\end{align}
+just like any matrix multiplication. Another key aspect of using biorthogonal bases lies in the fact that transforming one basis into another cannot always be achieved through unitary transformations. This convenience is readily available in the Hermitian scenario. Therefore, when working with complex Hamiltonian systems, the theory is dependent on specifying or choosing the basis, an important distinction between the theories. \par
+
+Hermiticity can now be easily redefined in the biorthogonal setting. For any operator described by Eq.(\ref{Representing a general operator O in biorthogonal basis}), \textit{biorthogonal Hermiticity} is defined as
+\begin{align}
+    \label{Biorthogonal Hermiticity}
+    &\nonumber\\
+    o_{nm}^{\, *} \, = \, o_{mn}.\\
+    &\nonumber
+\end{align}
+This is a natural extension of Hermitian quantum mechanics. When we talk about measurements, the expectation values of operators with respect to pure states is a genuine sequel. The expectation value of an operator $\mathcal{O}$ with respect to a pure state $|\alpha\rangle$ is defined as
+\begin{align}
+    \label{Expectation value of an operator wrt a pure state in BQM}
+    &\nonumber\\
+    \langle\mathcal{O}\rangle \, = \, \frac{\langle\tilde{\alpha}| \, \mathcal{O} \, | \alpha\rangle}{\langle\tilde{\alpha} | \alpha\rangle}.\\
+    &\nonumber
+\end{align}
+Analogously to standard quantum mechanics, here we state that if the operator $\mathcal{O}$ is \textit{biorthogonally Hermitian}, as in Eq.(\ref{Biorthogonal Hermiticity}), then Eq.(\ref{Expectation value of an operator wrt a pure state in BQM}) is real for an arbitrary pure state $|\alpha\rangle$. We can write Eq.(\ref{Expectation value of an operator wrt a pure state in BQM}) using the matrix representation in Eq.(\ref{Representing a general operator O in biorthogonal basis}) by expanding $|\alpha\rangle$ in the biorthogonal basis, $|\alpha\rangle \, = \, \sum_n \, a_n \, |\phi_n\rangle$ and substituting this in Eq.(\ref{Expectation value of an operator wrt a pure state in BQM}).
+\begin{align}
+    \label{Expectation value in matrix representation }
+    &\nonumber\\
+    \langle\mathcal{O}\rangle_{|\alpha\rangle} \, &= \, \frac{(\sum_k \, a_k^{\, *} \, \langle \chi_k|) \, (\sum_{n, m} \, o_{n m} \, |\phi_n \rangle\langle \chi_m|) \, (\sum_{l} \, a_l \, |\phi_l\rangle)}{(\sum_k \, a_k^{\, *} \, \langle \chi_k|) \, (\sum_{l} \, a_l \, |\phi_l\rangle)} \nonumber\\
+    \nonumber\\
+    &= \, \frac{\sum_{k,l,m,n} \, a_k^{\, *} \, a_l \, o_{nm} \, \langle \chi_k|\phi_n \rangle \langle \chi_m|\phi_l\rangle}{\sum_{k,l} \, a_k^{\, *} \, a_l \, \chi_k|\phi_l\rangle} \nonumber\\
+    \nonumber\\
+    &= \, \frac{\sum_{k,l,m,n} \, a_k^{\, *} \, a_l \, o_{nm} \, \delta_{kn} \, \delta_{ml} \, \langle \chi_k|\phi_k \rangle \langle \chi_m|\phi_m\rangle}{\sum_{k,l} \, a_k^{\, *} \, a_l \, \delta_{kl} \, \langle\chi_k|\phi_k\rangle} \quad \text{[Using Eq.(\ref{Mixed inner product in BQM})]}\nonumber\\
+    \nonumber\\
+    &= \, \frac{\sum_{m,n} \, a_n^{\, *} \, a_m \, o_{nm}}{\sum_{n} \, a_n^{\, *} \, a_n}. \quad \text{[Using Eq.(\ref{Norm convention in BQM})]}\\
+    &\nonumber
+\end{align}
+Now, if we also assume that $\{|\phi_n\rangle\}$ are eigenstates of $\mathcal{O}$ then the expectation value takes the form consistent with the probabilistic interpretation.
+\begin{align}
+    \label{Expectation value of an operator wrt to probabilities in BQM}
+    &\nonumber\\
+    \langle\mathcal{O}\rangle_{|\alpha\rangle} \, = \, \sum_{n} \, p_n \, o_n, \quad \text{where} \ o_n \ \text{are eigenvalues, and} \ p_n \, = \, \frac{c_n^{\, *} \, c_n}{\sum_k \, c_k^{\, *} \, c_k}.\\
+    &\nonumber
+\end{align} \par
+We have mentioned that the use of a biorthogonal basis has a disadvantage: an operator matrix representation $o_{nm}$ can be determined to be Hermitian if the basis is specified. Orthogonal bases do not have this problem; any arbitrary orthogonal basis does the job. To avoid this ambiguity, we can express the biorthogonal basis vectors using an orthonormal basis set. This leads to more rigid conditions. Let $\{ \epsilon \}$ be an arbitrary orthonormal basis for the Hilbert space and the biorthogonal eigenvectors can be expanded using this basis as
+\begin{align}
+    \label{Biorthonormal Basis}
+    &\nonumber\\
+    |\phi_n\rangle \, = \, \sum_k \, \upsilon_n^{\, k} \, |e_k\rangle, \qquad \qquad |\chi_n\rangle \, = \, \sum_k \, \nu_n^{\, k} \, |e_k\rangle. \\
+    &\nonumber
+\end{align}
+Replacing these in Eq.(\ref{Representing a general operator O in biorthogonal basis}) we obtain 
+\begin{align}
+    \label{Representing O in an arbitrary orthonormal basis}
+    &\nonumber\\
+    \mathcal{O} \, &= \, \sum_{k,l} \, o_{k l} \, \left(\sum_n \, \upsilon_k^{\, n} \, |e_n\rangle\right)\left(\sum_m \, {\nu_l^{\, m^{\, *}}} \, |e_m\rangle\right) \nonumber\\
+    &= \, \sum_{n, m}\left[\left(\sum_{k, l} \, o_{k l} \, \upsilon_k^{\, n} \, {\nu_l^{\, m^{\, *}}}\right)\left|e_n \rangle\langle e_{m l}\right|\right].\\
+    &\nonumber
+\end{align}
+The reality of the energy eigenvalue spectrum of operator $\mathcal{O}$ is ensured by its biorthogonal Hermiticity. But Eq.(\ref{Representing O in an arbitrary orthonormal basis}) clearly shows that biorthognal Hermiticity is guaranteed by the condition 
+\begin{align}
+    \label{BQM Hermiticity is ensured}
+    &\nonumber\\
+    \sum_{k, l} \, o_{k l} \, \upsilon_k^{\, n} \, {{\nu_l}^{\, m^{\, *}}} \, = \, \sum_{k, l} \, o_{k l}^{\, *} \, \upsilon_k^{\, m^{\, *}} {{\nu_l}^{\, n}}. \\
+    &\nonumber
+\end{align} \par
+We have talked about the basic formalism of Non-Hermitian quantum mechanics in this and the last chapter, but there is one detour that we will take before completing this one. \textit{Quasi-Hermitian quantum mechanics} is an important concept that was given shape in the early 1990s by Scholtz in his paper \cite{SCHOLTZ199274}. This paper was instrumental in the development of pseudo-Hermitian quantum mechanics and acted as a prequel to all modern developments. Therefore, it is imperative that we devote sometime to understanding the very beginnings of non-Hermitian quantum theory. \par
+
+\section{A brief description of Quasi-Hermitian Quantum Mechanics}
+
+Non-Hermitian operators appeared in various fields of physics, especially in the 1970s: theory of effective interactions \cite{1975,SCHUCAN1973483}, restoration of translational invariance in Hartree-Fock theory for finite systems \cite{JANSSEN1989270}. There was insufficient literature on understanding the physical consequences of non-Hermitian systems. Frederik G. Scholtz \textit{et al.} argued the need for a more natural framework for quantum mechanics that would include non-Hermitian operators \cite{SCHOLTZ199274}. The principle idea was to redefine the inner product so that the non-Hermitian operators would become Hermitian with respect to it. Their argument was to focus on the operators, which then defined the Hilbert space rather than the opposite, in which case the space is chosen \textit{a priori} and then the physical observables would have to be Hermitian with respect to the inner product. \par
+
+The solution was to introduce the concept of a set of quasi-Hermitian operators. We will elucidate this idea in the following subsection. But briefly speaking, a set of operators that are Hermitian with respect to a redefined inner product is called a quasi-Hermitian set of operators. The new inner product is defined in terms of the initially chosen inner product. This is quite analogous to what we have discussed in pseudo-Hermiticity, where the $\eta$ operator is obtained based only on the Hamiltonian of the system rather than a set of operators. \par
+
+A comprehensive discussion on quasi-Hermitian set of operators can be found in Marshal C. Pease's 1965 book on matrix algebra \cite{PeaseMethodsofMatrixAlgebra}. The immediate question one can ask is regarding the uniqueness of this redefined metric. Clearly, it is always possible to get multiple inner products with respect to which a set of non-Hermitian operators becomes Hermitian. This uniqueness is guaranteed when the set of operators is irreducible in the Hilbert space. This will also be touched upon in the following subsection. \par
+
+\subsection{Quasi-Hermitian Formalism}
+
+Let $H$ be a Hilbert space with inner product $(\cdot,\cdot)$ and let $\{ \mathcal{O}_i \}$ be a set of bounded linear operators on $H$. These operators are not necessarily Hermitian. The domain of the operators and their adjoints being the complete Hilbert space $H$, i.e. $D(\mathcal{O}_i) \, = \, D(\mathcal{O_i^{\, \dagger}}) \, = \, H$. Then the set of operators $\{ O_i \}$ is called quasi-Hermitian if $\exists$ a linear operator $T: H \rightarrow H$ such that
+\begin{subequations}
+\begin{align}
+    \label{Set of Quasi-Hermitian observables}
+    &\nonumber\\
+    & \qquad \qquad \qquad \ \, D(T) \, = \, H, \\
+    \nonumber\\
+    & \qquad \qquad \qquad \ \, T^{\, \dagger} \, = \, T, \qquad \text{(Self-adjointness),}\\
+    \nonumber\\
+    (\alpha, T \, \alpha) \, > \, 0, \quad \forall \ \alpha \in & \ H \ \text{and} \ \alpha \neq 0 \qquad \text{(Positive definite inner product)},\\
+    \nonumber\\
+    &||T \, \alpha|| \, \leq \,  ||T|| \, ||\alpha|| \quad \forall \ \alpha \in H \qquad \text{(Bounded operator),}\\
+    \nonumber\\
+    &T \, \mathcal{O}_i \, = \, \mathcal{O}_i^{\, \dagger} \, T \quad \forall \ i \qquad \text{(Quasi-Hermitian condition).} \\
+    &\nonumber
+\end{align}
+\end{subequations}
+Here, the `dagger' ($\dagger$) represents the Hilbert space adjoint operation, as in standard quantum mechanics. For finite-dimensional spaces, properties (2.69a) and (2.69d) are easily satisfied. The boundedness of a linear operator is described in Appendix \ref{Boundedness of a linear operator}. Therefore, properties (2.69b), (2.69c), and (2.69e) need to be satisfied to obtain a quasi-Hermitian set. In infinite-dimensional spaces, all the properties in Eq.(\ref{Set of Quasi-Hermitian observables}) are difficult to obtain. \par 
+
+We now define the modified inner product that we have mentioned so many times above. This inner product is based on the original inner product of the Hilbert space $H$, $(\cdot, \cdot)$. Let $\alpha$, $\beta \in H$ and then we have the modified inner porduct as
+\begin{align}
+    \label{Quasi-Hermitian Inner Product}
+    &\nonumber\\
+    (\alpha, \beta)_{\, T} \, \equiv \, (\alpha, T \beta) \quad \text{on $H$}.\\
+    &\nonumber
+\end{align} 
+This inner product induces a norm on $H$: $||\alpha||_{\, T} \, = \, \sqrt{(\alpha, \alpha)_{\, T}} \, = \, \sqrt{(\alpha, T \alpha)}$. Together with this norm, the original Hilbert space $H$ is modified to form $H_{\, T}$, a fact that can be confirmed \cite[see Appendix A]{SCHOLTZ199274}. Now we can easily see that the operators $\{ \mathcal{O}_i \}$ are Hermitian w.r.t. to this newly defined inner product in the Hilbert space $H_{\, T}$. 
+\begin{align}
+    \label{Hermitian wrt quasi-Hermitian inner product}
+    &\nonumber\\
+    (\alpha, \mathcal{O}_i \, \beta)_{\, T} \, = \, (\alpha, T \mathcal{O}_i \, \beta) \, = \, (\alpha, \mathcal{O}_i^{\dagger} \, T \beta) \, = \, (\mathcal{O}_i \, \alpha, T \beta) \, = \, (\mathcal{O}_i \, \alpha, \beta)_{ \, T} \\
+    &\nonumber
+\end{align} 
+The primary question that can be asked here is about the uniqueness of $T$. It can be shown that $T$ is unique on $H$ (upto a globalisation factor) if and only if $\{\mathcal{O}_i\}$ is irreducible on $H$ \cite[see Appendix A]{SCHOLTZ199274}. A set of operators $\{\mathcal{O}_i\}$ on $H$ is called irreducible if there does not exist any proper subset of $H$ that is invariant under each operator $O_i$. \par
+
+This detour was necessary to complete the picture of the enormous development behind non-Hermitian quantum theory. $\mathcal{PT}$-symmetry was developed after the work done on quasi-Hermiticity which was followed by pseudo-Hermiticity. Although there is no order that we can assign to theoretical physics work, this discussion gives the reader a rough sketch of the groundbreaking work established by some of the best mathematical physicists. 

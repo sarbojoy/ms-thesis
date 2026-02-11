@@ -1,0 +1,28 @@
+\section{What is a Seminorm?}
+\label{Seminorm illustration}
+
+Norms are thoroughly studied in functional analysis and in topology or geometry. The geometrical properties of a vector space are defined by its norm. The same vector space can behave much differently under non-identical norms. A vector space with its norm defined is termed a normed space or an inner-product space.  \par
+
+\hspace{-1.5em}Let $\bm{V}$ be a vector space with over the field of real numbers $\mathbb{R}$ or complex numbers $\mathbb{C}$ with a real-valued function $\bm{f}:\bm{V} \rightarrow \mathbb{R}$ (\textbf{A functional}). Then $\bm{f}$ is a \textit{seminorm} if the following properties hold. 
+
+\begin{itemize}
+    \item[(i)] $\bm{f}(x+y) \leq \bm{f}(x) + \bm{f}(y), \ \forall \ x,y \in \bm{V}$ or \textbf{triangle inequaltity holds true}. 
+    \item[(ii)] $\bm{f}(sx) = |s|\bm{f}(x), \ \forall \ x \in \bm{V}$ and all scalars $s$ or the space has \textbf{absolute homegeneity}. The consequences of this property are as follows.
+    \begin{itemize}
+        \item[$\bullet$] $\bm{f}(0)= 0$. (\textit{Trivial!})
+        \item[$\bullet$] $\bm{f}(x) \geq 0, \ \forall \ x \in \bm{V}$. Since,
+              \begin{align}
+              \label{}
+              &\bm{f}(0)\, = \, 0 \ \text { or, } \ \bm{f}(x-x)=0 \nonumber\\
+              \implies & \bm{f}(x)+\bm{f}(-x) \, \geq \, \bm{f}(x-x) \, = \, 0 \nonumber\\
+              \implies & \bm{f}(x)+|-1| \bm{f}(x) \, \geq \, 0 \nonumber\\
+              \implies & 2\bm{f}(x) \, \geq \, 0 \ \text{ or, } \ \bm{f}(x) \, \geq \, 0. 
+              \end{align}    
+    \end{itemize}
+\end{itemize}
+An interesting observation about the seminorm is that it is not necessarily point separating, i.e., vectors that are not zero can have zero norms. In topology, these properties are determined by the \textit{separation axioms}. Seminorms are essentially Minkowski functionals on convex, balanced, and absorbing sets. \par
+
+In quantum mechanics, states are vectors in \textit{normed spaces}. A normed space is a vector space $\bm{V}$ with a positive definite or point-separating seminorm. In other words, along with the above three, the norm must also have the following property.
+\begin{itemize}
+    \item[(iii)] $\bm{f}(x) = 0 \implies x = 0, \ \forall \ x \in \bm{V}$ or \textbf{only zero vector has zero norm}.
+\end{itemize}

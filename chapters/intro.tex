@@ -1,0 +1,1091 @@
+ \vspace{1cm}
+
+\hspace{0.7cm} Quantum Theory has proved to be very successful in understanding the nature of matter and interactions at minor scales, yet over time we have realised that it is inadequate to explain all fundamental physical theories. The development of Quantum Mechanics was very haphazard during the first half of the 20\textsuperscript{th} century until Paul Adrien Maurice Dirac \textbf{(The Master!)} formulated quantum mechanics the way we know it today and can be found in any standard textbook on the subject. Like any other scientific venture, quantum mechanics is built on some fundamental axioms or assumptions founded on sound reasons. However, starting from 1990, many physicists, mostly of the mathematical kind, questioned the basis of these assumptions trying to find theories that were more general than the then-contemporary notions. Quite surprisingly, through the efforts of many (several of whom we will mention in this dissertation), a more generalised approach was eventually constructed. This approach takes the assumptions of the standard formulation as special cases of its own. Let us first understand the axioms of Quantum Mechanics that define and characterise the theory. Once certain mathematical and physical subtleties are stated, we will move on to the actual scope of this thesis, i.e. Non-Hermitian Quantum Mechanics. The essence of a quantum theory can be found using the Hamiltonian approach, and hence it is imperative that we study the properties of the Hamiltonian for a system. The exceptional physical axiom is that the energy spectrum of a quantum Hamiltonian must yield real results \textbf{(Axiom 1)}. After all, energy is a real quantity!\par
+
+
+
+The other axioms that define a quantum theory are as follows : \par
+
+
+
+\begin{table}[h]
+    \centering
+        \begin{tabular}{l  p{11.7cm}}
+           \textbf{Axiom 2} \vline & The energy spectrum must be bounded below so that a stable lowest-energy state exists. As a consequence, we take the Hamiltonian of a system to be a bounded operator (bounded below) in the Hilbert Space. For a quick review of bounded operators please refer to Appendix A at the end. \\
+           
+           \\
+           
+           \textbf{Axiom 3} \vline & Time evolution of a quantum system must be unitary or probability conserving. \\
+           
+           \\
+           
+           \textbf{Axiom 4} \vline & A time evolving system must accord with causality and Lorentz covariance.  \\
+           
+           \\
+           
+           \textbf{Axiom 5} \vline & The Hamiltonian operator that describes the dynamics of the system must be Hermitian. It guarantees that the energy spectrum is real and time evolution is unitary. Also called the \textit{\textbf{Dirac Hermiticity}}, \textbf{this axiom is Mathematical, and it is more of a convenience than a necessity !} \textbf{[} $\mathbf{H} = \mathbf{H^\dagger}$ \textbf{]} 
+           
+        \end{tabular}
+        
+\end{table}
+\par
+
+The breakthroughs in non-Hermitian quantum physics have shown that \textbf{Axiom 5} has certain aspects that require more investigation. The work started by Bender\cite{PhysRevLett.80.5243,Bender_2007}, Mostafazadeh\cite{doi:10.1063/1.1418246,mostafazadeh2010pseudo} and many others has conclusively shown that \textbf{Axiom 5} is a sufficient condition, but it is \textbf{\textit{not necessary}}. The crux of non-Hermitian quantum mechanics lies in this very fact. Although, at first glance, the statement seems quite simple, it has far-reaching consequences and has led to the discovery of various theoretical and experimental advances. A first step towards this journey started with the idea of developing a non-Hermitian framework not only in terms of the Hamiltonian but also in terms of what consequent changes it would have on the metric of the system. An early work in 1991 by Scholtz \textit{et al}\cite{SCHOLTZ199274} provided the idea of Quasi-Hermitian Operators and the way we can construct a metric or inner product for a set of non-Hermitian operators such that they are Hermitian with respect to the redefined metric. Another vital observation in non-Hermitian Hamiltonians was pointed out by Bessis in a private communication to Carl M. Bender\cite{PhysRevLett.80.5243} that certain Hamiltonians violating Dirac Hermiticity showed a \textit{real and positive spectrum} under properly defined boundary conditions. It was shown on the basis of numerical studies that the spectrum of 
+\begin{align}
+     \label{rsnhh}
+     &\nonumber\\
+     H = p^2 + x^2 + ix^3, \\
+     &\nonumber
+\end{align}
+is real and positive, but it is not Hermitian \cite{PhysRevLett.80.5243}. The reason for such results was attributed to \textbf{parity-time symmetry or} $\mathbf{\mathcal{PT}}$\textbf{-symmetry}. 
+
+
+\section{Basic principles of $\mathcal{PT}$-symmetric Quantum Mechanics}
+
+In $\mathcal{PT}$-symmetry the Dirac Hermiticity requirement or \textbf{Axiom 5} is replaced with a more natural and physically transparent condition of parity-time symmetry, 
+\begin{align}
+    \label{ptsymm}
+    &\nonumber\\
+    H = H^{ \, \mathcal{ PT}}, \\
+    &\nonumber
+\end{align} 
+without violating any of the axioms mentioned above. A good counterexample would be to look at the Hamiltonian 
+\vspace{-1cm}
+\begin{align}
+    \label{rsnhwpts}
+    H = p^2 + ix^3 + x, \\
+    &\nonumber 
+\end{align}
+which has complex spectra and is not invariant under parity-time symmetry (does not follow Eq.(\ref{ptsymm})). Later in this Introduction, we will see that the $\mathcal{PT}$-symmetry has a \textit{complex extendion}, $\mathcal{CPT}$-symmetry. But the most surprising discovery will be introduced in Chapter 2, where we will understand that a larger framework called \textit{Pseudo-Hermiticity} is at play, which gives a more rigorous formalism responsible for the reality of the spectrum. We need to understand the workings of the \textit{Parity} and \textit{Time Reversal} operators before going any further. \par
+
+The parity or space-reflection operator affects the position operator $x$ and the momentum operator $p$ to change signs.
+\begin{align}
+    \label{parity on x and p}
+    &\nonumber\\
+    \mathcal{P} \, x \, \mathcal{P} \, = \, -x \quad \text { and } \quad \mathcal{P} \, p \, \mathcal{P} \, = \, -p. \\
+    &\nonumber
+\end{align}
+$\mathcal{P}$ is a linear operator, and hence the Heisenberg Algebra is left invariant under its action,
+\begin{align}
+    \label{piha}
+    &\nonumber\\
+    \mathcal{P}\,[x p-p x] \, = \, (-x)(-p)-(-p)(-x) \, = \, x p-p x \, = \, i \, \hbar \, \mathbf{1}. \\
+    &\nonumber
+\end{align}
+The time-reversal operator acts on position $x$ and momentum $p$ to give: 
+\begin{align}
+    \label{time reversal on x and p}
+    &\nonumber\\
+    \mathcal{T} \, x \, \mathcal{T} \, = \, x, \quad \text { and } \quad \mathcal{T} \, p \, \mathcal{T} \, = \, -p. \\
+    &\nonumber
+\end{align}
+The time-reversal operator is fundamental to nature and hence must leave the Heisenberg algebra invariant. But there is a slight problem, 
+\begin{align}
+    \label{trha}
+    &\nonumber\\
+    \mathcal{T} \, [x p-p x] \, = \, (x)(-p)-(-p)(x) \, = \, px-xp \, = \, -i \, \hbar \, \mathbf{1}. 
+\end{align}
+To make this consistent $\mathcal{T}$ must reverse the sign of complex $i$:
+\begin{align}
+    \label{trc}
+    &\nonumber\\
+    \mathcal{T} \, i \, \mathcal{T} \, = \, -i. \\ 
+    &\nonumber
+\end{align}
+$\mathcal{T}$ is \textit{antilinear} because a map $A: V \rightarrow W$, where $V$ and $W$ are complex vector spaces and $c$ a complex scalar, is antilinear if,
+\begin{align}
+    \label{antiliniear definition}
+    &\nonumber\\
+    A (c \alpha + \beta) \, = \, c^{\, *} A \alpha + A \beta \quad \quad \quad \text{where} \quad \alpha,\beta \in V. \\
+    &\nonumber
+\end{align}
+$c^{*}$ is the complex conjugate of c. \textbf{[Note that, the action of a linear operator would have kept $c$ unchanged]}. Both $\mathcal{P}$ and $\mathcal{T}$ are reflection symmetry operators; hence, acting on them twice, i.e. their squares, must be identity,
+\begin{align}
+    \label{squares of P and T}
+    &\nonumber\\
+    \mathcal{P}^{\, 2} \, = \, \mathcal{T}^{\, 2} \, = \, \mathbf{1}. \\
+    &\nonumber
+\end{align}\par
+Space-reflection and time-reversal can be measured to high accuracy simultaneously without disturbing the other. That is how they are interpreted in the quantum mechanical scaffolding. Hence, they must commute:
+\begin{align}
+    \label{P and T commute}
+    &\nonumber\\
+    [\mathcal{P},\mathcal{T}] \, = \, 0. \\
+    &\nonumber
+\end{align}
+The consequence of the above properties also makes the parity-time operator, $\mathcal{PT}$, self-invertible. From Eq.(\ref{P and T commute}) we get,
+\begin{align}
+    \label{PT is invertible}
+    &\nonumber\\
+    &\mathcal{PT} - \mathcal{TP} = 0 \nonumber\\
+    \implies & \mathcal{PT} - (\mathcal{P}^{-1}\mathcal{T}^{-1})^{-1} = 0 \nonumber\\
+    \implies \mathcal{PT} - (\mathcal{PT})^{-1} = 0 \qquad & \text{or} \qquad \mathcal{PT} = (\mathcal{PT})^{-1}  &&\text{[Using Eq.(\ref{squares of P and T})]}.  \\
+    &\nonumber
+\end{align}
+Eq.(\ref{PT is invertible}) helps us define the $\mathcal{PT}$-transformation of an operator,
+\begin{align}
+    \label{PT reflected hamiltonian}
+    &\nonumber\\
+    H^{\mathcal{PT}} \equiv (\mathcal{PT})^{-1}H(\mathcal{PT}) = (\mathcal{PT})H(\mathcal{PT}) &&\text{[Using Eq.\ref{PT is invertible}]}. \\
+    &\nonumber
+\end{align}
+This allows us to properly categorise the $\mathcal{PT}$-symmetric Hamiltonians as follows.
+\begin{align}
+    \label{PT symmetric hamiltonian}
+    &\nonumber\\
+    H \, = \, H^{\mathcal{PT}} \quad \text{or} \quad H \, = \, (\mathcal{PT}) \, H \, (\mathcal{PT}). \\
+    &\nonumber
+\end{align}\par
+The definition in Eq.(\ref{PT symmetric hamiltonian}) allows for a more general yet consistent framework of quantum mechanics. It has been seen that Hamiltonian, $H$, that follows Eq.(\ref{PT symmetric hamiltonian}), surprisingly have real eigenvalues and specifies a unitary-time evolution even though it is not necessary for $H$ to be Hermitian. \par
+
+Examples of Hamiltonians that are non-Hermitian but adhere to Eq.(\ref{PT symmetric hamiltonian}),
+\begin{align}
+    \label{PT symm H1}
+    &\nonumber\\
+    H \, = \,  p^2 + ix^3, \\
+    &\nonumber
+\end{align}
+and
+\begin{align}
+    \label{PT symm H2}
+    &\nonumber\\
+    H \, = \, p^2 - x^4. \\
+    \nonumber
+\end{align}
+Eq.(\ref{PT symm H1}) and Eq.(\ref{PT symm H2}) are part of a general parametric family of Hamiltonians that conform to Eq.(\ref{PT symmetric hamiltonian}). This family has been studied extensively, and in the coming sections we will explore the deep insights that are gained by investigating it. $\mathbf{\epsilon}$ parameterises this group as
+\begin{align}
+    \label{Gen Parametric Family of PT symm H}
+    &\nonumber\\
+    H \, = \, p^2 + x^2(ix)^{\, \epsilon}. \\
+    \nonumber
+\end{align}\par
+Eq.(\ref{Gen Parametric Family of PT symm H}) are complex extensions of the harmonic oscillator Hamiltonian. Bender and Boettcher \cite{PhysRevLett.80.5243} showed that, when $\epsilon \geq 0$ the eigenvalues of Eq.(\ref{Gen Parametric Family of PT symm H}) are \textit{real}, \textit{discrete}, and \textit{positive}. When $\epsilon < 0$ the eigenvalues become complex and the adjacent energy levels pair up to give conjugate pairs. This property is crucial for understanding $\mathcal{PT}$-symmetric quantum mechanics and will be presented in more detail as we progress in this chapter.
+
+\section{Why Non-Hermitian Quantum Mechanics ?}
+
+We look at the answers to this question via a dyadic approach: First, we will recognise the theoretical reinforcements that provide excellent reasons for conducting this investigation. Second, we give ample experimental evidence that supports the broad ideas of non-Hermitian quantum theory.
+
+\subsection{Theoretical Evidence}
+
+Symmetry plays a vital role in all areas of physics, and investigators often stumble upon significant results just by scrutinising symmetries of the system. In the case of $\mathcal{PT}$-symmetry, the homogeneous Lorentz groups of rotations and boosts are indispensable because both $\mathcal{P}$ and $\mathcal{T}$ are parts of it. Non-Hermitian Hamiltonians are quite common in the study of dissipative processes, such as radioactivity. However, these Hamiltonians are phenomenological descriptions and cannot be taken as fundamental interpretations of nature. Radioactive decay modelled using non-Hermitian Hamiltonians is \textit{non-unitary} and hence, \textit{non-fundamental} narratives.
+\\
+\\
+The question is then: \textbf{Why is this investigation important, and is it fundamental?}
+\par
+The answer is that non-Hermitian processes are fundamental in nature. The Lorentz group has four parts that are disconnected: 
+
+\begin{itemize}
+    \item[1.] \textbf{The proper orthochronous sub-group :} It is continuously connected in the group space through identity.
+    \item[2.] $\mathbf{\mathcal{P}}$ multiplied \textbf{to 1. :} Here, the elements are the product of \textit{proper orthochronous group} and $\mathcal{P}$. \textbf{\textit{Does not contain $\mathbf{1}$}}.
+    \item[3.] $\mathbf{\mathcal{T}}$ multiplied \textbf{to 1. :} Here, the elements are the product of \textit{proper orthochronous group} and $\mathcal{T}$. \textbf{\textit{Does not contain $\mathbf{1}$}}.
+    \item[4.] $\mathbf{\mathcal{PT}}$ multiplied \textbf{to 1. :} Here, the elements are the product of \textit{proper orthochronous group} and $\mathcal{PT}$. \textbf{\textit{Does not contain $\mathbf{1}$}}.
+\end{itemize}\par
+Since the last 3 parts do not contain the identity, we cannot consider them as sub-groups. Hence, all four parts are not connected continuously. Physics is Lorentz invariant under \textit{proper orthochronous sub-group} (Part 1.) of the total homogeneous Lorentz group. We know from experiments with the weak nuclear forces that they do not respect parity and time-reversal symmetry. The question of parity violation in weak nuclear forces and insufficient experimental evidence for the same was first pointed out by Lee and Yang \cite{lee1956question} in 1956. This observation was first confirmed by Wu \textit{et al} \cite{PhysRev.105.1413} in 1957 and paved the way for the creation of the standard model in particle physics. Time-reversal violations are observed in quantum entangled $B$ mesons \cite{RevModPhys.87.165}. There is a very interesting and informative \href{https://www.youtube.com/watch?v=yArprk0q9eE&t=92s}{\underline{\textit{YouTube video}}} on this topic of symmetry violation by Veritasium. A \textit{complex} Lorentz group can be constructed \cite[see Chpater 1]{StreaterandWightman} but it assumes that the eigenvalues of the Hamiltonian are real and bounded below (check Appendix \ref{Boundedness of a linear operator} for boundedness). In this complex group, there are two separate continuous paths: (i) The proper orthochronous group (Part 1 above) is continuously connected to the $\mathcal{PT}$ multiplied portion (Part 4 above). (ii) While the other two portions (Part 2 \& 3 above) are continuously connected in the complex Lorentz group space. The properties we see here in the study of complex Lorentz groups allow us to make a bold claim $\mathbf{\longrightarrow}$ \textbf{Physics is invariant under} $\mathcal{P}$ \textbf{and} $\mathcal{T}$ \textbf{as well as their proper orthochronous multiplied parts are connected continuously in the complex Lorentz group space. Now, physics is invariant under the proper orthochronous subgroup, and in the complex Lorentz group space it is continuously connected to} $\mathcal{PT}$\textbf{-symmetric multiplied to it part. Hence, we can argue that} $\mathcal{PT}$\textbf{-symmetry is a fundamental discrete symmetry of nature.} 
+\par
+The above claim has the consequence that new kinds of Hamiltonians can define allowable quantum theories and many Haamiltonian that we were considered to be unphysical can be brought back into the picture. This is the most thoroughgoing theoretical argument that one can make to justify the exploration of non-Hermitian quantum mechanics. 
+
+\subsection{Experimental Evidence}
+\label{Experimental Evidence}
+%%begin novalidate
+Non-Hermitian Hamiltonians that are $\mathcal{PT}$-symmetric have indirect experimental consequences. My study did not involve unswerving evidence of non-Hermitian Hamiltonians that occur in nature, but a recent \href{https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=physical+evidence+of+pt+symmetry&btnG=}{Google Scholar search} churns out tons of paper that study $\mathcal{PT}$-symmetric systems in experiments. In my work I did encounter a few experiments that survey experimental aspects of the subject.   
+%%end novalidate
+\par
+Non-Hermitian Hamiltonians have been used to study delocalisation transitions in superconductors, such as vortex depinning \cite{PhysRevLett.77.570} or represent population biology models \cite{PhysRevE.58.1383}. Both these papers by Nelson \textit{et al} show remarkable similarity to theoretical predictions. Let us look at depinning of vortex flux lines in type-II superconductors induced by an imaginary external field rendering the Hamiltonian to be non-Hermitian \cite{PhysRevLett.77.570}. Experimental results will help us to build our theory of $\mathcal{PT}$-symmetric quantum mechanics in a way that we can corroborate our abstract propositions to real-world attestation. Non-Hermitian quantum theory has been used in Quantum Field Theory \cite{PhysRevLett.54.1354,PhysRevLett.40.1610,CARDY1989275,BROWER1978213,HARMS1980392,PhysRevLett.93.251601}, Complex crystals\cite{M_V_Berry_1998,khare2005pt,BENDER1999272,KHARE2004406,Khare_2006,khare2006complex}, solving Schr\"{o}dinger equations for complicated systems\cite{PhysRevA.95.010102,FRING20172318,PhysRevD.90.084005}, and especially in condensed matter systems involving superconductors\cite{PhysRevLett.77.570,PhysRevB.48.13060,PhysRevB.56.8651,PhysRevB.48.1167}. We look here at one such experiment and its observations, which will help us to know if we are going in the right direction. \par
+
+\subsubsection{Localization Transitions in a Cylindrical Superconducting Shell}
+
+In this experiment \cite{PhysRevLett.77.570} a cylindrical superconductor with columnar defects is subjected to a constant imaginary vector potential. The flux lines are produced as a result of a strong magnetic field along the vertical axis of the superconductor. A current along this axis generates an imaginary vector potential that depins the created flux lines from columnar defects. A pictorial depiction of the experiment is shown in Fig. \ref{fig:superconductor}.
+\\
+
+\begin{figure}[h]
+    \centering
+    \frame{\includegraphics[scale=0.4]{images/Localization Transitions In Non-Hermitian Quantum Mechanics.jpg}}
+    \caption[Depinning of vortex flux lines in a superconducting shell subjected to a perpendicular imaginary vector potential]{A superconducting shell with radial thickness less than the penetration depth of the defect-free material with columnar defects. The scribbled red streak is the flux line induced by the constant magnetic field $\bm{H_{Z}}$. Flux lines interact with the blue bordered columnar defects. The imaginary vector potential field $\bm{H_{\perp}}$ is induced by the current $\bm{I}$.} 
+    \label{fig:superconductor}
+\end{figure}
+\par
+A non-Hermitian quantum Hamiltonian with randomness is introduced in the system to study its consequences. The experiment observes the mapping between flux lines of ($d+1$)-dimensional superconductors to the world lines of $d$-dimensional bosons. Flux lines such as the scribbled red track in Fig. \ref{fig:superconductor} are pinned by the experimentally introduced columnar defects (blue bordered columns in Fig. \ref{fig:superconductor}) \cite[see e.g.]{PhysRevLett.67.648}. These defects, in turn, give rise to a random potential in the boson system \cite{PhysRevB.48.13060}. $\bm{H_z}$ is applied vertically giving a chemical potential, while $H_\perp$ acts as an imaginary vector potential for the bosons. As the current $\bm{I}$ increases, the perpendicular magnetic field, $H_\perp$, also increases as a result of the depinning of the flux lines from columnar defects. You can see in Fig. \ref{fig:superconductor} the red streak moves from one column to another. These paths can be theoretically calculated using path-integral methods. Here, an imaginary potential, $\bm{H_\perp}$ (responsible for the non-Hermticity), depins the flux lines and hence must have extended states for a large zone where a delocalisation transition point exists at a critical strength of $\bm{H_\perp}$. The non-Hermitian Hamiltonian that describes this system is,
+\begin{align}
+    \label{Superconductor NH Hamiltonian}
+    & \nonumber\\
+    &\mathcal{H} = \frac{(\bm{p} + i\bm{h})^2}{2m} + V(\bm{x}) , \qquad \quad \text{$V(\bm{x})$ is a \textbf{random potential}.}\\
+    & \nonumber
+\end{align}
+\hspace{1.5em} Here, the non-Hermitian part of the Hamiltonian is observed in the transverse magnetic field: $\bm{h} = \phi_{0}\bm{H_\perp}/4\pi$. $\phi_{0}$ is the charge, while the appearance of the complex $i$ is the result of mapping onto imaginary time quantum mechanics. The vortex (red streak) in Fig. \ref{fig:superconductor} is described by Eq.(\ref{Superconductor NH Hamiltonian}) with some periodic boundary conditions. The penetration depth of the material (defect free) is smaller than the radial thickness, with the temperature described by the Planck constant $\hbar$. The position of the flux line for a distance $\tau$ from the bottom surface (see Fig. \ref{fig:superconductor}) is given by
+\begin{align}
+    \label{flux line distance}
+    &\nonumber\\
+    \langle x\rangle_{\tau} \equiv Z^{-1} \times \left\langle\psi^{f}\left|e^{-\left(L_{\tau}-\tau\right) \mathcal{H} / \hbar} \bm{x} e^{-\tau \mathcal{H} / \hbar}\right| \psi^{i}\right\rangle,& \quad \text{$\psi^i$ \& $\psi^f$ at $\tau = 0,L_\tau$, respectively.}\\
+    &\nonumber\\
+    \text{where,} \qquad Z \equiv\left\langle\psi^{f}\left|e^{-L_\tau \mathcal{H} / \hbar}\right| \psi^{i}\right\rangle.& \qquad \quad \text{[\textbf{Partition Function}]} \label{Partition Function}\\
+    & \nonumber
+\end{align}
+A current operator is also defined, $\boldsymbol{J} \equiv-i\, \partial \mathcal{H}/ \partial \boldsymbol{h}=(\boldsymbol{p}+i \boldsymbol{h}) / m$. This current is related to the commutator of $\mathcal{H}$ and $\bm{x}$ as : $[\mathcal{H},\bm{x}] = -i\hbar\boldsymbol{J}$, which in turn gives $(\partial / \partial \tau) \langle \bm{x} \rangle_\tau =-i\langle I \rangle_{\tau}= \text{Im} \langle \bm{J} \rangle_\tau $. A total displacement of the flux between the bottom and top surfaces is calculated as $\langle\bm{x}\rangle_{L_\tau} - \langle\bm{x}\rangle_0 = \hbar(\partial/\partial\bm{h})\:\text{ln} Z = \text{Im} \int_{0}^{L_\tau}\langle L \rangle_\tau \: d\tau $. This imaginary quantity stipulates the delocalisation transition caused by the imaginary vector potential. \par
+
+To solve this system we make a few assumptions: (i) Eigenfucntions, $\psi_n (\bm{x})$, are known for $\bm{h} = 0$, (ii) the corresponding eigenvalues $\varepsilon_n$ are also known. The ways of decoding the form of these eigenfunctions are taken as left and right (for small $\bm{h}$) $\rightarrow \psi\,_{n}^{R}\,(\bm{x} ; \bm{h})=e^{\bm{h} \cdot \bm{x} / \hbar}\, \psi_{n}(\bm{x} ; \bm{h} =0)$ and $\psi\,_{n}^{L}\,(\bm{x} ; \bm{h})=e^{-\bm{h} \cdot \bm{x} / \hbar}\, \psi_{n}^{*}(\bm{x} ; \bm{h} =0)$. The $\varepsilon_n$'s are unchanged under this ``imaginary" gauge transformation \cite{PhysRevB.48.1167}. The normalisation condition for the left and right wave functions is achieved for $|\bm{h}| < \hbar \kappa_n$, where $\kappa_n$ is the inverse localisation length of $\psi_n(\bm{x}; \bm{h}=0)$. The normalization condition, 
+\begin{align}
+    \label{wave fucntion superconductor}
+    &\nonumber\\
+    &\int d\,^d\bm{x} \ \psi\,_{n}^{R}(\bm{x}) \ \psi\,_{n}^{L}(\bm{x}) = 1, \\
+    & \nonumber\\
+    \text{which gives,}\hspace{1em} &\psi\,_{n}^{R}(\bm{x}) \ \simeq \ \sqrt{\frac{\left(2 \kappa_{n}\right)^{d}}{\Gamma(d) \Omega_d}} \ e^{\bm{h}\cdot\left(\bm{x}-\bm{x}_{n}\right)/\hbar-\kappa_{n}\left|\bm{x}-\bm{x}_{n}\right|}.\\
+    & \nonumber
+\end{align}
+Here, $\bm{x}_n$ is the localisation centre of $\bm{h} = 0$ and $\Omega_d$ is the total solid angle of the $d$ dimensional space. The delocalisation point occurs at $|\bm{h}| = \hbar \kappa_n$, for $|\bm{h}| > \hbar \kappa_n$ extended eigenfunctions are obtained (this region will give us a deep insight in a moment!). \par
+
+Imposing periodic boundary conditions: $\psi\,_{n}^{R}\left(L_{x} / 2, y, \ldots\right)=\psi\,_{n}^{R}\left(-L_{x} / 2, y, \ldots\right)$, with the $x$ axis parallel to $\bm{h}$ produces \textbf{interesting results} (there is a wave function mismatch at $x = \pm L_{x} / 2$ of order $e^{-\left(\kappa_{n}-h / \hbar\right) L_{x}}$), 
+
+\begin{table}[h]
+    \centering
+        \begin{tabular}{l  p{11.95cm}}
+        \textbf{(1)} \framebox{$h<\hbar \kappa_{n}$} $\ \longrightarrow$ & The mismatch is very small and hence, the change necessary to meet the periodic boundary conditions. \\ 
+        
+        \\
+        
+        \textbf{(2)} \framebox{$h \geq \hbar \kappa_{n}$} $ \ \longrightarrow$ & \textbf{Complex eigenvalue appears}, and there are substantial changes to the wave fucntion. \textbf{\textit{The Hamiltonian}} $\bm{\mathcal{H}}$ \textbf{\textit{if parameterized by}} $\bm{h}$\textbf{\textit{ (or}} $\bm{\kappa_n}$\textbf{\textit{) will give a family that produces complex eigenvalues after a point (or a transition).}}\\
+
+        \end{tabular}
+\end{table}    
+\hspace{-1em}Understanding the result in \textbf{(2)} requires $|\bm{h}| \rightarrow \infty$, where we can ignore the random potential $V(\bm{x})$ \cite{PhysRevB.56.8651}. In this case, the periodic boundary is satisfied by the extended wave function, which is $e^{i \bm{k} \cdot \bm{x}}$. The wave number in the direction $x_\nu$ is given by $k_{\nu}=2 n_{\nu} \pi / L_{\nu}$, where $n_{\nu}$ is an integer, and $L_{\nu}$ is the size of the system. Then the left eigenvector $\longrightarrow e^{-i \bm{k} \cdot \bm{x}}$. Hence, the eigenvalue is given by
+\begin{align}
+    \label{complex eigen value}
+    & \nonumber\\
+    \varepsilon(\bm{k})\ = \ \frac{(\hbar \bm{k} \ + \ i \bm{h})^{2}}{2 m}. 
+\end{align}
+\textbf{When the random potential cannot be neglected : } A non-Hermitian tight-binding model is used to represent the system with a second quantisation Hamiltonian with the boson field operators, 
+\begin{align}
+    \label{tight-binding model 2nd quant hamiltonian}
+    & \nonumber\\
+    \mathcal{H} \equiv -\frac{t}{2} \sum_{\boldsymbol{x}} \sum_{\nu=1}^{d}\left(e^{\boldsymbol{h} \cdot \boldsymbol{e}_{\nu} / \hbar}\, b_{\boldsymbol{x}+\boldsymbol{e}_{\nu}}^{\dagger}\, b_{x}+e^{-\boldsymbol{h} \cdot \boldsymbol{e}_{\nu} / \hbar}\, b_{\bm{x}}^{\dagger}\, b_{\bm{x}+\boldsymbol{e}_{\nu}}\right)+\sum_{\boldsymbol{x}} V_{\bm{x}} \, b_{\bm{x}}^{\dagger}\, b_{\bm{x}}, \\
+    & \nonumber
+\end{align}
+\hspace{0.5pt}where $b_{\bm{x}}^{\dagger}\, , \, b_{\bm{x}}$ are boson creation and annihilation operators, respectively, and $\boldsymbol{e}_{\nu}$ are unit lattice vectors. Here, $t \sim$ $V_{\text {bind }} \exp \left(-\sqrt{2 m V_{\text {bind }}} a / \hbar\right)$ is the hopping parameter with $V_{\text{bind}}$ being the binding energy of the columnar defect and $a$ being the lattice spacing. Again, a periodic boundary condition is imposed, $b_{\bm{x}+N_{\nu} \bm{e}_{\nu}}\, = \, b_{x}$ for $\nu=1,2, \ldots, d$, where $N_{\nu} \, \equiv \, L_{\nu} / a$. Then we find another set of interesting results that give valuable insights: 
+
+\begin{table}[h]
+    \centering
+        \begin{tabular}{l  p{11.95cm}}
+        \textbf{(1)\footnotemark} &\normalsize{The non-Hermitian system here possesses complex conjugate pairs of eigenvalues: complex eigenvalue $\varepsilon$ associated with the right eigenfunction $\psi^R$ has a corresponding conjugate pair $\varepsilon^*$ associated with the complex conjugate of right eigenfunction $(\psi^R)^*$. [It guarantees the reality of the partition function $Z$ in Eq.(\ref{Partition Function})]} \\
+        & \\
+        \textbf{(2)} & A symmetry is obtained: $\mathcal{H}(
+        \bm{h})^T \ = \ \mathcal{H}(-\bm{h})$. This implies that a right eigenfunction of $\mathcal{H}(\bm{h})$ is equal to the left eigenfunction of $\mathcal{H}(-\bm{h})$. Surprisingly, they have the same eigenvalue. 
+        \end{tabular}
+\end{table}    
+
+\footnotetext{This result is the primary study of the next few sections, it is supported by the idea of \textit{spontaneous} \\ $\mathcal{PT}$-symmetry breaking and later (Chapter 2), expanded by \textit{Pseudo-Hermitian Quantum Mechanics.}}
+
+Now we have some tangible evidence to move on and work on building the theory. In the next section, it will become clear why we have introduced this experiment and its result. \textbf{The most important of them is (1)} and we will see that it corroborates with the theoretical predictions. \\ \\ \\ 
+
+\section{Eigenvalues of a $\mathcal{PT}$-symmetric Hamiltonian \& How to Compute Them}
+
+The experimental evidence at the end of the last section clearly pointed out that a very distinctive characteristic of a Hamiltonian with parity-time symmetry lies in the analysis of it’s eigenvalues i.e. solving it’s Schr\"{o}dinger eigenvalue problem. Physical properties in a quantum theory are governed by the Hamiltonian of the system. To explain, we present a three-fold rationalisation: 
+
+\begin{longtable}{l  p{11.7cm}}
+        &\\
+        \textbf{Characteristic 1} \vline & Energy levels of a quantum system are determined by the Hamiltonian. The time-independent Schr\"{o}dinger eigenvalue problem is solved to find the eigenvalues with certain boundary conditions depending on the problem,
+        \begin{equation}
+            \label{time-independent eigenvalue equation}
+            H \, \psi \, = \, E \,\psi. 
+        \end{equation}
+        Eq.(\ref{time-independent eigenvalue equation}) must be solved carefully using proper boundary conditions, and the energy eigenvalues must be real and positive. \\
+        &\\
+        \textbf{Characteristic 2} \vline & Time-evolution is described by the Hamiltonian. States (Schr\"{o}dinger picture) and operators (Heisenberg picture) can evolve depending on the interpretation. The states evolve according to the time-dependent Sch\"{o}dinger equation, 
+        \begin{equation}
+            \label{time-dependent Schrondinger equation}
+            i \, \frac{\partial}{\partial t}\, \psi(t) \, = \, H \, \psi(t).
+        \end{equation}
+        If the Hamiltonian is assumed to be independent of time, i.e. there is no question of time ordering arising due to non-commutativity of the Hamiltonian between different times, then the solution is
+        \begin{equation}
+            \label{time-dependent schrodinger eq solution}
+           \psi(t) \, = \, e^{-i H t} \, \psi(0).
+        \end{equation} 
+        The way this time-translation acts on a state results in the norm of any evolved state that remains constant in time. This is because\\ 
+        
+        \hspace{33.08mm} \vline & the Hamiltonian is Hermitian, i.e. $H^\dagger = H$. You can see this very easily: assume a general state $|\alpha(t_0)\rangle$ at time $t_0 = 0$. Evolve the state, $e^{-i H t}|\alpha(0)\rangle=|\alpha(t)\rangle \text {,}$ and hence,
+        {\begin{align}
+            \label{time evolved bra}
+            \langle\alpha(t)| \, &= \, \langle\alpha(0)| \, (e^{-i H t})^{\dagger} \nonumber\\
+            &= \, \langle\alpha(0)| \, e^{i H^{\dagger} t} \nonumber\\
+            &= \, \langle\alpha(0)| \, e^{i H t} \qquad \bm{[ \, \because \, H^{\dagger}=H \, ]}. 
+        \end{align}} 
+        The norm of a state is calculated as $\sqrt{\ | \! \braket{\alpha} \! | \ }$. Therefore,
+        {\begin{align}
+            \label{norm of time evolved state}
+            \sqrt{\ | \! \braket{\alpha(t)} \! | \;} \ &= \ \sqrt{ \ |  \langle\alpha(0)|e^{i H t} e^{-i H t}| \alpha(0) \rangle  | \ } \nonumber \\
+            &= \ \sqrt{\ |\!\braket{\alpha(0)} \!| \ } \nonumber \\
+            &= \ \text{\textbf{Norm}} \, \bm{(}|\alpha(0)\rangle\bm{)}.
+        \end{align}}
+            The square of the norm in Eq.(\ref{norm of time evolved state}) is interpreted as probability and, hence, it is essential that it remains constant in time. In the case of a $\mathcal{PT}$-symmetric Hamiltonian, the norm remains constant but \textit{Dirac Hermiticity} may not be respected. \\
+        &\\
+        \textbf{Characteristic 3} \vline & Symmetries of a quantum system are subsumed by its Hamiltonian. Any anti-linear operator that commutes with the Hamiltonian will have \textit{simultaneous eigenstates} with the Hamiltonian. These \textit{simultaneous  energy eigenstates} will inherit the properties necessary to be also the eigenstates of the commuting operator. \\
+\end{longtable}
+\par
+The study of non-Hermitian quantum mechanics involves the scrutiny of \textbf{Characteristic 2} and its results. As we saw in the Experimental Evidence part of the previous section, the bifurcation of eigenvalues into complex conjugate pairs from real ones plays a pivotal role in understanding the nature of non-Hermitian Hamiltonians. We now look at this idea and further extrapolate on how to calculate the eigenvalues. 
+
+\subsection{Spontaneous $\mathcal{PT}$-symmetry Breaking}
+
+In his paper \cite{PhysRevLett.80.5243}, Bender \textit{et al} examines the numerical and asymptotic properties of the class of non-Hermitian Hamiltonians parameterized by a real number $N$:
+\begin{align}
+    \label{parameterized hamiltonian by N}
+    & \nonumber\\
+    H \ = \ p^2 \ + \ m^{2}x^{2} \ - \ (ix)^N \qquad \quad \text{($N \in \mathbb{R}$).}\\
+    & \nonumber
+\end{align}
+It was found that when we transform Eq.(\ref{parameterized hamiltonian by N}) into a Lagrangian for a quantum field theory, it produces asymptotically free theories that have stable critical points \cite{Carl_M_Bender_1999,PhysRevD.57.3595,PhysRevD.62.085001}. This means that the Hamiltonians in Eq.(\ref{parameterized hamiltonian by N}) are physical even though they turn out to be non-Hermitian and, sometimes, contain upside-down potentials for certain values of $N$. $\mathcal{PT}$-symmetry has been widely used in quantum field theories, often leading to riveting results. Parity invariance alone is not very strong, and hence $\mathcal{PT}$-invariance is a more natural choice. Bender \textit{et al} studied the Hamiltonian in Eq.(\ref{parameterized hamiltonian by N}) using various methods such as moving the $x$ into the complex plane \cite{BENDER1993442}, using the WKB phase integral methods \cite{PhysRevLett.80.5243,Bender_2007}, numerical methods like Runge-Kutta \cite{PhysRevLett.80.5243,Bender_2007}, and comparison of known Schr\"{o}dinger equations with Eq.(\ref{parameterized hamiltonian by N}) \cite{PhysRevLett.80.5243,Bender_2007}. We will look at some of the techniques in the next subsection. Here, we present the findings of their study and it's implications. The Schr\"{o}dinger eigenvalue problem associated with Eq.(\ref{parameterized hamiltonian by N}) is (for mass or $m = 0$): 
+\begin{align}
+    \label{Schrondinger Eigenvalue problem for parameterized Hamiltonian}
+    & \nonumber\\
+    -\psi^{\prime \prime}(x) \ - \ (i x)^{N} \, \psi(x) \ = \ E \, \psi(x). \\
+    & \nonumber
+\end{align}
+The results obtained are against the real number $N$, which essentially makes Eq.(\ref{parameterized hamiltonian by N}) a family. Here is the summary (for $m = 0$):
+
+\begin{longtable}{l  p{11.7cm}}
+    &\\
+    \textbf{(1)} \hspace{0.2em} \framebox{$N \, \geq \, 2$} $\hspace{1.27em} \longrightarrow$ & The calculated spectrum is infinite,discrete and entirely real and positive. This result is what makes the theory physical. We see here that even non-Hermitian Hamiltonians are producing eigen\\
+    &-values that can be observed in experiments because they belong to $\mathbb{R}^{+}$. \\
+    &\\
+    \textbf{(2)} \hspace{0.2em} \framebox{$N \, = \, 2$} $\hspace{1.27em} \longrightarrow$ & This is a phase transition point for the spectrum. It is quite simple to see that this case is that of a simple harmonic oscillator that is known and exactly solvable. The spectrum of the harmonic oscillator is: $E_n = 2n + 1$, which is again infinite, discrete, and is in $\mathbb{R}^{+}$.   \\
+    &\\
+    \textbf{(3)} \framebox{$1< N <  2$} $\ \longrightarrow$ & In this region finite number of real and positive eigenvalues are obtained. But an interesting thing happens as we move towards 1 from 2: \textit{\textbf{adjacent eigenvalues start merging together to form complex conjugate pairs.}} We have encountered this kind of results at the end of Sub-Section \ref{Experimental Evidence} where the system with imaginary (non-Hermitian) vector potentials is studied with a non-neglected random potential. \textit{\textbf{This effect is termed as spontaneous $\mathcal{PT}$-symmetry breaking.}} After a critical value of $N$ no real eigenvalues remain except the ground state. \\
+    &\\
+    \textbf{(4)} \hspace{0.01em} \framebox{$N \rightarrow 1^{+}$} $\hspace{0.89em} \longrightarrow$ & Ground state energy diverges as $N$ approaches $1$ from above.\\
+    &\\
+    \textbf{(5)} \hspace{0.2em} \framebox{$N \, \leq \, 1$} $\hspace{1.23em} \longrightarrow$ & No real eigenvalue endures and the spectrum becomes entirely complex.\\
+\end{longtable}
+
+The above results showed that more research was needed in the field of non-Hermitian quantum mechanics, especially due to results \textbf{(1)} and \textbf{(2)}. These two discoveries were the most fascinating. It took many years (after 1998) to rigorously prove that \textit{unbroken} $\mathcal{PT}$-symmetry leads to the reality of the spectrum and was finally shown by Dorey \textit{et al} in 2001 \cite{Dorey_2001,dorey2004reality}. \par
+
+If a Hamiltonian is parity-time invariant, then it commutes with the $\mathcal{PT}$ operator. Any operator invariant with the Hamiltonian is sufficient to commute with it. But the $\mathcal{PT}$ operator is not linear; it is antilinear. Hence, even though the Hamiltonian and the parity-time operator commute, there is no guarantee that they will have \textit{simultaneous eigenstates}, nondegenerate or otherwise. \par
+
+We can do a small calculation to see why it is erroneous to assume that the Hamiltonian and the $\mathcal{PT}$ operator have simultaneous eigenstates. Let $\psi$ be an eigenstate for both H and $\mathcal{PT}$, then we have
+\begin{align}
+    \label{PT EV eq}
+    & \nonumber\\
+    \mathcal{PT}\,\psi \ = \ \lambda \, \psi, \qquad  \quad \text{$\lambda$ is the eigenvalue.} \\
+    & \nonumber
+\end{align}
+$\mathcal{PT}$ multiplied from the left and using Eq.(\ref{PT is invertible}), which gives $(\mathcal{PT})^2 \ = \ \bm{1}$, we get
+\begin{align}
+    \label{PT multiplied from left}
+    &\nonumber\\
+    &\qquad \; \qquad \qquad \qquad \quad \psi \  = \ (\mathcal{PT})\lambda(\mathcal{PT})^{2}\,\psi \nonumber \\
+    &\nonumber\\
+    \qquad \qquad &\Longrightarrow \qquad \psi \ = \ \mathcal{PT} \lambda(\mathcal{T}\mathcal{P})(\mathcal{P T}) \, \psi \qquad \qquad [\, \because \ \mathcal{P T}-\mathcal{T P}\ = \ 0, \ \text{i.e. Eq.(\ref{P and T commute})} \, ]\nonumber\\
+    &\nonumber\\
+    &\Longrightarrow \qquad \psi \ = \ \lambda^{*} \: \mathcal{P}^{2}(\mathcal{P T}) \, \psi \ = \ \lambda^{*}\: \bm{1} \: \lambda \, \psi \qquad [\, \because \ \mathcal{T}\, i \, \mathcal{T} \, = \, -i \quad \text{and} \quad \mathcal{P}^{2}=1 \,]  \nonumber\\
+    &\nonumber\\
+    &\Longrightarrow \qquad \psi \ = \ \lambda^{*} \, \lambda \, \psi \ = \ |\lambda|^{2} \, \psi \qquad \quad \text{or} \qquad \quad |\lambda|^{2} \ = \ 1.  \\
+    & \nonumber
+\end{align}
+Hence, Eq.(\ref{PT multiplied from left}) infers that the eigenvalue $\lambda$ is just a phase factor,
+\begin{align}
+    \label{eigenvalue is a phase}
+    &\nonumber\\
+    \lambda \ = \ e^{i \,\theta}.\\
+    &\nonumber
+\end{align}
+\hspace{1.5em}Now, $\mathcal{PT}$ is multiplied from the left to the time-independent Sch\"{o}dinger eigenvalue equation, i.e. Eq.(\ref{time-independent eigenvalue equation}) and again, using the property $(\mathcal{PT})^2 \ = \ 1 $, we get
+\begin{align}
+    \label{Eigenvalue is real}
+    &\nonumber\\
+    & \qquad \qquad \qquad \qquad \qquad \qquad (\mathcal{P} \mathcal{T}) \, H \, \psi \ = \ (\mathcal{P} \mathcal{T}) \, E \, (\mathcal{P} \mathcal{T})^{2}\, \psi \nonumber\\
+    &\nonumber\\
+    &\Longrightarrow \qquad H \, (\mathcal{PT}) \, \psi \ = \ (\mathcal{PT}) \, E \, (\mathcal{PT})^2 \, \psi \qquad [ \, \text{H is $\mathcal{PT}$-symmetric} \ \Longleftrightarrow \ \bm{[}H, \, \mathcal{PT}\bm{]} \ = \ 0 \,] \nonumber\\
+    &\nonumber\\
+    &\Longrightarrow \qquad H \, \lambda \, \psi \ = \ (\mathcal{PT})\, E \, (\mathcal{TP}) \, (\mathcal{PT}) \, \psi \qquad \quad \ [\, \because \ \mathcal{P T}-\mathcal{T P}\ = \ 0, \ \text{i.e. Eq.(\ref{P and T commute})} \, ] \nonumber\\
+    &\nonumber\\
+    & \Longrightarrow \qquad E \, \lambda \, \psi \ = \ E^{*} \, \mathcal{P}^{2} \, \lambda \, \psi \quad \text{or} \quad E \, \lambda \, \psi \ = \ E^{*} \, \lambda \, \psi \quad \ [\, \because \ \mathcal{T}\, i \, \mathcal{T} \, = \, -i \quad \text{and} \quad \mathcal{P}^{2}=1 \,] \nonumber\\
+    & \nonumber \\
+    & \Longrightarrow \qquad \qquad \qquad \qquad \quad \ \  E \ = \ E^{*} \qquad \qquad [ \, \because \ \lambda \ \neq \ 0, \ \text{from Eq.(\ref{eigenvalue is a phase})} \, ] \\
+    &\nonumber
+\end{align}
+Here, Eq.(\ref{Eigenvalue is real}) points to the fact that tbe eigenvalues must be real, but that false. We have regimes in which the spectrum is real while on others it might be complex. \par
+
+The calculation of Eq.(\ref{Eigenvalue is real}) gives us a different view of the results we have outlined above based on values of $N$. It tells us that we can also understand \textit{spontaneous} $\mathcal{PT}$\textit{-symmetry breaking} with the eigenfunctions of the $\mathcal{PT}$ operator: If all the eigenstates of a parity-time invariant Hamiltonian are also eigenstates of the $\mathcal{PT}$ operator, then $\mathcal{PT}$-symmetry is \textit{unbroken}. But if some of the eigenstates of a $\mathcal{PT}$-symmetric Hamiltonian are not simultaneous eigenstates of the $\mathcal{PT}$ operator, then the $\mathcal{PT}$ -symmetry of the Hamiltonian is \textit{broken}. \par
+
+It is time to show how we can obtain the results discussed in this section, i.e., solve the time-independent Schr\"{o}dinger eigenvalue problem in Eq.(\ref{time-independent eigenvalue equation}) which is a second order differential equation in position coordinates. 
+
+\subsection{Boundary conditions in case of $\mathcal{PT}$-symmetric eigenvalue problem; Solving the Schr\"{o}dinger equation}\label{Boundary Conditions and Eigenvalue Problem}
+
+The complicated Schr\"{o}dinger equations involving non-Hermitian Hamiltonians are very difficult to solve, although they might look simple. Therefore, it is of utmost importance that the boundary conditions for the problem are chosen prudently. For the sake of clarity, we mention the Hamiltonian family again, in a different form and with a different parameter. We do this remodification for lucidity and hence will be the consistent notation we use for the rest of the treatise.
+\begin{align}
+    \label{m equals 0 epsilon Hamiltonian}
+    &\nonumber\\
+    H \ = \ p^{2} \, + \, x^{2} \, (i x)^{\epsilon}, \qquad \quad \text{here, mass or $m \ = \ 0$ and $\epsilon \in \mathbb{R}$}   \\
+    &\nonumber
+\end{align}
+To convert it into a differential equation, we use
+\begin{align}
+    \label{postion basis transformation}
+    &\nonumber\\
+    x \ \rightarrow \ x \qquad \text { and } \qquad p \ \rightarrow \ -i \, \frac{\mathrm{d}}{\mathrm{d} x},\\
+    &\nonumber
+\end{align}
+but we take $x$ as complex for reasons that will be clear in the following subsection. Hence, the differential equation obtained is of the form
+\begin{align}
+    \label{schrondinger equation in position basis for epsilon hamiltonian}
+    &\nonumber\\
+    -\psi^{\prime \prime}(x) \, + \, x^{2} \, (\mathrm{i} x)^{\epsilon}  \, \psi(x) \ = \ E \, \psi(x).\\
+    &\nonumber
+\end{align}
+\hspace{1.5em}To solve Eq.(\ref{schrondinger equation in position basis for epsilon hamiltonian}) is a herculean task and cannot be done for arbitrary values of $\epsilon$. But the asymptotic behaviour of this differential equation can be studied using WKB methods. For differential equations of the form $y^{\prime \prime}(x) \, + \, V(x) \, y(x) \ = \ 0$, where $V(x)$ grows as $|x|  \rightarrow  \infty$ the exponential component of asymptotic $y(x)$ for substantial $|x|$ is given by,
+\begin{align}
+    \label{Asymptotic Exponential}
+    &\nonumber\\
+    y(x) \ \sim \ \exp [\pm \int^{x} \mathrm{~d} s \, \sqrt{V(s)}].\\
+    &\nonumber
+\end{align}
+\hspace{1.5em}First we check for $\epsilon \ = \ 0$, which is exactly the case for the harmonic oscillator. From Eq.(\ref{Asymptotic Exponential}) we see that in this case $y(x) \sim \exp(\pm \, \frac{1}{2} \, x^{2})$ and since it must also be square-integrable, we should choose the one with the negative sign which vanishes as we move toward large values of $x$. This quality can also be extended to the complex plane, in which case we conclude: If the states vanish exponentially on the real axis as $|x|  \rightarrow  \infty$ then in the complex-$x$ plane they should vanish in two wedges with opening angle of $\frac{\pi}{2}$ centred about the positive and negative real axes. To determine these areas in the complex plane, a method of extrapolating the eigenvalue problem to the complex plane is used and it was studied by Bender and Turbiner in their 1992 paper \cite{BENDER1993442} on extending eigenvalue problems to the complex plane. The wedges we talk about are called \textit{Stokes wedges}. For $\epsilon > 0$ ($\epsilon \in \mathbb{R}^{+}$) a logarithmic branch point occurs at $x = 0$ and the branch cut is along the imaginary axis, i.e. $x=0$ to $x=i\infty$. The solutions are single valued in the cut plane created as a result of the branch cuts \cite{dorey2006differential} and it is seen that the Stokes wedges form below the real axis and the opening angles decrease as $\epsilon$ increases \cite{Dorey_2005}. \par
+
+The criteria for $\psi(x) \rightarrow 0$ for large $|x|$ is a basic necessity for a realisable quantum theory and as so happens that many wedges in the complex plane allow this condition, but to keep things interesting, the solution of Eq.(\ref{Schrondinger Eigenvalue problem for parameterized Hamiltonian}) is studied away from $\epsilon \, = \, 0$ (the already well established case of harmonic oscillator). It is observed for $\epsilon > 0$ that $\psi(x)$ vanishes most rapidly along the centre of \textit{Stokes wedges}, which are called the \textit{anti-Stokes lines}. For the Hamiltonian in Eq.(\ref{m equals 0 epsilon Hamiltonian}) with $\epsilon > 0$ the \textit{anti-Stokes lines} are found at angles, 
+\begin{align}
+    \label{anti-Stokes lines angle}
+    &\nonumber\\
+    \theta_{\mathrm{left}}=-\pi+\frac{\epsilon}{\epsilon+4} \frac{\pi}{2} \qquad \quad \text { and } \qquad \quad \theta_{\text {right }}=-\frac{\epsilon}{\epsilon+4} \frac{\pi}{2} .\\
+    &\nonumber
+\end{align}
+We can integrate along any path in these wedges as long as $\psi(x)$ vanishes at the end of the paths. $\Delta = 2\pi/(\epsilon + 4)$ is the equation for the opening angles, but as $\epsilon > 2$ the wedges shift below the real axis, as can be seen from Eqs.(\ref{anti-Stokes lines angle}). \par
+
+We show the \textit{Stokes wedges} and \textit{anti-Stokes lines} for $\epsilon = 5$ in Fig. Here we have the \textit{anti-Stokes lines} in $\theta_{\mathrm{left}} = - 13\pi/18$ and $\theta_{\mathrm{right}} = -5\pi/18$. The opening angle(s) is calculated as $\Delta = 2\pi/9$. Therefore, the left wedge runs from $-13\pi/18 \, - \, \Delta/2 \;$ to $-13\pi/18 \, + \, \Delta/2 \;$ or $-15\pi/18 \;$ to $-11\pi/18$ and the right wedge runs from $-5\pi/18 \, - \, \Delta/2 \;$ to $-5\pi/18 \, + \, \Delta/2 \;$ or $-7\pi/18 \;$ to $-3\pi/18$. The dashed orange line in Fig. represents the \textit{anti-stokes lines}, while the black curve is some eigenfunction $\psi(x)$ that vanishes in these wedges as $|x| \rightarrow \infty$. \par
+\vspace{1cm}
+\begin{figure}[h]
+    \centering
+    \frame{\includegraphics[scale=2]{images/Stokes_Wedges_Epsilon_5.jpg}}
+    \caption[\textit{Stokes Wedges} and \textit{Anti-Stokes lines} in the complex plane for $\epsilon = 5$]{Here we can see that the eigenfucntion $\psi(x)$ is integrable inside the two wedges (marked with grey) below the real-$x$ axis. The function dies down most rapidly along the \textit{anti-Stokes lines} (marked with orange dashed lines) as $|x| \rightarrow \infty$. [\textit{Plotted using} \textbf{ComplexRegionPlot}\textit{ in }\href{https://www.wolfram.com/mathematica/}{\textit{Mathematica}}]}
+    \label{Stokes Wedges for Epsilon Equals 5 with wave function and anti-stokes lines}
+\end{figure}    
+
+\textsuperscript{*}Note: In the complex coordinate space, there is a left-right symmetry about the imaginary$x$ axis. This is precisely because of $\mathcal{PT}$-symmetry. Let $x = Re \, x \, + \, i \, Im \, x$ be the coordinate in the complex-$x$ plane. Then, applying the parity operator negates the coordinate, i.e. $-x = - Re \, x \, - \, i \, Im \, x$ and then acts the time-reversal operator. Since $\mathcal{T}$ is anti-linear (Eq.(\ref{trc})), we have $-x^{*} = - Re \, x \, + \, i \, Im \, x $, i.e. a reflection about the imaginary-$x$ axis.
+\vspace{-1.5em}
+\subsubsection{Analytically Extending Eigenvalue Problems to the Complex Plane}
+
+The concept of \textit{Stokes wedges} emerges from the idea of closely investigating eigenvalue problems in the complex plane, i.e., taking the position as a complex number. A good place to understand this scheme can be found in Bender and Turbiner’s work in 1992 \cite{BENDER1993442}. Here, we recognise why it is necessary to move to the complex coordinate space and why one might arrive at inconsistent outcomes if this extension is not taken into account. Various eigenvalue problems involving potentials with coupling-constant parameters can produce eigenvalue problems that are mathematically rich with very involved results. One eigenvalue problem may contain multiple internal eigenvalue problems, like is the case for the anharmonic oscillator potential,
+\begin{align}
+    \label{Anharmonic Potential}
+    &\nonumber\\
+    V(x) \ = \ a^{2} \, x^{6} \, - \, 3 \, a \, x^{2}.\\
+    &\nonumber
+\end{align}
+The time-independent Schrodinger eigenvalue problem has an \textit{exact} ground-state solution for $a > 0$,
+\begin{align}
+    \label{ground state solution for AHO}
+    &\nonumber\\
+    \psi_{0}(x) \ = \ \exp(-\frac{1}{4} \, a \, x^{4}), \qquad \ \text{ground state energy $E_{0}(a) = 0$}.\\
+    &\nonumber
+\end{align}
+The analytical continuation of $E_{0}(a) = 0$ into negative values of $a$ will lead to the conclusion that $E_{0}(a) = 0$ for all real values of $a$. But if we look at the spectra of the anharmonic potential for $a<0$, $V(x) \, = \, a^{2} \, x^{6} \, - \, 3 \, a \, x^{2}$, then it is positive because the first term dominates over the second for large values of $x$ and the parameter $a$ is squared. But the lowest energy state for this potential is found to be,
+\begin{align}
+    \label{AHO lowest energy state}
+    &\nonumber\\
+    E_0 \ = \ c \, |a|^{\frac{1}{2}}, \qquad \quad \text{with \; $c = 1.9355\dots$} \\
+    &\nonumber
+\end{align}
+\hspace{1.5em} \textbf{The question then arises: \textit{How can the analytic continuation of a zero function, i.e. $E_{a} = 0$, be not zero?}} The answer lies in the fact that such analytic continuation must be done with critical supervision and cannot be a mere replacement of variables from positive to negative or vice versa. The way forward was first proposed by Bender and Wu in 1969 \cite{PhysRev.184.1231} and can be used to understand this oddity. \par
+
+The anharmonic oscillator potential falls under a more general family of potentials described by the equation,
+\begin{align}
+    \label{Gen family of AH potentials}
+    &\nonumber\\
+    V(x) \ = \ a^{2} \, x^{6} \, + \, 2 \, a \, b \, x^{4} \, + \, (b^{2} \, - \, 3 \, a) \, x^{2} &&\text{[\,Eq.(\ref{AHO lowest energy state}) occurs for $b = 0$\,]} \\
+    &\nonumber
+\end{align}
+Therefore, the Schr\"{o}dinger equation and the associated boundary condition on the real axis become
+\begin{align}
+    \label{AHO SE with BC}
+    &\nonumber\\
+    -\psi^{\prime \prime}(x) \, + \, V(x) \, \psi(x) \ = \ E(a, b) \, \psi(x) \, ; \qquad \quad \lim_{|x| \rightarrow \infty} \psi(x) \ = \ 0.\\
+    &\nonumber
+\end{align}
+In the case of Eq.(\ref{m equals 0 epsilon Hamiltonian}) we extended the $x$ coordinate into the complex plane, similarly, we must take $x$ into the complex plane in order to also take $a$ to be complex. Therefore, again we study the asymptotic behaviour of $\psi(x)$ for $|x| \rightarrow \infty$. Eq.(\ref{ground state solution for AHO}) suggest two types of asymptotic behaviour: $\psi_{+}(x) \approx \exp (\frac{1}{4}ax^4)$ and $\psi_{-}(x) \approx \exp (-\frac{1}{4}ax^4)$. The square integral $\psi(x)$ must not diverge and the parameter $a$ should be chosen accordingly. For $a > 0$, we have
+\begin{align}
+    \label{for a>0 asymptotic behaviour}
+    &\nonumber\\
+    \psi_{-}(x) \ \longrightarrow \ 0, \qquad \text{for} \ |x| \rightarrow \infty, \ \text{with} \ |\arg x| < \frac{1}{8}\pi \  \text{and} \  \frac{7}{8}\pi < \arg x < \frac{9}{8}.    \\
+    &\nonumber
+\end{align}
+Check Fig.\ref{Complex Region Plot 1} for the designated areas on the complex-$x$ plane. The shaded regions represent the area (in case of the $\mathcal{PT}$-symmetric Hamiltonian in Eq.(\ref{m equals 0 epsilon Hamiltonian}) it was the \textit{wedges}) within which the desired boundary condition of Eq.(\ref{for a>0 asymptotic behaviour}) is satisfied. \par
+
+Since the eigenvalue differential equation in Eq.(\ref{AHO SE with BC}) is of second order we must have two kinds of asymptotic behaviour for $|x| \rightarrow \infty$. The other asymptotic behaviour is: $\psi_{+}(x) \rightarrow 0$ as $|x| \rightarrow \infty$, where $\psi_{+}(x) \approx \exp (\frac{1}{4}ax^4) $. It is represented by the unshaded region in Fig.\ref{Complex Region Plot 1}. \par
+
+We obtain \textit{four} independent eigenvalue problems centred on four lines:
+
+\begin{itemize}
+    \item[i.] $Im \, x \ = \ 0 \ \longrightarrow$ Centred about horizontal shaded region in Fig.\ref{Complex Region Plot 1}.  
+    \item[ii.] $Re \, x \ = \ 0 \ \longrightarrow$ Centred about vertical shaded region in Fig.\ref{Complex Region Plot 1}.  
+    \item[iii.] $Re \, x \ = \ Im \, x \ \longrightarrow$ Centred about right slanted unshaded region in Fig.\ref{Complex Region Plot 1}.
+    \item[iv.] $Re \, x \ = \ - Im \, x \ \longrightarrow$ Centered about left slanted unshaded region in Fig.\ref{Complex Region Plot 1}.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \frame{\includegraphics[scale = 0.7]{images/Complex Region for integrable wave function 1.jpg}}
+    \caption[Complex Region Plot for satisfaction of Boundary Conditions of Eigenfunctions for the generalised Anharmonic Oscillator Potential Eigenvalue Problem]{The shaded regions(in gray) in the complex-$x$ plane where the boundary condition: $\psi_{-}(x) \rightarrow 0 $ as $|x| \rightarrow \infty$ is satisfied for the eigenstates of Eq.(\ref{AHO SE with BC}). For $a>0$ this is the case. Although, two separate regions emerge (shaded and unshaded) from a single eigenvalue problem in order to generalize the parameter $a$. [\textit{Plotted using} \textbf{ComplexRegionPlot}\textit{ in }\href{https://www.wolfram.com/mathematica/}{\textit{Mathematica}}]}
+    \label{Complex Region Plot 1}
+\end{figure}
+\textbf{The solutions to these four eigenvalue problems for the ground-state energy:}
+\begin{itemize}
+    \item[i.] Here, $\psi_{-}(x)$ has no nodes on the real axis, and hence,
+                \begin{align}
+                \label{Solution for i}
+                \psi_{(i)}(x) \ = \ \exp (-\frac{1}{4} \, a \, x^{4} \, - \, \frac{1}{2} \, b \, x^{2}) \qquad \text{and} \qquad E_{(i)}(a,b) \ = \ b \ \cite{BENDER1993442}.
+                \end{align} 
+    \item[ii.] For $Re \, x \ = \ 0$, i.e., the imaginary axis, the real axis is rotated by $\frac{\pi}{2}$ so that $x = ir$ where $r \in \mathbb{R}$. This gives 
+                \begin{subequations}
+                    \label{Solution for ii}
+                    \begin{align}
+                    (-\frac{\mathrm{d}^{2}}{\mathrm{~d} r^{2}}  \, + \, a^{2} \, r^{6} \, -2 \, a \, b \, r^{4} \, + \, (b^{2} \, - \, 3 \, a) \, r^{2} \, + \, E) \, \psi(x) \ = \ 0, \\
+                    \text{with the boundary condition,} \qquad \psi(r) \rightarrow 0 \quad \text{as} \ |r| \rightarrow \infty.
+                    \end{align}
+                    \setcounter{storesubequations}{\value{equation}}
+                \end{subequations}
+                Eq.(\ref{Solution for ii}) is Eq.(\ref{AHO SE with BC}) with $b$ replaced by $-b$, and $E$ replaced by $-E$ giving a completely negative spectrum,
+                \addtocounter{equation}{-1}
+                \begin{subequations}\setcounter{equation}{\value{storesubequations}}
+                    \begin{align}
+                    E_{(ii)}(a,b) \ = \ - \, b.
+                \end{align}
+                \end{subequations}
+     \item[iii.] For $Im \, x = Re \, x $ we rotate by $\frac{\pi}{4}$ to the centre of the right slanted unshaded region and therefore make the substitution $x = r \exp(\frac{1}{4}\pi i)$, again with $r \in \mathbb{R}$ which gives,
+                \begin{align}
+                \label{Solution for iii}
+                (-\frac{\mathrm{d}^{2}}{\mathrm{~d} r^{2}} \, + \, a^{2} \, r^{6} \, - \, 2 \, a \, \beta \, r^{4} \, + \, (\beta^{2} \, + \, 3 \, a) \, r^{2} \, - \, i E) \, \psi(x) \ = \ 0.
+                \end{align}
+                Here, $\beta = ib.$ Eq.(\ref{Solution for iii}) is Eq.(\ref{AHO SE with BC}) with $a$ replaced by $-a$ and $E$ replaced by $-iE$. It cannot be solved analytically, and we have to take the help of numerical methods such as the WKB approximation or the variational method \cite{Turbiner_1984}.  
+     \item[iv.] For $Re \, x = - Im\, x$, we have the complex conjugate of iii. which gives 
+                \begin{align}
+                \label{Solution for iv}
+                (-\frac{\mathrm{d}^{2}}{\mathrm{~d} r^{2}} \, + \, a^{2} \, r^{6} \, - \, 2 \, a \, \beta^{*} \, r^{4} \, + \, ({(\beta^{*})}^{2} \, + \, 3 \, a) \, r^{2} \, - \, (-i) E) \, \psi(x) \ = \ 0.
+                \end{align}
+\end{itemize}
+\hspace{1.5em} The next step would be to take the parameter $a$ into the complex plane. To do that we must rotate $a$ onto some angle,
+\begin{align}
+    \label{Rotating a into the complex plane}
+    &\nonumber\\
+    a \ = \ \rho \, \exp \, (i\theta), \qquad\quad \theta \; \text{increasing from} \; 0 \; \text{to} \; \pi. \\
+    &\nonumber
+\end{align}
+This makes the centre lines of the shaded and unshaded regions in Fig.\ref{Complex Region Plot 1} will rotate clockwise as $a$ rotates anticlockwise. Therefore, taking $a = \rho \exp(i \pi) = -\rho$ or rotating $a$ by $\pi$ makes the solution of i. as $\psi(x) \approx \exp(\frac{1}{4}ax^4)$, and $\psi_{+}(x) \rightarrow 0$ as $|x| \rightarrow \infty$ on the line $Re \, x = -Im \, x $. The final rotated problem looks like
+\begin{align}
+    \label{Rotated a to pi}
+    &\nonumber\\
+    &(-\frac{\mathrm{d}^{2}}{\mathrm{~d} x^{2}} \, + \, a^{2} \, x^{6} \, - \, 2 \, a \, b \, x^{4} \, + \, (b^{2} \, + \, 3 \, a) \, x^{2} \, - \, E \, \psi(x) \ = \ 0, \nonumber\\
+    \text{with bou}&\text{ndary condition,} \quad \psi(x) \longrightarrow 0 \; \text{as} \; |x| \rightarrow \infty \quad \text{\&} \quad x \ = \ r \, \exp(-i \, \frac{\pi}{4}).   
+\end{align}
+Replacing $x = \exp(-i \, \frac{\pi}{4}) $ in Eq.(\ref{Rotated a to pi}) gives,
+\begin{align}
+    \label{Rotated a to pi eigenvalue problem}
+    &\nonumber\\
+    (-\frac{\mathrm{d}^{2}}{\mathrm{~d} r^{2}} \, &+ \, a^{2} \, r^{6} \, - \, 2 \, i \, a \, b \, r^{4} \, + \, (-b^{2} \, - \, 3 \, a) \, r^{2} \, + \, i \, E) \, \psi(r) \ = \ 0, \nonumber\\
+    &\text{with boundary condition,} \quad \psi(r) \longrightarrow 0 \; \text{as} \; |r| \rightarrow \infty.
+\end{align}
+Eq.(\ref{Rotated a to pi eigenvalue problem}) is the eigenavlue problem in case i. with $b = -ib$, and $E = -iE$. This gives the solution $-iE = -ib$ or $E = b$ [from Eq.(\ref{Solution for i})]. Therefore, we can see that $E$ does not change with a sign change of $a$ as $E$ is not a function of $a$. But if we had just replaced $a$ with $-a$ in the eigenvalue equation, we would get a different problem, that is, 
+\begin{align}
+    \label{a replaced with -a eigenvalue problem}
+    &\nonumber\\
+    (-\frac{\mathrm{d}^{2}}{\mathrm{~d} x^{2}} \, + \, a^{2} \, x^{6} \, - \, 2 \, a \, b \, x^{4} \, + \, (b^{2} \, + \, 3 \, a) \, x^{2} \, - \, E) \, \psi(x).\\
+    &\nonumber
+\end{align}
+This is the case where $Re \, x = Im \, x$ with the coordinate space rotated by an angle of $\frac{\pi}{4}$, and with an undetermined eigenvalue problem that must be solved numerically.  \par
+
+\textbf{The above example shows that merely changing the sign of} $\bm{a}$ \textbf{replaces the problem entirely to a different eigenvalue problem and hence, is too naive.} This careful treatment is necessary so that we do not lead to paradoxes and can be applied to even simpler systems, say \textit{harmonic oscillator}. A similar region plot of the harmonic oscillator eigenvalue problem is shown in Fig.\ref{Complex Region Plot 2}. The specific eigenvalue problem is
+\begin{align}
+    \label{Harmonic Oscillator Eigenvalue Problem}
+    &\nonumber\\
+    &(-\frac{\mathrm{d}^{2}}{\mathrm{~d} x^{2}} \, + \, \frac{1}{4} \, a^{2} \, x^{2} \, - \, E) \, \psi(x) \ = \ 0, \nonumber\\ 
+    \text{wit}&\text{h boundary condition,} \quad \lim_{|x| \rightarrow \infty} \psi(x)=0.  \\
+    &\nonumber
+\end{align}
+The solution to this eigenvalue problem is very well established: $\psi(x) = \exp (- \frac{1}{4}ax^2)$ with energy eigenvalues, $E_n = (n + \frac{1}{2})a$. The energy of the ground state is $E_0 = \frac{1}{2}a$. Again, if we replace here $a$ with $-a$ then the eigenvalues become negative but the eigenvalue problem remains the same. \textbf{\textit{A paradox, again!}} \par 
+
+\begin{figure}[h]
+    \centering
+    \frame{\includegraphics[scale = 0.7]{images/Complex Region for integrable wave function 2.jpg}}
+    \caption[Complex Region Plot for satisfaction of Boundary Conditions of Eigenfunctions for the Harmonic Oscillator Eigenvalue Problem]{Shaded region(in gray) in the complex-$x$ plane where the boundary condition: $\psi(x) \rightarrow 0 $ as $|x| \rightarrow \infty$ is satisfied for eigenfunctions of the Harmonic oscillator eigenvalue problem in Eq.(\ref{Harmonic Oscillator Eigenvalue Problem}). In case of the Anharmonic Oscillator the problem got divided into four parts and here it gets divided into two part: one on the real-$x$ axis and other on the imaginary-$x$ axis.[\textit{Plotted using} \textbf{ComplexRegionPlot}\textit{ in }\href{https://www.wolfram.com/mathematica/}{\textit{Mathematica}}]}
+    \label{Complex Region Plot 2}
+\end{figure}
+
+It would be too naive to replace the negative of $a$, as we have learnt from the previous example. Instead, we again examine the asymptotic behaviour of the eigenfunction moving into the complex-$x$ plane (see Fig.\ref{Complex Region Plot 2}). Taking $a = \rho \exp(i \theta)$ and rotating $\theta$ from $0$ to $\pi$ we see that clockwise rotation of the centre line in the shaded region in Fig.\ref{Complex Region Plot 2} moves to the centre line of the unshaded part. This means that the eigenvalue problem becomes
+\begin{align}
+    \label{Rotating harmonic oscillator a to pi}
+    &\nonumber\\
+    &(-\frac{\mathrm{d}^{2}}{\mathrm{~d} x^{2}} \, + \, \frac{1}{4} \, a^{2} \, x^{2} \, - \, E) \, \psi(x) \ = \ 0, \nonumber\\ 
+    \text{wit}&\text{h boundary condition,} \quad \lim _{x \rightarrow \pm i \infty} \psi(x)=0. \\ 
+    &\nonumber
+\end{align}
+Replacing $x=ir$ gives the solution
+
+\begin{align}
+    \label{Taking x to be purely imaginary in rotated a of harmonic oscillator}
+    &(-\frac{\mathrm{d}^{2}}{\mathrm{~d} r^{2}} \, + \, \frac{1}{4} \, a^{2} \, r^{2} \, + \, E) \, \psi(r) \ = \ 0, \nonumber\\
+    \text{wit}&\text{h boundary condition,} \quad \lim _{r \rightarrow \pm \infty} \psi(r)=0. \\
+    &\nonumber
+\end{align}
+This is Eq.(\ref{Harmonic Oscillator Eigenvalue Problem}) with $E$ replaced by $-E$, giving the ground-state eigenvalue as
+\begin{align}
+    \label{Ground State Energy of complex a HO}
+    &\nonumber\\
+    E \ = \ - \, a.\\
+    &\nonumber
+\end{align}
+\textbf{Simply replacing} $\bm{a}$ \textbf{by} $\bm{- a}$ \textbf{gives an independent eigenvalue problem and hence we must extend the problem to the complex plane to get consistent results.}
+
+\subsection{WKB phase integral approach}
+
+In Sub-Section \ref{Boundary Conditions and Eigenvalue Problem}, we saw that the analytic continuation of the eigenvalue problem can churn out the mathematical subtleties as well as the paradoxes associated with them. But once the problem is set, we may find ourselves solving differential equations that cannot always be solved analytically, and hence may require numerical approximation. WKB techniques are one of those numerical approximation methods that can be used to solve the final eigenvalue problems in the case that the mathematical analysis fails. It is certainly necessary to use this approach not only to solve the equations but also to verify the solved ones. \par
+
+Returning to the original problem at hand, that is, the eigenvalue problem in Eq.(\ref{schrondinger equation in position basis for epsilon hamiltonian}) for the $\mathcal{PT}$-symmetric Hamiltonian in Eq.(\ref{m equals 0 epsilon Hamiltonian}), we can use the WKB approximation technique for $\epsilon > 0$. It gives accurate and reliable results. More importantly, the approximation must be made while being in the complex-$x$ plane. In this case, the turning points for the WKB approximation are given by the roots of $E = x^2 \, (ix)^\epsilon$ because this term in Eq.(\ref{m equals 0 epsilon Hamiltonian}) is responsible for taking the problem into the complex-$x$ plane. The roots/turning points are given by 
+\begin{align}
+    \label{Turning Points WKB}
+    &\nonumber\\
+    x_{-} \ = \ E^{ \, \frac{1}{\epsilon+2}} \, \mathrm{e}^{ \, i \pi(\frac{3}{2}-\frac{1}{\epsilon+2})}, \qquad \quad \text{and} \qquad \quad x_{+} \ = \ E^{ \,\frac{1}{\epsilon+2}} \, \mathrm{e}^{ \,-i \pi(\frac{1}{2}-\frac{1}{\epsilon+2})}. \\
+    &\nonumber
+\end{align}
+As we can see from Eq.(\ref{Turning Points WKB}) that they lie in the lower-half (upper-half) for $\epsilon > 0$ ($\epsilon < 0$). The leading order WKB phase integral quantisation is found to be \cite{Bender_2007},
+\begin{align}
+    \label{WKB Approx integral}
+    &\nonumber\\
+    (n+\frac{1}{2}) \pi \ = \ 2 \sin (\frac{\pi}{\epsilon+2}) \, E^{ \, \frac{1}{\epsilon+2}+\frac{1}{2}} \int_{0}^{1} \mathrm{~d} s \sqrt{1-s^{ \, \epsilon+2}}.\\
+    &\nonumber
+\end{align}
+Eq.(\ref{WKB Approx integral}) can be solved for $E_n$, giving \cite{Bender_2007}:
+\begin{align}
+    \label{WKB Eigenvalues}
+    &\nonumber\\
+    E_{n} \ \sim \ \left[\frac{\Gamma(\frac{3}{2}+\frac{1}{\epsilon+2}) \, \sqrt{\pi} \, (n+\frac{1}{2})}{\sin (\frac{\pi}{\epsilon+2}) \, \Gamma(1+\frac{1}{\epsilon+2})} \right]^{\frac{2 \epsilon+4}{\epsilon+4}} \qquad \quad (n \rightarrow \infty). \\
+    &\nonumber
+\end{align}
+A quick calculation of shows that the above values are real and positive, which is a mark of its physicality. The eigenvalue problem for Eq.(\ref{m equals 0 epsilon Hamiltonian}) is also analytically approached and the differential equations are solved numerically using Runge-Kutta techniques. A table comparing these values are shown in Bender's review of $\mathcal{PT}$-symmetry published in 2007 \cite[see Pg. 961]{Bender_2007}. \par
+
+\section{The complex symmetry operator, $\mathcal{C}$} \label{C operator}
+
+We have talked about the nature of non-Hermitian Hamiltonians and how to solve their Schr\"{o}dinger equations to obtain the spectrum but, one thing that was consistently ignored was the \textit{positive definiteness} of the norm generated by a non-Hermitian theory. Surely, if the Hamiltonian is not Hermitian, then we cannot expect its eigenvectors to be orthogonal, and hence, the norm must be modified. In this section we will try to paint a picture in which we built quantum theory from the basics, using our knowledge of non-Hermitian Hamiltonian theory, while being consistent with its standard interpretation. Since the seasoned researcher in physics is very much familiar with standard quantum theory, we will straight away get into non-Hermitian theory. For the amateur reader, the first few chapters (till dynamics) of any standard book on quantum mechanics should do the trick.
+
+\subsection{Designing a quantum theory based on $\mathcal{PT}$-symmetric Hamiltonians}
+\label{Recipe for PT-symm. QM}
+
+The essence of building a Quantum Theory from scratch, considering the fact that the Hamiltonian is non-Hermitian, lies in the redefinition of the inner product. As we discuss further, it will be natural for us to see that in a $\mathcal{PT}$-symmetric theory the inner product varies based on the given Hamiltonian. A $\mathcal{PT}$-symmetric theory will choose its own Hilbert space and the inner product in this space. Now we look at how the standard results of ordinary quantum theory stack up against $\mathcal{PT}$-symmetric theory:
+
+\begin{longtable}{l p{108.5mm}}
+        &\\
+        \textbf{Eigenfunctions and} \vline & \hspace{1.5em} The techniques to determine the eigenvalues of a non- \\
+        \textbf{Eigenvalues  } \hspace{12.67mm} \vline & Hermitian $\mathcal{PT}$-symmetric Hamiltonian, using analytical and numerical methods, were extensively covered in the last few sections. The physicality of parity-time quantum theory lies in the \textit{spontaneously unbroken} regime, where we find real eigenvalues. Therefore, it is wise to develop our design assuming that the eigenvalues of the $\mathcal{PT}$-symmetric Hamiltonian are real. Phrased differently, $\mathcal{PT}$ and H commute with each other and thereby have simultaneous eigenfunctions. \\
+        &\\
+        \textbf{Orthogonal set of} \hspace{1.61mm} \vline & \hspace{1.5em} The geometry of the Hilbert space and orthogonality of \\ 
+        \textbf{Eigenfuncions} \hspace{9.64mm} \vline & vectors can only be determined after defining an inner product or norm in the space. Hilbert spaces with such complex Hamiltonians, when expounded, produce indefinite metrics that are physically unrealisable \cite{PhysRevLett.89.270401}. In order to obtain a consistent theory, a symmetry operator, $\mathcal{C}$, will be introduced in due course. This operator will allow for an accordant inner product to be defined, and consequently, orthogonality of vectors can be introduced. \textbf{(Remember: The orthogonality of a pair of vectors depends on the inner product.)} An educated guess of an inner product would be: \\
+        
+        \hspace{39.64mm} \vline & 
+        {\begin{align}
+        \label{Guess for PT inner product}
+        (\psi, \phi) \equiv \int_C \mathrm{~d} x \, [\psi(x)]^{\mathcal{P T}} \, \phi(x) \, = \,  \int_C \mathrm{~d} x \, [\psi(-x)]^* \, \phi(x).
+        \end{align}}
+        Here, $C$ is a contour, and it must be in the \textit{Stoke’s Wedges} that we have elaborated extensively in previous sections. You can guess that the form has been borrowed from the general definition used in standard quantum mechanics. It can be shown that (\ref{Guess for PT inner product}) confers the orthogonality of degenerate states, but does not keep it \textit{positive definite}. \\
+        &\\
+        \textit{\textbf{Redefining the }} \hspace{5.87mm} \vline & \hspace{1.5em} We introduce a new symmetry operator, $\mathcal{C}$, and then use\\
+        \textit{\textbf{Inner Product}} \hspace{7.87mm} \vline & it to form a redefined inner product. $\mathcal{C}$ will commute with both $\mathcal{P}$ and $\mathcal{T}$, and hence represent a symmetry for the Hamiltonian. This operator is similar to the charge conjugation operator in particle physics. The new inner-product ($\mathcal{CPT}$ inner-product) is defined as: 
+        {
+        \begin{align}
+        \label{CPT inner product}
+        \langle\psi\mid\chi\rangle^{\, {\mathcal{C P T}}}  = \int \mathrm{d} x \, \psi^{\, \mathcal{C P T}}(x) \, \chi(x), \nonumber\\
+        \text{where,} \quad \psi^{ \, \mathcal{C P T}}(x) \, = \, \int \mathrm{d} y \, \mathcal{C}(x, y) \, \psi^*(-y).
+        \end{align}
+        }
+        This inner-product allows us to build a positive norm and a unitary Hilbert space. Later in the chapter, we will see how to construct this $\mathcal{C}$ operator (for any general Hamiltonian, $H$) and represent it as a sum of the eigenfunctions of $H$. \\ 
+        &\\
+        \textbf{Normalising the} \hspace{4.92mm} \vline & \hspace{1.5em} We saw in Eqs.(\ref{PT EV eq}) to (\ref{eigenvalue is a phase}) that $H$ and $\mathcal{PT}$ has simul-\\
+        \textbf{eigenfunctions \&} \hspace{3.46mm} \vline  & taneous eigenstates with eigenvalues of the form $\lambda = e^{i\alpha}$,\\
+        \textbf{Completeness} \hspace{9.84mm} \vline & (replaced $\theta$ with $\alpha$) where phase $\alpha$ depends on the subscript, $n$, of the eigenstate $\psi_n(x)$. This allows us to construct $\mathcal{PT}$-normalised eigenstates as, \\
+        \hspace{39.7mm} \vline &
+        {\begin{align}
+        \label{Simultaneous Eigenstates of H and PT}
+        \phi_n(x) \, \equiv \, e^{-i \alpha / 2} \, \psi_n(x).
+        \end{align}}  
+        Thus, $\phi_n(x)$, by construction, is a simultaneous eigenstate of $H$ and $\mathcal{PT}$ with unit eigenvalue. The $\mathcal{PT}$-symmetric inner product defined in Eq.(\ref{Guess for PT inner product}) gives a $(-1)^n \ \forall \, n$ algebraic sign which is alternating and hence not positive throughout. \textbf{\textit{The actual reason for introducing the}} $\bm{\mathcal{C}}$ \textit{\textbf{operator is to get rid of this alternating signs generated by}} $\bm{(-1)^n}$ \textbf{\textit{and keep it postive, always.}} Eq.(\ref{Guess for PT inner product}) has the advantage of being phase independent, and hence the states can be represented with a space of rays. Therefore, we can define the eigenfunctions of $H$ such that their $\mathcal{PT}$ norms are consistently $(-1)^n$:
+        {\begin{align}
+        \label{PT norm of energy eigenstates}
+        (\phi_n \, , \, \phi_n) &= \int_C \mathrm{~d} x\left[\phi_n(x)\right]^{\mathcal{P} \mathcal{T}} \phi_n(x)=\int_C \mathrm{~d} x\left[\phi_n(-x)\right]^* \phi_n(x) \nonumber\\
+        &=(-1)^n.
+        \end{align}
+        }
+        Here, the contour $C$ lies inside \textit{Stokes wedges}. The completeness relation w.r.t. these eigenstates was calculated numerically and analytically in \cite{Mezincescu_2000,Bender_2001} and given by,
+        {\begin{align}
+        \label{Completeness Relation}
+        \sum_{n=0}^{\infty}(-1)^n \, \phi_n(x) \, \phi_n(y) \, = \, \delta(x-y).
+        \end{align}}\\
+        &\\
+        \textbf{Representing $\bm{H}$,} \hspace{3.72mm} \vline & \hspace{1.5em} The parity operator, in general, is defined as $\mathcal{P}(x,y) = \delta$\\
+        \textbf{Green's Function,} \hspace{1.4mm} \vline & $(x+y)$ in position or coordinate basis. Then from Eq.(\ref{Completeness Relation})\\
+        \textbf{\& Parity Operator} $\! \! \!$ \hspace{1pt} \vline & we see that,
+        {\begin{align}
+        \label{Parity in coordinate basis}
+        \mathcal{P}(x, y) \, = \, \sum_{n=0}^{\infty} \, (-1)^n \, \phi_n(x) \, \phi_n(-y).     
+        \end{align}}
+        The Hamiltonian in the coordinate space representation is \\
+        \hspace{39.7mm} \vline & given by, 
+        {\begin{align}
+         \label{Hamiltonian in coordinate basis}    
+         H(x, y) \, = \, \sum_{n=0}^{\infty} \, (-1)^n \, E_n \, \phi_n(x) \, \phi_n(y).    
+        \end{align}
+        }
+        Green's function for the system is essentially the functional inverse of the Hamiltonian ($\int \mathrm{d} y H(x, y) G(y, z)=\delta(x-z)$), and represented as,
+        {\begin{align}
+         \label{Greens Function in coordinate basis}
+         G(x, y) \, = \, \sum_{n=0}^{\infty} \, (-1)^n \, \frac{1}{E_n} \, \phi_n(x) \, \phi_n(y).
+         \end{align}
+        }
+        \\
+\end{longtable}        
+
+\subsection{Significance of the $\mathcal{C}$ operator and its construction}
+
+The alternating sign of the $\mathcal{PT}$ norm leads us to question the validity of $\mathcal{PT}$ quantum mechanics as a physically viable theory. This is because the norm is interpreted as probability. But for the $\mathcal{PT}$ norm, we have half of the eigenstates with positive norms and half with negative norms. If we take the $\mathcal{PT}$ norm in Eq.(\ref{Guess for PT inner product}) to be our standard inner product, then a finite-dimensional $2n \times 2n$ matrix Hamiltonian quantum theory based on this assumption manifests a $SU(n,n)$ symmetry rather than $SU(2n)$ \cite{PhysRevLett.89.270401}. The whole space is divided into two separate and disjoint spaces: (1) Eigenstates with positive norms, and (2) Eigenstates with negative norms. The situation here is very similar to the one faced by Dirac while trying to formulate relativistic quantum mechanics. \textbf{\textit{Hence the symmetry operator here is represented by the letter C, just like charge-conjugation!}} The $\mathcal{C}$ operator represents a hidden symmetry in the unbroken $\mathcal{PT}$-symmetric regime: Equal number of positive and negative norm states. We thus have a physical interpretation for the negative norm states. $\mathcal{C}$ measures the sign of the $\mathcal{PT}$ norm of a state. Both $H$ and $\mathcal{PT}$ commute with $\mathcal{C}$. $\mathcal{C}$ is self-invertible and therefore has $\pm 1$ as eigenvalues. The $\mathcal{C}$ operator is represented on the position basis as the sum of the $\mathcal{PT}$ normalised eigenstates:
+\begin{align}
+    \label{C operator in position basis}
+    &\nonumber\\
+    \mathcal{C}(x, y) \, = \, \sum_{n=0}^{\infty} \, \phi_n(x) \, \phi_n(y).
+\end{align}
+This is the same as completeness, i.e. Eq.(\ref{Completeness Relation}), without the $(-1)^n$ factor. We can see that $\mathcal{C}$ is self-invertible using this completeness relation and the $\mathcal{PT}$ inner product in a position basis,
+\begin{align}
+    \label{C is self-invertible}
+    &\nonumber\\
+    \int d y \, C(x, y) \, C(y, z) \, &= \, \int d y \, \sum_m^\infty \, \phi_m(x) \, \phi_m(y) \, \sum_n^\infty \, \phi_n(y) \, \phi_n(z) \nonumber\\
+    &= \, \int d y \, \sum_{n, m}^\infty \, \phi_m(x) \, \phi_n(z) \, \phi_m(y) \, \phi_n(y)  \nonumber\\
+    &= \, \sum_{n, m}^\infty  \left\{\left(\phi_m(x) \, \phi_n(z)\right) \times \int d y \, \phi_m(y) \, \phi_n(y)\right\} \nonumber\\
+    &= \, \sum_{n, m}^\infty  \, (-1)^n \, \delta_{m n} \, \phi_m(x) \, \phi_n(z) \nonumber \\
+    &= \, \sum_n^\infty  \, (-1)^n \, \phi_n(x) \, \phi_n(z) \, = \, \delta(x-z). \\
+    &\nonumber
+\end{align}
+Recall that $\mathcal{C}$ and $H$ commute and therefore must have simultaneous eigenstates. The eigenvalues of $\mathcal{C}$ are $\pm1$ and $\mathcal{C}$ acted on the eigenstates of $H$, $\phi_n$' s, giving
+\begin{align}
+    \label{C acting on H eigenstates}
+    &\nonumber\\
+    \mathcal{C} \, \phi_n(x) \, &= \, \int \mathrm{d} y \, \mathcal{C}(x, y) \, \phi_n(y) \nonumber\\
+    &= \, \sum_{m=0}^{\infty} \, \phi_m(x) \int \mathrm{d} y \, \phi_m(y) \, \phi_n(y) \, = \, (-1)^n \, \phi_n(x). \\
+    &\nonumber
+\end{align}
+\hspace{1.5em} In conventional Hermitian quantum theory, $\mathcal{C}$ becomes identical to the parity operator. $\mathcal{C}$ and $\mathcal{P}$ are distinct square roots of the identity operator, but $\mathcal{C}$ is complex, while $\mathcal{P}$ is real. In the Hermitian limit, the $\mathcal{CPT}$ operator becomes $\mathcal{T}$ and thus we finally see that $\bm{\mathcal{CPT}}$ \textbf{symmetry is the natural extension of Dirac Hermiticity}. The culminating condition is then represented as 
+\begin{align}
+    \label{CPT symmetry of the Hamiltonian}
+    &\nonumber\\
+    H^{\, \bm{\mathcal{CPT}}} \, = \, H, \\
+    &\nonumber
+\end{align}
+and the completeness becomes, 
+\begin{align}
+    \label{CPT Completeness}
+    &\nonumber\\
+    \sum_n^\infty \, \phi_n(x)\left[ \, \mathcal{CPT} \, \phi_n(y) \, \right] \, = \, \delta(x-y). \\
+    &\nonumber
+\end{align}
+\subsection{Example of a $\mathbf{SU(2)}$ system with a $\mathbf{\mathcal{PT}}$-symmetric Hamiltonian}
+
+We have extensively covered the introductory theory of $\mathcal{PT}$-symmetric quantum mechanics but without giving any example. The ideas we have shared are useless if we cannot demonstrate that they work in a particular scenario. Therefore, we present a $2 \time 2$ matrix Hamiltonian example to show the calculations to generally obtain the $\mathcal{C}$ operator \cite{PhysRevLett.89.270401} . For a more general approach, using any antiunitary operator, take a look at \cite{Bender_Berry_Mandilara_2002}.\par    
+
+A two-dimensional parity operator representing reflection about the line $y = x$ (straight line with 45$\degree$ slant about the real x direction) is given by
+\begin{align}
+    \label{Parity in 2D about slanted staright line}
+    &\nonumber\\
+    \mathcal{P} \, = \, \left(\begin{array}{cc}
+                            0 & 1 \\
+                            1 & 0
+                        \end{array}\right)\\
+    &\nonumber
+\end{align}
+This is unique up to any unitary transformation, and hence the most general form of $\mathcal{PT}$-symmetric two-dimensional matrix Hamiltonian is a four-parameter family of matrices of the form
+\begin{align}
+    \label{PT symm 2D matrix Hamiltonian }
+    &\nonumber\\
+    H \, = \, \left(\begin{array}{cc}
+                        r e^{i \theta} & s \\
+                        t & r e^{-i \theta}
+                    \end{array}\right)
+\end{align}
+where $r$,$s$,$t$, and $\theta$ are real quantities. To make things simpler, let us take $t=s$ so that the final Hamiltonian becomes
+\begin{align}
+    \label{PT symm Hamiltonian for t=s}
+    &\nonumber\\
+    H \, = \, \left(\begin{array}{cc}
+                        r e^{i \theta} & s \\
+                        s & r e^{-i \theta}
+                    \end{array}\right)\\
+    &\nonumber
+\end{align}
+The time-reversal operator, being anti-linear, essentially changes the sign of $i$ (complex conjugation) and, therefore, we define it as
+\begin{align}
+    \label{T as Complex Conjugation}
+    &\nonumber\\
+    \mathcal{T} \, = \, \text{\textbf{\textit{`` Complex Conjugation "}}}\\
+    &\nonumber
+\end{align}
+\hspace{1.5em}Now that our system is defined, we can start doing some calculations. Let us first check the $\mathcal{PT}$-invariance of the Hamiltonian in Eq.(\ref{PT symm Hamiltonian for t=s}),
+\begin{align}
+    \label{PT invariance of 2D Matrix Hamiltonian}
+    &\nonumber\\
+    &(\mathcal{PT})^{-1} \, H \, \mathcal{PT} \, = \, \mathcal{PT} \, H \, \mathcal{PT} \, = \, \mathcal{P} \, H^* \, \mathcal{P} \nonumber\\
+    & \nonumber\\
+    \implies \mathcal{P} \, H^* \, \mathcal{P} \, =& \, \left(\begin{array}{ll}
+                                                                0 & 1 \\
+                                                                1 & 0
+                                                             \end{array}\right)\left(\begin{array}{cc}
+                                                                r e^{-i \theta} & s \\
+                                                                s & r e^{+i \theta}
+                                                             \end{array}\right)\left(\begin{array}{ll}
+                                                                0 & 1 \\
+                                                                1 & 0
+                                                             \end{array}\right) \nonumber\\
+    & \nonumber\\                                                             
+    =& \, \left(\begin{array}{cc}
+                s & r e^{i \theta} \\
+                r e^{-i \theta} & s
+             \end{array}\right)\left(\begin{array}{ll}
+                0 & 1 \\
+                1 & 0
+             \end{array}\right)=\left(\begin{array}{cc}
+                r e^{i \theta} & s \\
+                s & r e^{-i \theta}
+             \end{array}\right) \, = \, H. \\
+    &\nonumber
+\end{align}
+We can further calculate the eigenvalues of this Hamiltonian by solving the characteristic polynomial.
+\begin{align}
+    \label{Characteristic Polynomial}
+    &\nonumber\\
+    &\left(r e^{i \theta}-\lambda\right)\left(r e^{-i \theta}-\lambda\right)-s^2 \, = \, 0 \nonumber\\
+    \implies& \, r^2-\lambda \, r e^{i \theta}-\lambda \, r e^{-i \theta}+\lambda^2-s^2 \, = \, 0 \nonumber\\
+    \implies& \, \lambda^2-\lambda \, r\left(e^{i \theta}+e^{-i \theta}\right)+r^2-s^2 \, = \, 0 \nonumber\\
+    \implies& \, \lambda^2-2 \, \lambda \, r \cos \theta+r^2-s^2 \, = \, 0 \nonumber\\
+    \implies& \, \lambda \, = \, \frac{2 \, r \cos \theta \pm \sqrt{4 \, r^2 \cos ^2 \theta-4 r^2+4 s^2}}{2} \nonumber\\
+    &\nonumber\\
+    \implies& \, \boxed{\lambda \, = \, r \cos \theta \pm\left(s^2-r^2 \sin ^2 \theta\right)^{1 / 2} \,= \, E_{\pm}.} \\
+    &\nonumber
+\end{align}
+We can see in Eq.(\ref{Characteristic Polynomial}) the eigenvalues are divided into two different domains based on the real variable values. These are
+\begin{itemize}
+    \item[(i)] $s^2 \, < \, r^2 \, sin^{2}\theta \, \rightarrow \,$ The eiegnvalues are complex conjugate pairs and therefore fall into the broken $\mathcal{PT}$-symmetric regime.
+    \item[(ii)] $s^2 \, \geq \, r^2 \, sin^{2}\theta \, \rightarrow \,$ Here we have real eigenvalues, and thus this is the region of unbroken $\mathcal{PT}$ symmetry. 
+\end{itemize}
+Taking into account region (ii) of unbroken $\mathcal{PT}$ symmetry, the simultaneous eigenstates of the Hamiltonian and the parity-time operator are calculated to be
+\begin{align}
+    \label{Eigenstates of H and PT}
+    &\nonumber\\
+    \left|\varepsilon_{+}\right\rangle \, = \, \frac{1}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{l}
+            e^{i \alpha / 2} \\
+            e^{-i \alpha / 2}
+          \end{array}\right)
+    \qquad \text { and } \qquad 
+    \left|\varepsilon_{-}\right\rangle \, = \, \frac{i}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{l}
+            e^{-i \alpha / 2} \\
+            -e^{i \alpha / 2}
+          \end{array}\right). \\
+    &\nonumber
+\end{align}
+Here, $sin \, \alpha \, = \, \frac{r}{s} \, sin \, \theta$ and we also see that the form in Eq.(\ref{Simultaneous Eigenstates of H and PT}) is maintained. \textbf{We can easily check the} $\bm{\mathcal{PT}}$ \textbf{norm for various combinations of these eigenstates.} 
+\begin{itemize}
+    \item[(i)] $\mathcal{PT}$ norm of the '$+$' state is given by  $\left(\left\langle\varepsilon_+\right|\mathcal{PT}\right) \, \cdot \, \left(\left|\varepsilon_+\right\rangle\right)$ and therefore,
+                \begin{align}
+                \label{PT acts on plus eigenstate}
+                &\nonumber\\
+                \mathcal{PT} \, \left|\varepsilon_{+}\right\rangle \, &= \, 
+                \left(\begin{array}{ll}
+       	                0 & 1 \\
+                        1 & 0
+                      \end{array}\right) \, \mathcal{T} \, \frac{1}{\sqrt{2 \cos \alpha}} \,
+                \left(\begin{array}{l}
+       	                e^{i \alpha / 2} \\
+                        e^{-i \alpha / 2}
+                      \end{array}\right) \nonumber\\
+                &\nonumber\\      
+                &= \, \frac{1}{\sqrt{2 \cos \alpha}} \,
+                \left(\begin{array}{ll}
+       	                0 & 1 \\
+       	                1 & 0
+                      \end{array}\right) \,
+                \left(\begin{array}{l}
+                        e^{-i \alpha / 2} \\
+                        e^{i \alpha / 2}
+                      \end{array}\right) \nonumber\\
+                &= \, \frac{1}{\sqrt{2 \cos \alpha}} \, 
+                \left(\begin{array}{l}
+                        e^{i \alpha / 2} \\
+                        e^{-i \alpha / 2}
+                       \end{array}\right). \\
+                &\nonumber\\
+                \label{PT inner product of plus eigenstate}
+                \therefore \qquad \left(\left\langle\varepsilon_+\right|\mathcal{PT}\right) \, \cdot \, \left(\left|\varepsilon_+\right\rangle\right) \, &= \, \frac{1}{2 \cos \alpha} \,   
+                \begin{pmatrix}
+                    e^{i \alpha / 2} & e^{-i \alpha / 2}
+                \end{pmatrix}
+                \,
+                \left(\begin{array}{l}
+                      e^{i \alpha / 2} \\
+                      e^{-i \alpha / 2}
+                      \end{array}\right) \nonumber\\
+                &\nonumber\\
+                &= \, \frac{1}{2 \cos \alpha} \, \left[ \, e^{i \alpha} \, + \, e^{-i \alpha} \, \right] \, = \, 1. \quad \bm{[}\, \text{\textbf{Positive!}} \, \bm{]} \\
+                &\nonumber
+                \end{align}
+    
+    \item[(ii)]$\mathcal{PT}$ norm of the '$-$' state is given by  $\left(\left\langle\varepsilon_-\right|\mathcal{PT}\right) \, \cdot \, \left(\left|\varepsilon_-\right\rangle\right)$ and therefore,
+                \begin{align}
+                \label{PT inner product of minus eigenstate}
+                &\nonumber\\
+                \left(\left\langle\varepsilon_-\right|\mathcal{PT}\right) \, \cdot \, \left(\left|\varepsilon_-\right\rangle\right) \, &= \, \frac{-i^2}{2 \cos \alpha} \,
+                \begin{pmatrix}
+                    -e^{-i \alpha / 2} & e^{i \alpha / 2}
+                \end{pmatrix} \,
+                \left(\begin{array}{c}
+                        e^{-i \alpha / 2} \\
+                        -e^{i \alpha / 2}
+                    \end{array}\right) \nonumber\\
+                &\nonumber\\
+                &= \, \frac{1}{2 \cos \alpha} \, \left[-e^{-i \alpha} \, - \, e^{i \alpha / 2}\right] \, = \, -1. \quad \bm{[}\, \text{\textbf{Negative!}} \, \bm{]} \\
+                &\nonumber
+                \end{align}
+                \textbf{\textit{This is not required because we need a positive definite norm for a consistent and correctly interpretable quantum theory.}}
+    
+    \item[(iii)] The inner products of the mixed-sign eigenstates vanish. This makes us see that orthogonality is realised when taking the $\mathcal{PT}$-invariant inner product. We could have taken this inner product as the standard, but only if it were postive definite (Eq.(\ref{PT inner product of minus eigenstate}) showed us this).
+                \begin{align}
+                \label{Mixed-Sign Eigenstates PT Inner Products}
+                &\nonumber\\
+                \left(\left\langle\varepsilon_+\right|\mathcal{PT}\right) \, \cdot \, \left(\left|\varepsilon_-\right\rangle\right) \, &= \, \frac{i}{2 \cos \alpha} \,   
+                \begin{pmatrix}
+                    e^{i \alpha / 2} & e^{-i \alpha / 2}
+                \end{pmatrix}
+                \,
+                \left(\begin{array}{l}
+                      e^{-i \alpha / 2} \\
+                      -e^{i \alpha / 2}
+                      \end{array}\right) \nonumber\\
+                &= \, \frac{i}{2 \cos \alpha} \, \left[ \, e^0 \, - \, e^0 \, \right] \, = \, 0.  \\
+                &\nonumber\\
+                \left(\left\langle\varepsilon_-\right|\mathcal{PT}\right) \, \cdot \, \left(\left|\varepsilon_+\right\rangle\right) \, &= \, \frac{-i}{2 \cos \alpha} \, \begin{pmatrix}
+                    -e^{-i \alpha / 2} & e^{i \alpha / 2}
+                \end{pmatrix}
+                \,
+                \left(\begin{array}{l}
+                      e^{i \alpha / 2} \\
+                      e^{-i \alpha / 2}
+                      \end{array}\right) \nonumber\\
+                &= \, \frac{-i}{2 \cos \alpha} \, \left[ \, -e^0 \, + \, e^0 \, \right] \, = \, 0.\\
+                &\nonumber
+                \end{align}
+\end{itemize}
+
+The last three points have shown the problem of using a $\mathcal{PT}$ norm. \textbf{Although orthogonality is maintained, positive definiteness is not guaranteed}. Therefore, it is imperative that the symmetry operator $\mathcal{C}$ be deployed and the inner product is redefined to a $\mathcal{CPT}$ inner product where $\mathcal{C}$ checks the sign of the $\mathcal{PT}$ inner product so that the final product is positive definite. 
+
+\subsubsection{Caculating the $\mathcal{C}$ operator}
+
+The $\mathcal{C}$ operator can be obtained using the prescription in Eq.(\ref{C operator in position basis}) and we show here one of the entries, namely the $(1,1)$ element.
+\begin{align}
+    \label{C(1,1)}
+    &\nonumber\\
+    \mathcal{C}(1,1) \, &= \, \phi_1(1) \, \phi_1(1) \, + \, \phi_2(1) \, \phi_2(1) \nonumber\\
+    &\nonumber\\
+    &= \, \frac{1}{2 \cos \alpha} \, \left(e^{i \alpha / 2}\right) \, \left(e^{i \alpha / 2}\right) \, + \, \frac{i^2}{2 \cos \alpha} \, \left(e^{-i \alpha / 2}\right) \, \left(e^{-i \alpha / 2}\right) \nonumber\\
+    &\nonumber\\
+    &= \, \frac{1}{2 \cos \alpha} \, \left(e^{i \alpha} \, - e^{-i \alpha / 2}\right) \, = \, \frac{1}{\cos \alpha} \, i \, \sin \alpha. \\
+    &\nonumber
+\end{align}
+Here, ``1" corresponds to ``$+$" and ``2" corresponds to ``$-$". For other elements of the $\mathcal{C}$ matrix, see Appendix \ref{Calculate C operator}. Thus, for the parity operator in Eq.(\ref{Parity in 2D about slanted staright line}), the $\mathcal{C}$ operator is
+\begin{align}
+    \label{C operator for y=x Parity}
+    &\nonumber\\
+    \mathcal{C} \, = \, \frac{1}{\cos \alpha} \, \left(\begin{array}{cc}
+    i \sin \alpha & 1 \\
+    1 & -i \sin \alpha
+    \end{array}\right).
+\end{align}
+\hspace{1.5em} The $\mathcal{C}$ operator also has the property of self-ivertibility, that is, $\mathcal{C}^{\, 2} \, = \, \bm{1}$. See Appendix \ref{C self-invertibility} for verification. When this operator is applied to the eigenstates, the sign in the subscript is revealed, and this allows the $\mathcal{CPT}$ inner product to be positive even for the minus signed eigenvalue. We can see that
+\begin{align}
+    \label{C applied to minus eigenstate}
+    &\nonumber\\
+    \mathcal{C}\left|\varepsilon_{-}\right\rangle \, &= \, \frac{1}{\cos \alpha} \, \left(\begin{array}{cc}
+            i \sin \alpha & 1 \\
+            1 & -i \sin \alpha
+          \end{array}\right) \, \frac{i}{\sqrt{2 \cos \alpha}} \, 
+    \left(\begin{array}{c}
+            e^{-i \alpha / 2} \\
+            -e^{i \alpha / 2}
+          \end{array}\right) \nonumber\\
+    &= \, \frac{i}{\cos \alpha \, \sqrt{2 \cos \alpha}} \,
+    \left(\begin{array}{l}
+            i \, \sin \alpha \, e^{-i \alpha / 2}-e^{i \alpha / 2} \\
+            e^{-i \alpha / 2}+i \, \sin \alpha \, e^{i \alpha / 2}
+          \end{array}\right) \nonumber\\
+    &= \, \frac{i}{\cos \alpha \, \sqrt{2 \cos \alpha}} \, 
+    \left(\begin{array}{l}
+            e^{i \alpha / 2} \, \left(i \, \sin \alpha \, e^{-i \alpha}-1\right) \\
+            e^{-i \alpha / 2} \, \left(1+i \, \sin \alpha \, e^{i \alpha}\right)
+          \end{array}\right) \nonumber\\
+    &= \, \frac{i}{\cos \alpha \, \sqrt{2 \cos \alpha}} \,
+    \left(\begin{array}{c}
+            e^{i \alpha / 2} \, \left(i \sin \alpha \cos \alpha+\sin ^2 \alpha-1\right) \\
+            e^{-i \alpha / 2} \, \left(1+i \sin \alpha \cos \alpha-\sin ^2 \alpha\right)
+          \end{array}\right) \nonumber\\
+    &= \, \frac{i}{\cos \alpha \, \sqrt{2 \cos \alpha}} \, 
+    \left(\begin{array}{l}
+            e^{i \alpha / 2} \, (i \sin \alpha-\cos \alpha) \cos \alpha \\
+            e^{-i \alpha / 2} \, (\cos \alpha+i \sin \alpha) \cos \alpha
+          \end{array}\right) \nonumber\\
+    &= \, \frac{i}{\sqrt{2 \cos \alpha}} \, 
+    \left(\begin{array}{c}
+            e^{i \alpha / 2} \, \left(-e^{-i \alpha}\right) \\
+            e^{-i \alpha / 2} \, \left(e^{i \alpha}\right)
+          \end{array}\right) \, = \, \frac{-i}{\sqrt{2 \cos \alpha}} \, 
+    \left(\begin{array}{c}
+            -e^{-i \alpha / 2} \\
+            e^{i \alpha / 2}
+          \end{array}\right) \, \nonumber\\
+    &= \, -\left|\varepsilon_{-}\right\rangle.  \\
+    \nonumber
+\end{align}
+
+\vspace{-0.2cm}
+This shows that $\mathcal{C}$ shows a negative sign when acted on the negative-subscripted eigenstate and a positive sign for the positive-subscripted eigenstate. And hence, we have
+\begin{align}
+    \label{C acting on the positive-negative eigenstates}
+    &\nonumber\\
+    \mathcal{C} \left|\varepsilon_{\pm}\right\rangle \, = \, \pm\left|\varepsilon_{\pm}\right\rangle.\\
+    &\nonumber
+\end{align}
+\hspace{1.5em} The $\mathcal{CPT}$-dual of a state, $\left|u\right\rangle$, can now be defined as
+\begin{align}
+    \label{CPT-dual state }
+    &\nonumber\\
+    \left\langle u \right| \, = \, \left( \mathcal{C P T} \left|u \right\rangle \right)^{T}, \quad \text { where } T \, = \, \text { Transpose.} 
+\end{align}
+Using this definition, the inner product of two states, $\left|u\right\rangle$ and $\left|v\right\rangle$ becomes
+\begin{align}
+    \label{The CPT matrix inner product}
+    &\nonumber\\
+    (v \, , \, u)_{ \, \mathcal{CPT}} \, = \, \left(\left(\mathcal{C P T} \left|v \right\rangle \right)^{T}\right) \cdot \left(\left|u\right\rangle\right).
+\end{align}
+For this particular case of a $SU(2)$ system, the inner products of the eigenstates are postive definite and orthogonal, essentially orthonormal.
+\begin{align}
+    \label{The CPT matrix inner product for SU(2)}
+    &\nonumber\\
+    (\varepsilon_{\pm} \, , \, \varepsilon_{\pm})_{ \, \mathcal{CPT}} \, = \, 1, \quad \text{and} \quad (\varepsilon_{\mp} \, , \, \varepsilon_{\pm})_{ \, \mathcal{CPT}} \, = \, 0. \\
+    &\nonumber
+\end{align}
+See Appendix \ref{CPT inner product of minus-plus eigenstates} for the verification of Eq.(\ref{The CPT matrix inner product}). The completeness condition can be shown for these eigenstates
+\begin{align}
+    \label{Completeness Condition minus-plus eigenstates}
+    &\nonumber\\
+    \left|\varepsilon_{+}\right\rangle\left\langle\varepsilon_{+}|+| \varepsilon_{-}\right\rangle\left\langle\varepsilon_{-}\right| \, = \, \left(\begin{array}{ll}
+            1 & 0 \\
+            0 & 1
+          \end{array}\right). \\
+    &\nonumber
+\end{align}
+Check Appendix \ref{completeness condition for the plus-minus eigenstates} for the calculation of the completeness condition. 
+
+\section{How is $\mathcal{PT}$-symmetric quantum mechanics is different from Hermitian quantum mechanics?}
+
+\begin{itemize}
+    \item[]
+    \item[(i)] The Hilbert space is predefined in standard quantum mechanics and the inner product in this space is with respect to the Dirac Hermitian conjugation. Any operator or state is then defined over this structure, including the Hamiltonian. In the case of $\mathcal{PT}$-symmetric quantum mechanics, the Hilbert space is determined by the Hamiltonian along with the inner product. Once the eigenstates are found, the Hilbert space structure is revealed. More complex concepts are built on this newfound space, making $\mathcal{PT}$-symmetric quatum theory a sort of 'boot-strap' approach for hypothesising the quantum world.
+    \item[(ii)] If an operator in standard quantum mechanics follows the Hermiticity condition then we say that it is an obserable. Similarly in $\mathcal{PT}$-symmetric quantum mechanics, any operator $A$ must follow the $\mathcal{CPT}$ invariance condition (at time $t \, = \, 0$) that $A^{T} \, = \, \mathcal{CPT} \, A \, \mathcal{CPT}$, where $A^{T}$ denotes the transpose of $A$. If the Hamiltonian is symmetric, then this condition will hold for all times. \textbf{Note:} The $\mathcal{C}$ operator itself is an observable. 
+    \item[(iii)] The $\mathcal{C}$ operator is not realised in standard Hermitian quantum mechanics because, in the limit the Hamiltonian of the system reaches a Hermitian limit, the $\mathcal{C}$ operator becomes identical to the parity operator. Now the parity operator is self-invertible and hence the $\mathcal{CPT}$ conjugate reduces to just $\mathcal{T}$ or ``complex conjugation" ($\mathcal{CPT} \rightarrow \mathcal{PPT} \rightarrow \mathcal{P}^2\mathcal{T} \rightarrow \mathcal{T}$). Complex conjugation is the ``natural duality" assumed in standard quantum mechanics, and hence the $\mathcal{C}$ symmetry goes unnoticed.   
+    \item[(iv)] The greatest similarity between the two theories is perhaps that the time evolution or the dynamics of the system is given by $e^{-iHt}$ regardless of the Hamiltonian. In the case of $\mathcal{PT}$-symmetric quantum mechanics, the unitary evolution of the norm is maintained with respect to the $\mathcal{CPT}$ inner product. 
+\end{itemize}

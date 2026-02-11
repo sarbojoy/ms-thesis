@@ -1,0 +1,239 @@
+\section{Calculation of the $\mathcal{C}$ operator}
+\label{Calculate C operator}
+
+\begin{align}
+    \label{All the elements of C}
+    &\nonumber\\
+    \mathcal{C}(1,2) \, &= \, \phi_1(1) \, \phi_1(2) \, + \, \phi_2(1) \, \phi_2(2)\nonumber\\
+    &= \, \frac{1}{2 \cos \alpha} \, \left(e^{i \alpha / 2}\right) \, \left(e^{-i \alpha / 2}\right) \, + \, \frac{i^2}{2 \cos \alpha} \, \left(e^{-i \alpha / 2}\right) \, \left(-e^{i \alpha / 2}\right) \nonumber\\
+    &= \, \frac{1}{\cos \alpha}. \\
+    &\nonumber\\
+    \mathcal{C}(2,1) \, &= \, \phi_1(2) \, \phi_1(1) \, + \, \phi_2(2) \, \phi_2(1) \nonumber\\
+    &= \, \frac{1}{2 \cos \alpha}\left(e^{-i \alpha / 2}\right) \, \left(e^{i \alpha / 2}\right) \, + \, \frac{i^2}{2 \cos \alpha} \, \left(-e^{i \alpha / 2}\right) \, \left(e^{-i \alpha / 2}\right) \nonumber\\
+    &= \, \frac{1}{\cos \alpha}. \\
+    &\nonumber\\
+    \mathcal{C}(2,2) \, &= \, \phi_1(2) \, \phi_1(2) \, + \, \phi_2(2) \, \phi_2(2) \nonumber\\
+    &= \, \frac{1}{2 \cos \alpha} \, \left(e^{-i \alpha / 2}\right) \, \left(e^{-i \alpha / 2}\right) \, + \, \frac{i^2}{2 \cos \alpha} \, \left(-e^{i \alpha / 2}\right) \, \left(-e^{i \alpha / 2}\right) \nonumber\\
+    &= \, \frac{1}{2 \cos \alpha} \, \left(e^{-i \alpha / 2} \, - e^{i \alpha}\right) \, = \, \frac{1}{\cos \alpha} \, (-i \sin \alpha).\\
+    &\nonumber
+\end{align}
+
+\section{$\mathcal{C}$ operator is self-invertible}
+\label{C self-invertibility}
+
+The square of the $\mathcal{C}$ operator is unity. We can check this.
+\begin{align}
+    \label{C squared equals 1}
+    &\nonumber\\
+    \mathcal{C}^{\, 2} &= \, \frac{1}{\cos ^2 \alpha}\left(\begin{array}{cc}
+                                                        i \sin \alpha & 1 \\
+                                                        1 & -i \sin \alpha
+                                                      \end{array}\right)
+                                      \left(\begin{array}{rr}
+                                            i \sin \alpha & 1 \\
+                                            1 & -i \sin \alpha
+                                            \end{array}\right) \nonumber\\
+        &= \, \frac{1}{\cos ^2 \alpha}
+        \left(\begin{array}{ll}
+                1-\sin ^2 \alpha & i \sin \alpha-i \sin \alpha \nonumber\\
+                i \sin \alpha-i \sin \alpha & 1-\sin^2 \alpha
+              \end{array}\right) \\
+        &= \, \left(\begin{array}{ll}
+                        1 & 0 \\
+                        0 & 1
+                \end{array}\right).\\
+    &\nonumber
+\end{align}
+\vspace{-17mm}
+\section{The $\mathcal{CPT}$ inner product}
+\label{CPT inner product of minus-plus eigenstates}
+
+The application of the total $\mathcal{CPT}$ operator to eigenstates in Eq.(\ref{Eigenstates of H and PT}) gives
+\begin{align}
+    \label{CPT applied to plus eigenstate}
+    &\nonumber\\
+    \mathcal{C P T} \, \left|\varepsilon_{+}\right\rangle \, &= \,
+    \frac{1}{\sqrt{2 \cos \alpha}} \, 
+    \mathcal{CP}\left(\begin{array}{l}
+                        e^{-i \alpha / 2} \\
+                        e^{i \alpha / 2}
+                      \end{array}\right) \nonumber\\
+    &= \, \frac{1}{\sqrt{2 \cos \alpha}} \, \mathcal{C} 
+    \left(\begin{array}{ll}
+            0 & 1 \\
+            1 & 0
+          \end{array}\right)
+    \left(\begin{array}{c}
+            e^{-i \alpha / 2} \\
+            e^{i \alpha / 2}
+          \end{array}\right) \nonumber\\
+    &= \, \frac{1}{\cos \alpha \sqrt{2 \cos \alpha}} 
+    \left(\begin{array}{cc}
+            i \sin \alpha & 1 \\
+            1 & -i \sin \alpha
+          \end{array}\right)
+    \left(\begin{array}{c}
+            e^{i \alpha / 2} \\
+            e^{-i \alpha / 2}
+          \end{array}\right) \nonumber\\
+    &= \, \frac{1}{\cos \alpha \sqrt{2 \cos \alpha}}
+    \left(\begin{array}{c}
+            i \sin \alpha \, e^{i \alpha / 2}+e^{-i \alpha / 2} \\
+            e^{i \alpha / 2}-i \sin \alpha \, e^{-i \alpha / 2}
+          \end{array}\right) \nonumber\\
+    &= \, \frac{1}{\cos \alpha \sqrt{2 \cos \alpha}} 
+    \left(\begin{array}{l}
+            e^{i \alpha / 2} \, \cos \alpha \\
+            e^{-i \alpha / 2} \, \cos \alpha
+          \end{array}\right) \nonumber\\
+    &= \, \frac{1}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{l}
+            e^{i \alpha / 2} \\
+            e^{-i \alpha / 2}
+          \end{array}\right) \\
+    &\nonumber\\
+    \mathcal{C P T} \, \left|\varepsilon_{-}\right\rangle \, &= \,
+    \frac{1}{\sqrt{2 \cos \alpha}} \, \mathcal{C P} \, (-i)
+    \left(\begin{array}{c}
+            e^{i \alpha / 2} \\
+            -e^{-i \alpha / 2}
+          \end{array}\right) \nonumber\\
+    &= \, \frac{-i}{\sqrt{2 \cos \alpha}} \, \mathcal{C}
+    \left(\begin{array}{ll}
+            0 & 1 \\
+            1 & 0
+          \end{array}\right)
+    \left(\begin{array}{c}
+            e^{i \alpha / 2} \\
+            -e^{-i \alpha / 2}
+          \end{array}\right)\nonumber\\
+    &= \,\frac{-i}{\sqrt{2 \cos \alpha}} \, \mathcal{C}
+    \left(\begin{array}{c}
+            -e^{-i \alpha / 2} \\
+            e^{i \alpha / 2}
+          \end{array}\right) \nonumber\\
+    &= \, \frac{-i}{\cos \alpha \, \sqrt{2 \cos \alpha}}
+    \left(\begin{array}{cc}
+            i \sin \alpha & 1 \\
+            1 & -i \sin \alpha
+          \end{array}\right)
+    \left(\begin{array}{c}
+            -e^{-i \alpha / 2} \\
+            e^{i \alpha / 2}
+          \end{array}\right)\nonumber\\
+    &= \, \frac{-i}{\cos \alpha \, \sqrt{2 \cos \alpha}}
+    \left(\begin{array}{l}
+            -i \sin \alpha \, e^{-i \alpha / 2}+e^{i \alpha / 2} \\
+            -e^{-i \alpha / 2}-i \sin \alpha \, e^{i \alpha / 2}
+          \end{array}\right)\nonumber\\
+    &= \, \frac{-i}{\cos \alpha \, \sqrt{2 \cos \alpha}}
+    \left(\begin{array}{l}
+            e^{-i \alpha / 2} \, \cos \alpha \\
+            -e^{i \alpha / 2} \, \cos \alpha
+          \end{array}\right) \nonumber\\
+    &= \, \frac{-i}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{c}
+            e^{-i \alpha / 2} \\
+            -e^{i \alpha / 2}
+          \end{array}\right). \\
+    &\nonumber
+\end{align}
+\hspace{1.5em} Now we calculate the inner product for various permutations of the plus and minus eigenstates.
+\begin{align}
+    \label{CPT inner-product of diff permutations of plus-minus eigenstates}
+    &\nonumber\\
+    \left\langle\varepsilon_+ \mid \varepsilon_+\right\rangle \, &= \,
+    \frac{1}{\sqrt{2 \cos \alpha}}
+    \begin{pmatrix}
+          e^{i \alpha / 2} & e^{-i \alpha / 2}
+    \end{pmatrix}
+    \frac{1}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{l}
+            e^{i \alpha / 2} \\
+            e^{-i \alpha / 2}
+          \end{array}\right) \nonumber\\
+    &= \, \frac{1}{2 \cos \alpha}\left[e^{i \alpha}+e^{-i \alpha}\right] \,= \, +1. \\
+    &\nonumber\\
+    \left\langle\varepsilon_{-} \mid \varepsilon_{-}\right\rangle \, &= \,
+    \frac{-i}{\sqrt{2 \cos \alpha}}
+    \begin{pmatrix}
+            e^{-i \alpha / 2} & -e^{i \alpha / 2}             
+    \end{pmatrix}
+    \frac{i}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{c}
+            e^{-i \alpha / 2} \\
+            -e^{i \alpha / 2}
+          \end{array}\right)\nonumber\\
+    &= \, \frac{1}{2 \cos \alpha}\left[e^{-i \alpha}+e^{i \alpha}\right] \, = \, +1. \qquad \text{\textbf{[Positive!]}}\\
+    &\nonumber\\
+    \left\langle\varepsilon_{-} \mid \varepsilon_{+}\right\rangle \, &= \, \frac{-i}{\sqrt{2 \cos \alpha}}
+    \begin{pmatrix}
+            e^{-i \alpha / 2} & -e^{i \alpha / 2}
+    \end{pmatrix}
+    \frac{1}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{l}
+            e^{i \alpha / 2} \\
+            e^{-i \alpha / 2}
+          \end{array}\right)\nonumber\\
+    &= \, \frac{-i}{2 \cos \alpha}\left[e^0-e^0\right] \, = \, 0.\\
+    &\nonumber\\
+    \left\langle\varepsilon_{+} \mid \varepsilon_{-}\right\rangle \, &= \, \frac{1}{\sqrt{2 \cos \alpha}}
+    \begin{pmatrix}
+            e^{i \alpha / 2} & e^{-i \alpha / 2}
+    \end{pmatrix}
+    \frac{i}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{c}
+            e^{-i \alpha / 2} \\
+            -e^{i \alpha / 2}
+          \end{array}\right)\nonumber\\
+    &= \, \frac{i}{2 \cos \alpha}\left[e^0-e^0\right] \, = \, 0.\\
+    &\nonumber
+\end{align}
+
+\section{Completeness condition of the eigenstates}
+\label{completeness condition for the plus-minus eigenstates}
+\begin{align}
+    \label{completeness of pm eigenstates}
+    &\nonumber\\
+    & \qquad \qquad \qquad \quad \left|\varepsilon_{+}\right\rangle\left\langle\varepsilon_{+}|+| \varepsilon_{-}\right\rangle\left\langle\varepsilon_{-}\right| \, = \, \nonumber\\
+    &= \, \frac{1}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{c}
+            e^{i \alpha / 2} \\
+            e^{-i \alpha / 2}
+          \end{array}\right)
+    \frac{1}{\sqrt{2 \cos \alpha}}
+    \begin{pmatrix}
+            e^{i \alpha / 2} &  e^{-i \alpha / 2}      
+    \end{pmatrix}\nonumber\\
+    & \qquad \qquad \qquad 
+    +\frac{i}{\sqrt{2 \cos \alpha}}
+    \left(\begin{array}{cc}
+            e^{-i \alpha / 2} \\
+            -e^{i \alpha / 2}
+          \end{array}\right)
+    \frac{i}{\sqrt{2 \cos \alpha}}
+    \begin{pmatrix}
+            -e^{-i \alpha / 2} & e^{i \alpha / 2}
+    \end{pmatrix}\nonumber\\
+    &= \, \frac{1}{2 \cos \alpha}
+    \left(\begin{array}{cc}
+            e^{i \alpha} & 1 \\
+            1 & e^{-i \alpha}
+          \end{array}\right)-
+    \frac{1}{2 \cos \alpha}
+    \left(\begin{array}{cc}
+            -e^{-i \alpha} & 1 \\
+            1 & -e^{i \alpha}
+          \end{array}\right)\nonumber\\
+    &= \, \frac{1}{2 \cos \alpha}
+    \left(\begin{array}{cc}
+            e^{i \alpha}+e^{-i \alpha} & 0 \\
+            0 & e^{-i \alpha}+e^{i \alpha}
+          \end{array}\right) \, = \, 
+    \left(\begin{array}{cc}
+            1 & 0 \\
+            0 & 1
+          \end{array}\right) \, = \, \bm{1}. \\
+    &\nonumber
+\end{align}
+
