@@ -1,0 +1,28 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.lof
+*.lot
+*.loa
+
+# minted
+_minted*
+*.pyg
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
